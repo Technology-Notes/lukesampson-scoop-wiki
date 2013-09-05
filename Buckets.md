@@ -51,6 +51,5 @@ scoop search hello # -> you should see hello listed under, 'my-bucket bucket:'
 scoop install hello
 hello # -> you should see 'Hello, <windows-username>!'
 ```
-5. Sharing your bucket
-All you need to do is tell people how to add you bucket, i.e. by running the command in step 3.
+5. To share your bucket, all you need to do is tell people how to add you bucket, i.e. by running the command in step 3.
 
