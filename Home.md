@@ -1,7 +1,7 @@
 # Documentation
 
 ### Getting Started
-* Installing
+* [Quick Start](wiki/Quick-Start)
 * Command help
 
 ### General Concepts
