@@ -25,6 +25,6 @@ Now that you have a rough idea of how scoop commands work, let's try installing 
 
 You'll probably see a warning about a missing hash, but you should see a final message that cURL was installed successfully. Try running it:
 
-    curl https://google.com
+    curl -L https://get.scoop.sh
 
 You should see some HTML, probably with a 'document moved' message. Note that, like when you installed Scoop, you didn't need to restart your console for the program to work. Also, if you've installed cURL manually before you might have noticed that you didn't get an error about SSL—Scoop downloaded a certificate bundle for you.
