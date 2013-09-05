@@ -1,7 +1,9 @@
-## Getting Started
+# Documentation
+
+### Getting Started
 Installing
 Command help
 
-## General Concepts
+### General Concepts
 * Buckets
 * [App Manifests](wiki/App-Manifests)
