@@ -1,8 +1,8 @@
 # Documentation
 
 ### Getting Started
-Installing
-Command help
+* Installing
+* Command help
 
 ### General Concepts
 * Buckets
