@@ -30,6 +30,6 @@ Scoop:
 * has a curated collection of apps, while at the same time...
 * makes it easy to create your own apps and collections of apps
 * values your time and attention
-* reads the README for you
+* reads the Readme for you
 
 There are other, less objective reasons to give Scoop a try. Maybe you like Chocolatey but you don't like the name, or typing `cinst` feels weird, or you're not a fan of messages about 'Chocolatey gods'.
