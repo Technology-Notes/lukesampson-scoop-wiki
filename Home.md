@@ -6,7 +6,8 @@
 
 ### Getting Started
 * [Quick Start](wiki/Quick-Start)
-* [Command help](wiki/Commands)
+* [Command Help](wiki/Commands)
+* [Uninstalling Scoop](wiki/Uninstalling-Scoop)
 
 ### Concepts
 * [Apps](wiki/Apps)
