@@ -23,6 +23,7 @@ Scoop:
 * avoids GUIs whenever possible, keeps you on the command line
 * installs to your home directory by default (thereby avoiding UAC popups, and other people messing up your setup)
 * installs applications independently and in a self-contained way (which means less conflicts, easy to undo installs)
+* doesn't pollute your path
 * has a command interface similar to Git and similar tools
 * makes it easy to discover commands that you don't know, or have forgotten
 * makes is easy to tell people how to install your programs
