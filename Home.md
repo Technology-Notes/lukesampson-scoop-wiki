@@ -7,3 +7,6 @@
 ### General Concepts
 * Buckets
 * [App Manifests](wiki/App-Manifests)
+
+### Misc.
+* [How is Scoop different to Chocolatey?](wiki/Chocolatey-Comparison)
