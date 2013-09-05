@@ -2,7 +2,7 @@
 
 ### Getting Started
 * [Quick Start](wiki/Quick-Start)
-* Command help
+* [Command help](wiki/Commands)
 
 ### General Concepts
 * Buckets
