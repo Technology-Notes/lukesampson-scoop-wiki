@@ -7,6 +7,7 @@
 * [Quick Start](wiki/Quick-Start)
 * [Command help](wiki/Commands)
 
-### General Concepts
+### Concepts
+* [Apps](wiki/Apps)
 * [Buckets](wiki/Buckets)
 * [App Manifests](wiki/App-Manifests)
