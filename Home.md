@@ -1,6 +1,7 @@
 # Documentation
 
 ### Overview
+* [So What?](wiki/So-What)
 * [How is Scoop different to Chocolatey?](wiki/Chocolatey-Comparison)
 
 ### Getting Started
