@@ -4,4 +4,4 @@ Command help
 
 ## General Concepts
 * Buckets
-* [App Manifests](App-Manifests)
+* [App Manifests](wiki/App-Manifests)
