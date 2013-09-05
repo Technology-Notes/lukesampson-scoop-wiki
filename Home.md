@@ -1,7 +1,6 @@
 # Documentation
 
 ### Overview
-* [What Does Scoop Do?](wiki/What-Does-Scoop-Do%3F)
 * [So What?](wiki/So-What%3F)
 * [How is Scoop different to Chocolatey?](wiki/Chocolatey-Comparison)
 
