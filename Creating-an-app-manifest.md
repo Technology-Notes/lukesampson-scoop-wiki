@@ -27,5 +27,7 @@ If you make your app manifest publicly available on the web, anyone can install 
     scoop install https://gist.github.com/lukesampson/6446567/raw/hello.json
 
 ### Next steps
-If you ran some of these examples, you probably noticed a warning saying 'no hash in manifest'. For reference information on specifying file hashes and much more in your manifests, see the [App Manifests reference][App-Manifests].
+If you ran some of these examples, you probably noticed a warning saying 'no hash in manifest'. For reference information on specifying file hashes and much more in your manifests, see the [App Manifests reference](App-Manifests).
+
+If you want to maintain a collection of apps, see the page on [Buckets](Buckets) for more information.
 
