@@ -11,4 +11,4 @@
 * [Apps](wiki/Apps)
 * [Buckets](wiki/Buckets)
 * [App Manifests](wiki/App-Manifests)
-* [Creating an App Manifest](wiki/Creating-an-app-manifest)
+    * [Creating an App Manifest](wiki/Creating-an-app-manifest)
