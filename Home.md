@@ -8,5 +8,5 @@
 * [Command help](wiki/Commands)
 
 ### General Concepts
-* Buckets
+* [Buckets](wiki/Buckets)
 * [App Manifests](wiki/App-Manifests)
