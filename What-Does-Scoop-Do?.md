@@ -1,6 +1,3 @@
-What does Scoop do?
--------------------
-
 Scoop installs programs from the command line with a minimal amount of friction. It tries to eliminate things like:
 * Permission popup windows
 * GUI wizard-style installers
