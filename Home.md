@@ -1,1 +1,7 @@
-Welcome to the scoop wiki!
+## Getting Started
+Installing
+Command help
+
+## General Concepts
+* Buckets
+* [App Manifests](App-Manifests)
