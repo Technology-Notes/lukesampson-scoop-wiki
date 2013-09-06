@@ -14,3 +14,6 @@
 * [Buckets](wiki/Buckets)
 * [App Manifests](wiki/App-Manifests)
     * [Creating an App Manifest](wiki/Creating-an-app-manifest)
+
+### More
+* [System-wide installs](wiki/Global-Installs)
