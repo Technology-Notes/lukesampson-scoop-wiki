@@ -1,3 +1,4 @@
+### `scoop reset`
 If you need to run multiple versions of Ruby or Python on the same computer, you can use `scoop reset` to switch between versions. If you're familiar with rbenv or RVM this is roughly similar, although with `scoop reset` you always need to switch version manually.
 
 ### Example
