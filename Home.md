@@ -17,4 +17,4 @@
 
 ### More
 * [System-wide installs](wiki/Global-Installs)
-* [Switching between Ruby and Python Versions)(wiki/Switching-Ruby-And-Python-Versions)
+* [Switching between Ruby and Python Versions](wiki/Switching-Ruby-And-Python-Versions)
