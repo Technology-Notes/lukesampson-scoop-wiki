@@ -23,7 +23,9 @@ If you would like to serve documents from somewhere else, you need to change the
 
     "$(scoop which httpd | split-path)\..\conf\httpd.conf"
 
-**To install Apache as a service**, run:
+## Installing Apache as a service
+
+Run:
 
     sudo httpd -k install -n apache
     sudo net start apache
