@@ -4,7 +4,7 @@ Install PHP and Apache:
 
 Register the PHP handler with Apache:
 
-    iex (new-object net.webclient).downloadstring('[https://gist.github.com/lukesampson/6546858/raw/apache-php-init.ps1](https://gist.github.com/lukesampson/6546858/raw/apache-php-init.ps1)')
+    iex (new-object net.webclient).downloadstring('https://gist.github.com/lukesampson/6546858/raw/apache-php-init.ps1')
 
 **To start Apache on the command line**, run:
 
