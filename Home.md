@@ -15,6 +15,9 @@
 * [App Manifests](wiki/App-Manifests)
     * [Creating an App Manifest](wiki/Creating-an-app-manifest)
 
+### Scenarios
+* [Apache with PHP](wiki/Apache-with-PHP)
+
 ### More
 * [System-wide installs](wiki/Global-Installs)
 * [Switching between Ruby and Python Versions](wiki/Switching-Ruby-And-Python-Versions)
