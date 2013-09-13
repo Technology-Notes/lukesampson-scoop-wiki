@@ -1,8 +1,10 @@
-To install Apache with PHP support, run:
+Install PHP and Apache:
 
     scoop install php apache
 
-The order of 'php' and 'apache' above is important. The Apache setup detects PHP and configures a handler for it if PHP is already installed.
+Register the PHP handler with Apache:
+
+    iex (new-object net.webclient).downloadstring('https://gist.github.com/lukesampson/6546858/raw/apache-php-init.ps1')
 
 **To start Apache on the command line**, run:
 
@@ -38,4 +40,3 @@ To uninstall the Apache service
     sudo httpd -k uninstall -n apache
 
 For more information, see [Using Apache HTTP Server on Windows](http://httpd.apache.org/docs/current/platform/windows.html).
-
