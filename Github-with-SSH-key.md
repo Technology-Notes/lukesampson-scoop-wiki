@@ -4,6 +4,8 @@ This guide uses Github as an example, but the same principals apply for any SSH-
 
 This assumes you have [installed Scoop](https://github.com/lukesampson/scoop/wiki/Quick-Start), and have a basic knowledge of Git.
 
+*Based on [this guide from GitHub](https://help.github.com/articles/generating-ssh-keys#platform-windows)*
+
 ### Install
 
 First up, install the programs you need:
