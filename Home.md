@@ -15,7 +15,7 @@
 * [App Manifests](wiki/App-Manifests)
     * [Creating an App Manifest](wiki/Creating-an-app-manifest)
 
-### Scenarios
+### Guides
 * [SSH](wiki/SSH-on-Windows)
 * [Apache with PHP](wiki/Apache-with-PHP)
 
