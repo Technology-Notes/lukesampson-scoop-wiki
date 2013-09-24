@@ -17,7 +17,7 @@
 
 ### Guides
 * [SSH](wiki/SSH-on-Windows)
-* [GitHub with SSH](wiki/GitHub-with-SSH)
+* [GitHub with SSH Key](wiki/GitHub-with-SSH-Key)
 * [Apache with PHP](wiki/Apache-with-PHP)
 
 ### More
