@@ -2,7 +2,7 @@
 
 This is how my command line looks, running Powershell in the built-in Windows Console. You can see the [Solarized](http://ethanschoonover.com/solarized) color theme, and a custom prompt including Git info. You can't see Git tab completions or support for SSH keys, but those are there too.
 
-I used [concfg](https://github.com/lukesampson/concfg) for the font and color theme, and [Pshazz](https://github.com/lukesampson/pshazz) for the custom prompt and Git and SSH features.
+I used [Concfg](https://github.com/lukesampson/concfg) for the font and color theme, and [Pshazz](https://github.com/lukesampson/pshazz) for the custom prompt and Git and SSH features.
 
 Here's my script to get this setup:
 
@@ -24,12 +24,12 @@ concfg import solarized small
 scoop install pshazz
 ```
 
-If you install pshazz and you already have an SSH key, you'll see a popup asking for your password.
+If you install Pshazz and you already have an SSH key, you'll see a popup asking for your password.
 ![](https://github.com/lukesampson/scoop/raw/gh-pages/images/docs/askpass.png)
 
 There's [more info on setting up SSH with Scoop](https://github.com/lukesampson/scoop/wiki/SSH-on-Windows), if you're interested.
 
-Now you should have a nicer looking command prompt, with some helpful Git and SSH enhancements. If you want to customize your prompt even more, check out the [concfg](https://github.com/lukesampson/concfg) and [pshazz](https://github.com/lukesampson/pshazz) projects on GitHub.
+Now you should have a nicer looking command prompt, with some helpful Git and SSH enhancements. If you want to customize your prompt even more, check out the [Concfg](https://github.com/lukesampson/concfg) and [Pshazz](https://github.com/lukesampson/pshazz) projects on GitHub.
 
 It's worth pointing out that concfg works in ye olde cmd.exe as well, but with Powershell you get the extra prompt enhancements, plus a great dynamic and functional programming language at your fingertips as well.
 
