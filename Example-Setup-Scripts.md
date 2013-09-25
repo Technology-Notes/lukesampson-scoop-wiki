@@ -8,7 +8,7 @@ set-executionpolicy unrestricted -s cu
 
 ### Example dev environment setup
 ```powershell
-# core utilities
+# utils
 scoop install 7zip curl sudo git openssh coreutils grep
 
 # programming languages
@@ -21,6 +21,21 @@ iex (new-object net.webclient).downloadstring('https://gist.github.com/lukesamps
 # console theme
 scoop install concfg pshazz
 concfg import solarized small
+
+# vim
+scoop install vim
+
+# extra vim settings
+'
+set ff=unix
+
+set cindent
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set backupdir=$TEMP
+' | out-file ~/.vimrc -enc oem -append
+
 ```
 
 ### Example production environment setup
@@ -34,6 +49,5 @@ sudo scoop install git ruby postgres --global
 # just for me
 scoop install grep coreutils 
 ```
-
 
 
