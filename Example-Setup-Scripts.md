@@ -9,7 +9,7 @@ set-executionpolicy unrestricted -s cu
 ### Example dev environment setup
 ```powershell
 # utils
-scoop install 7zip curl sudo git openssh coreutils grep
+scoop install 7zip curl sudo git openssh coreutils grep sed less
 
 # programming languages
 scoop install python ruby go nodejs
