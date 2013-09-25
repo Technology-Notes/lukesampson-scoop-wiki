@@ -24,4 +24,4 @@
 ### Misc
 * [System-wide installs](wiki/Global-Installs)
 * [Switching between Ruby and Python Versions](wiki/Switching-Ruby-And-Python-Versions)
-* [Why Powershell?](wiki/Why-Powershell)
+* [Why Powershell?](wiki/Why-Powershell%3F)
