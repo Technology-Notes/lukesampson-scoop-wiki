@@ -1,4 +1,4 @@
-Scoop tries to 'just work' whether you run it from Powershell or cmd.exe, but **I recommend using Powershell** instead. **Here's why** I think you should try using Powershell as your primary shell.
+Scoop tries to 'just work' whether you run it from Powershell or cmd.exe, but **I recommend using Powershell** instead. Here's why.
 
 ### Yes, Powershell has problems
 
