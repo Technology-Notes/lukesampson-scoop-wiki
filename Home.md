@@ -16,6 +16,7 @@
     * [Creating an App Manifest](wiki/Creating-an-app-manifest)
 
 ### Guides
+* [Theming Powershell](wiki/Theming-Powershell)
 * [SSH](wiki/SSH-on-Windows)
 * [GitHub with SSH Key](wiki/GitHub-with-SSH-Key)
 * [Apache with PHP](wiki/Apache-with-PHP)
