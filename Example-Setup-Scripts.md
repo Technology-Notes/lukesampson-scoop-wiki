@@ -24,8 +24,6 @@ concfg import solarized small
 
 # vim
 scoop install vim
-
-# extra vim settings
 '
 set ff=unix
 
