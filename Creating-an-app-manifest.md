@@ -5,7 +5,7 @@ Here's how to create and install a manifest for an 'app' that says hello, in jus
 
 ```powershell
 # write an app manifest to hello.json
-'{ version: "1.0", url: "https://gist.github.com/lukesampson/6446238/raw/hello.ps1", bin: "hello.ps1" }' > hello.json
+'{ "version": "1.0", "url": "https://gist.github.com/lukesampson/6446238/raw/hello.ps1", "bin": "hello.ps1" }' > hello.json
 
 # install the app
 scoop install hello
