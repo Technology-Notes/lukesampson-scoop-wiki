@@ -14,6 +14,7 @@
 * [Buckets](wiki/Buckets)
 * [App Manifests](wiki/App-Manifests)
     * [Creating an App Manifest](wiki/Creating-an-app-manifest)
+* [Dependencies](wiki/Dependencies)
 
 ### Guides
 * [Theming Powershell](wiki/Theming-Powershell)
