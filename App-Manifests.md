@@ -21,6 +21,7 @@ For more examples, see the app manifests in the [main Scoop bucket](https://gith
 * `architecture`: If the app has 32- and 64-bit versions, architecture can be used to wrap the differences ([example](https://github.com/lukesampson/scoop/blob/master/bucket/7zip.json)]).
     * `32bit|64bit`: contains architecture-specific instructions (`url`, `hash`, `msi`, and `installer`).
 * `bin`: A string or array of strings of programs (executables or scripts) to make available on the user's path.
+* `depends`: Runtime dependencies for the app.
 * `env_add_path`: Add this directory to the user's path (or system path if `--global` is used). The directory is relative to the install directory, and must be inside the install directory.
 * `env_set`: Sets one or more environment variables for the user (or system if `--global` is used) ([example](https://github.com/lukesampson/scoop/blob/master/bucket/go.json)).
 * `extract_dir`: If `url` points to a compressed file (.zip, .7z, .tar, .gz, .lzma are supported), Scoop will extract just the directory specified from it.
