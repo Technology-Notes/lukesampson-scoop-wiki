@@ -3,6 +3,7 @@
 ### Overview
 * [So What?](wiki/So-What%3F)
 * [How is Scoop different to Chocolatey?](wiki/Chocolatey-Comparison)
+* [How is Scoop different to Cygwin and MSYS?](wiki/How-is-Scoop-different-to-Cygwin-and-MSYS%3F)
 
 ### Getting Started
 * [Quick Start](wiki/Quick-Start)
