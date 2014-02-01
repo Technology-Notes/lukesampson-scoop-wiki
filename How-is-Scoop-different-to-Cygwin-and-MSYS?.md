@@ -16,4 +16,4 @@ So to parallel this for Scoop:
 
 Using Scoop lets you achieve similar things to Cygwin and MSYS, but without having to learn about and use a separate environment. You can just keep doing what you're already doing but easily access the cross-platform tools you need.
 
-As it happens, a lot of the programs that Scoop installs either come directly from the MinGW/MSYS project, or were built using their tools. Scoop can only hope to achieve it's goals because of 15 years of amazing work from MinGW/MSYS.
+As it happens, a lot of the programs that Scoop installs either come directly from the MinGW/MSYS project, or were built using their tools. Scoop can only hope to achieve it's goals because of 15 years of amazing work on MinGW/MSYS, which itself is based on Cygwin.
