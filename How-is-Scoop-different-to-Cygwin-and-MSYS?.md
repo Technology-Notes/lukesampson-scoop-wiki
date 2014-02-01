@@ -7,9 +7,13 @@ The most concise comparison I've come across for these 2 projects is an answer b
 > Msys is a command shell substitute<br>
 > The goal of Msys is to provide a POSIX scripting environment.
 
+It's probably not a completely accurate or comprehensive comparison, but it is fairly easy to grasp.
+
 So to parallel this for Scoop:
 
-Scoop is an installer<br>
-The goal of Scoop is to let you use Unix-y programs in a normal Windows environment
+**Scoop is an installer**<br>
+**The goal of Scoop is to let you use Unix-y programs in a normal Windows environment**
 
 Using Scoop lets you achieve similar things to Cygwin and MSYS, but without having to learn about and use a separate environment. You can just keep doing what you're already doing but easily access the cross-platform tools you need.
+
+As it happens, a lot of the programs that Scoop installs either come directly from the MinGW/MSYS project, or were built using their tools. Scoop can only hope to achieve it's goals because of 15 years of amazing work from MinGW/MSYS.
