@@ -28,3 +28,4 @@
 * [Switching between Ruby and Python Versions](wiki/Switching-Ruby-And-Python-Versions)
 * [Why Powershell?](wiki/Why-Powershell%3F)
 * [Example Setup Scripts](wiki/Example-Setup-Scripts)
+* [Using Scoop behind a proxy server](wiki/Using-Scoop-behind-a-proxy)
