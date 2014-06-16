@@ -1,12 +1,10 @@
 ### Prerequisites
-Before you start, make sure you have Powershell 3 installed. Make sure Powershell is enabled for your Windows account i.e. the execution policy allows running scripts that aren't code-signed.
-
-    set-executionpolicy unrestricted -s cu
+Before you start, make sure you have Powershell 3 installed. 
 
 ### Installing Scoop
-In a Powershell command console, run:
+From the command prompt run:
 
-    iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
+    @powershell -NoProfile -ExecutionPolicy unrestricted -Command "iex (new-object net.webclient).downloadstring('https://get.scoop.sh')"
 
 Assuming you didn't see any error messages, Scoop is now ready to run.
 
