@@ -22,6 +22,7 @@
 * [SSH](wiki/SSH-on-Windows)
 * [GitHub with SSH Key](wiki/GitHub-with-SSH-Key)
 * [Apache with PHP](wiki/Apache-with-PHP)
+* [Java](wiki/Java)
 
 ### Misc
 * [System-wide installs](wiki/Global-Installs)
