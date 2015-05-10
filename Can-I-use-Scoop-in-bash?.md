@@ -1,6 +1,6 @@
 ## Short answer: yes!
 
-Add `alias scoop="powershell scoop.ps1"` to your `~/.bashrc` (or `~/.profile` if you're using `busybox`). Restart bash or run `source ~/.bashrc` and Scoop will now work.
+Add `alias scoop="powershell -noprofile -ex unrestricted scoop.ps1"` to your `~/.bashrc` (or `~/.profile` if you're using `busybox`). Restart bash or run `source ~/.bashrc` and Scoop will now work.
 
 ## Long answer
 
