@@ -30,3 +30,4 @@
 * [Why Powershell?](wiki/Why-Powershell%3F)
 * [Example Setup Scripts](wiki/Example-Setup-Scripts)
 * [Using Scoop behind a proxy server](wiki/Using-Scoop-behind-a-proxy)
+* [Can I use Scoop in bash?](wiki/Can-I-Use-Scoop-In-Bash%3F)
