@@ -72,3 +72,11 @@ scoop config proxy username:password@proxy.example.org:8080
 ```powershell
 scoop config proxy none
 ```
+
+##### Using a password containing `@` or `:`
+
+If your proxy password contains `@` or `:` characters, you can escape them using a `\`, e.g.:
+
+```powershell
+scoop config proxy 'username:p\@ssword@proxy.example.org:8080'
+```
