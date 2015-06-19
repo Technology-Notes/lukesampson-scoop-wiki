@@ -42,6 +42,7 @@ By default, Scoop will use the proxy settings from Internet Options, but with an
 * To use the system proxy settings configured in Internet Options, use `default` in place of `host:port`
 * An empty or unset value for proxy is equivalent to `default` (with no username or password)
 * To bypass the system proxy and connect directly, use `none` (with no username or password)
+
 ---
 
 ## Config examples
