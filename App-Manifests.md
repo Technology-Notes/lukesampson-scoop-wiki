@@ -32,6 +32,7 @@ For more examples, see the app manifests in the [main Scoop bucket](https://gith
 * `installer`|`uninstaller`: Instructions for running a non-MSI installer.
     * `file`: The installer executable file. For installer, this defaults to the last URL downloaded. Must be specified for `uninstaller`.
     * `args`: An array of arguments to pass to the installer.
+* `pre_install` | `post_install` : A string or array of strings of the commands to executed before or after an application is installed. 
 * `license`: The software license for the program. For well-known licenses, this will be a string like "MIT" or "GPL2". For custom licenses, this should be the URL of the license.
 * `msi` *(deprecated)*: Settings for running an MSI installer<br>
 **This property is deprecated and support will be removed in a future version of Scoop.** *The new method is to treat .msi files just like a .zip and extract the files from it without running the full install. You can use the new method simply by not including this `msi` property in your manifest.*
