@@ -5,7 +5,7 @@ Scoop has a [main bucket](https://github.com/lukesampson/scoop/tree/master/bucke
 
 By default, when you run `scoop install <app>`, it looks in the main bucket, but it's possible to install from other buckets too.
 
-There's an optional [extras bucket](https://github.com/lukesampson/scoop-extras) containing apps that don't quite fit the criteria of the main bucket, but are still good to have.
+There's an optional [extras bucket](https://github.com/lukesampson/scoop-extras) containing apps that don't quite fit the criteria of the main bucket, but are still good to have. There is also an optional 'versions' bucket containing older versions of some well-known packages.
 
 And Scoop supports adding other buckets. Anyone can set up their own bucket with their own set of apps, and other people can add and install from this bucket—they just need to know the location of the bucket's Git repository.
 
