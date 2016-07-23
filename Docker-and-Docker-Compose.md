@@ -22,7 +22,7 @@ Create our Docker base machine (will be named _default_):
 
 We copy the command to access directly our Docker machine, something like:
 
-    & "C:\Users\_USER_\AppData\Local\scoop\apps\docker-machine\0.7.0\docker-machine.exe" env | Invoke-Expression
+    & "$HOME\AppData\Local\scoop\apps\docker-machine\0.7.0\docker-machine.exe" env | Invoke-Expression
 
 Then we can bring up any Docker image:
 
