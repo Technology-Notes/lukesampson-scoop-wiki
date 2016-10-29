@@ -3,6 +3,8 @@ If you need to run multiple versions of Ruby or Python on the same computer, you
 
 ### Example
 ```powershell
+scoop bucket add versions # add the 'versions' bucket if you haven't already
+
 scoop install ruby ruby19
 ruby --version # -> ruby 1.9.3p448 (2013-06-27) [i386-mingw32]
 
@@ -21,6 +23,9 @@ ruby --version # -> ruby 1.9.3p448 (2013-06-27) [i386-mingw32]
 The same thing works for Python
 
 ```powershell
+# add the 'versions' bucket if you haven't already
+scoop bucket add versions
+
 scoop install python27 python
 python --version # -> Python 3.3.2
 
