@@ -1,6 +1,6 @@
 #### How is Scoop different to [Chocolatey](http://chocolatey.org)?
 
-* **Installs to ~/appdata/local/ by default** You can set up your own programs and not worry that they'll interfere with other users' programs (or theirs with yours, perhaps more importantly). You can optionally choose to install programs system-wide if you have admin rights.
+* **Installs to ~/scoop/ by default** You can set up your own programs and not worry that they'll interfere with other users' programs (or theirs with yours, perhaps more importantly). You can optionally choose to install programs system-wide if you have admin rights.
 * **No UAC popups, doesn't require admin rights.** Since programs are installed just for your user account, you won't be interrupted by UAC popups.
 * **Doesn't pollute your path.** Where possible, Scoop puts your program shims in a single directory and just adds that to your path
 * **Doesn't use NuGet.** NuGet is a great solution to the problem of managing software library dependencies. Scoop avoids this problem altogether: each program you install is isolated and independent.
