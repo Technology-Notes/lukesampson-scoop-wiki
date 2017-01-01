@@ -15,6 +15,7 @@
 * [Buckets](wiki/Buckets)
 * [App Manifests](wiki/App-Manifests)
     * [Creating an App Manifest](wiki/Creating-an-app-manifest)
+    * [Autoupdate](wiki/App-Manifest-Autoupdate)
 * [Dependencies](wiki/Dependencies)
 
 ### Guides
