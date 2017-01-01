@@ -41,3 +41,18 @@ You can also find apps by the name of the commands they install. For example,
     scoop search hg
 
 This shows you that the 'mercurial' app includes 'hg.exe'.
+
+### Updating Scoop
+To get the latest version of scoop you have to run the command
+
+    scoop update
+
+This will download the latest version of scoop and updates the local app manifests.
+
+After you updated scoop you can update individual apps
+
+    scoop update curl
+
+If you want to update all your installed apps you can run
+
+    scoop update *
