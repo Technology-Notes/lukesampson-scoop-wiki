@@ -19,7 +19,7 @@ For more examples, see the app manifests in the [main Scoop bucket](https://gith
 * `version` **required**: The version of the app that this manifest installs.
 * `url` **required**: The URL or URLs of files to download. If there's more than one URL, you can use a JSON * array, e.g. `"url": [ "http://example.org/program.zip", "http://example.org/dependencies.zip" ]`. URLs can be HTTP, HTTPS or FTP.
 * `architecture`: If the app has 32- and 64-bit versions, architecture can be used to wrap the differences ([example](https://github.com/lukesampson/scoop/blob/master/bucket/7zip.json)]).
-    * `32bit|64bit`: contains architecture-specific instructions (`url`, `hash`, `msi`, `pre_install`, `post_install`, `installer`, and `bin`).
+    * `32bit|64bit`: contains architecture-specific instructions (`url`, `hash`, `msi`, `extract_dir`, `pre_install`, `post_install`, `installer`, and `bin`).
 * `bin`: A string or array of strings of programs (executables or scripts) to make available on the user's path.
     * you can also create an alias shim which uses a different name to the real executable and (optionally) passes arguments to the executable. Instead of just using a string for the executable, use e.g: `[ "program.exe", "alias", "--arguments" ]`. See [busybox](https://github.com/lukesampson/scoop/blob/master/bucket/busybox.json) for an example.
 * `shortcuts`: Specifies the shortcut values to made available in a users startmenu. The array specifies an executable/Label pair. See [sourcetree](https://github.com/lukesampson/scoop-extras/blob/master/sourcetree.json) for an example.
