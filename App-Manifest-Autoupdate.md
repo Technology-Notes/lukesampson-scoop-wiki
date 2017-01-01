@@ -13,7 +13,7 @@ It is recommended to verify that the updated manifest still works by installing 
 
 
 ## Add autoupdate to a manifest
-_TODO_
+For the autoupdate feature to work it needs a `checkver` definition to find the latest version number.
 
 *Some manifests already using the `autoupdate` feature*
  - [NodeJS](https://github.com/lukesampson/scoop/blob/master/bucket/nodejs.json)
