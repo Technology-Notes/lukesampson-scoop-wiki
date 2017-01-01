@@ -41,4 +41,4 @@ For more examples, see the app manifests in the [main Scoop bucket](https://gith
     * `silent`: should normally be `true` to try to install without popups and UAC prompts
 * `notes`: A string with a message to be displayed after installing the app.
 * `checkver`: App maintainers and developers can use the [bin/checkver](https://github.com/lukesampson/scoop/blob/master/bin/checkver.ps1) tool to check for updated versions of apps. The **optional** `checkver` property in a manifest is a regular expression that can be used to match the current stable version of an app from the app's homepage. For an example, see the [go](https://github.com/lukesampson/scoop/blob/master/bucket/go.json) manifest. If the homepage doesn't have a reliable indication of the current version, you can also specify a different URL to check—for an example see the [ruby](https://github.com/lukesampson/scoop/blob/master/bucket/ruby.json) manifest.
- 
+* `autoupdate`: Definition of how the manifest can be updated automatically. [App Manifest Autoupdate Documentation](App-Manifest-Autoupdate)
