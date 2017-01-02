@@ -34,3 +34,5 @@ The reason Scoop uses junctions instead of symbolic links is that, unlike symbol
 The main problem being addressed here is how to keep programs working smoothly between updates, even though the new program is in a different directory to the previous one. Shims do solve some of the problems here, by staying in the same place and updating the version that they point to.
 
 However, some programs need to set environment variables, registry settings or other configuration after installation that point to the actual install path. Before Scoop used `current` directory junctions, these variables and settings would be pointing to the old directory after an upgrade, which was not ideal. By using a `current` alias directory and updating the alias, the settings would continue to point to the right location.
+
+![Why Junctions?](https://raw.githubusercontent.com/lukesampson/scoop/gh-pages/images/Junctions%20Comparison.png)
