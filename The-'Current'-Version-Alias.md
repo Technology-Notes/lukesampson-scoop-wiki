@@ -2,6 +2,8 @@ The `current` directory for apps is a special alias directory which points to th
 
 It allows path references to remain the same across app updates, since paths refer to the `current` directory alias rather than a hardcoded version directory.
 
+![How the 'current' alias works](https://raw.githubusercontent.com/lukesampson/scoop/gh-pages/images/Junctions%20Overview.png)
+
 For example, if I run `ls ~/scoop/apps/git` now, I see this output:
 
 ```powershell
