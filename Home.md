@@ -17,6 +17,7 @@
     * [Creating an App Manifest](wiki/Creating-an-app-manifest)
     * [Autoupdate](wiki/App-Manifest-Autoupdate)
 * [Dependencies](wiki/Dependencies)
+* [The 'Current' Version Alias](wiki/The-'Current'-Version-Alias)
 
 ### Guides
 * [Theming Powershell](wiki/Theming-Powershell)
