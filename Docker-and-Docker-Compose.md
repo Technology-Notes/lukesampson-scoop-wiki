@@ -4,7 +4,7 @@ Requirements: [Virtualbox](https://www.virtualbox.org/) or [VmWare](https://www.
 
 Docker is on the extras repo of Scoop:
 
-    scoop add extras
+    scoop bucket add extras
 
 Set-up Docker stack:
 
