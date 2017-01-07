@@ -23,6 +23,7 @@ Some manifests already using the `autoupdate` feature:
 
 ```
     "autoupdate": {
+        "note": "Thanks for using autoupdate, please test your updates!",
         "architecture": {
             "64bit": {
                 "url": "https://example.org/dl/example-v$version-x64.msi"
