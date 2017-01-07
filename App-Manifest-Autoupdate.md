@@ -48,6 +48,7 @@ All the options can be set globally for all architectures or for each architectu
 
  - `url`: an url template for generating the new url (Variables: `$version` (_3.7.1_), `$underscoreVersion` (_3_7_1_))
  - `extract_dir`: Option to update `extract_dir` option (Variables: `$version`)
+ - `note`: Optional message to be displayed when the autoupdate command is run
 
 #### Hashing `hash`
 There are several options to obtain the hash of the new file, if nothing is defined the files will be downloaded and hashed locally.
