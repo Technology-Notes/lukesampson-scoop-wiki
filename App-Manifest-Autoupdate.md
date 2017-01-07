@@ -54,7 +54,7 @@ There are several options to obtain the hash of the new file, if nothing is defi
 
  - `mode`: Can be `extract` (download from `url` and find with the regex), `rdf` to extract from a RDF file ([imagemagick](https://github.com/lukesampson/scoop/blob/master/bucket/imagemagick.json)) or `download` (default) for downloading the file and hash it locally
  - `url`: Url of the page to download or the RDF file (Variables: `$version`, `$url`)
- - `find`: A regex to extract the hash from the source
+ - `find`: A regex to extract the hash from the source (Variables: `$basename`)
  - `type`: The type of the hash (`sha1`, `sha256` (default), `sha512`)
 
 ### Limitations
