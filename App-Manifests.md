@@ -33,7 +33,7 @@ For more examples, see the app manifests in the [main Scoop bucket](https://gith
     * `file`: The installer executable file. For installer, this defaults to the last URL downloaded. Must be specified for `uninstaller`.
     * `args`: An array of arguments to pass to the installer. Optional.
     * `keep`: `"true"` if the installer should be kept after running (for future uninstallation, as an example). If omitted or set to any other value, the installer will be deleted after running. See [`vc-redist14`](https://github.com/lukesampson/scoop/blob/master/bucket/vc-redist14.json) for an example. This option will be ignored when used in an `uninstaller` directive.
-* `pre_install` | `post_install` : A string or array of strings of the commands to executed before or after an application is installed. 
+* `pre_install` | `post_install` : A string or array of strings of the commands to executed before or after an application is installed. (Available variables: `$dir`, `$version` many more (_check the `lib/install` script_))
 * `license`: The software license for the program. For well-known licenses, this will be a string like "MIT" or "GPL2". For custom licenses, this should be the URL of the license.
 * `msi` *(deprecated)*: Settings for running an MSI installer<br>
 **This property is deprecated and support will be removed in a future version of Scoop.** *The new method is to treat .msi files just like a .zip and extract the files from it without running the full install. You can use the new method simply by not including this `msi` property in your manifest.*
