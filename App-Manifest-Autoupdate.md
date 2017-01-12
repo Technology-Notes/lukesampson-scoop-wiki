@@ -47,7 +47,14 @@ Some manifests already using the `autoupdate` feature:
 
 All the options can be set globally for all architectures or for each architecture separately 
 
- - `url`: an url template for generating the new url. (Variables: `$version` (_3.7.1_), `$underscoreVersion` (_3_7_1_), `$cleanVersion` (_371_), `$majorVersion` (_3_), `$minorVersion` (_3.7_), `$patchVersion` (_3.7.1_))
+ - `url`: an url template for generating the new url. It supports the following variables:
+   - `$version`: `3.7.1`
+   - `$underscoreVersion`: `3_7_1`
+   - `$cleanVersion`: `371`
+   - `$majorVersion`: `3`
+   - `$minorVersion`: `7`
+   - `$patchVersion`: `1`
+   - `$preReleaseVersion`: Everything after the first `-`, e.g. `3.7.1-rc.1` would result in `rc.1`
  - `extract_dir`: Option to update `extract_dir` option (Variables: `$version`)
  - `note`: Optional message to be displayed when the autoupdate command is run
 
