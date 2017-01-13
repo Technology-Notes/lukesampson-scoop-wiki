@@ -14,10 +14,13 @@ When this manifest is run with `scoop install` it will download the zip file spe
 
 For more examples, see the app manifests in the [main Scoop bucket](https://github.com/lukesampson/scoop/tree/master/bucket).
 
-### Reference
+### Required Properties
 
-* `version` **required**: The version of the app that this manifest installs.
-* `url` **required**: The URL or URLs of files to download. If there's more than one URL, you can use a JSON * array, e.g. `"url": [ "http://example.org/program.zip", "http://example.org/dependencies.zip" ]`. URLs can be HTTP, HTTPS or FTP.
+* `version`: The version of the app that this manifest installs.
+* `url`: The URL or URLs of files to download. If there's more than one URL, you can use a JSON * array, e.g. `"url": [ "http://example.org/program.zip", "http://example.org/dependencies.zip" ]`. URLs can be HTTP, HTTPS or FTP.
+
+### Optional Properties
+
 * `architecture`: If the app has 32- and 64-bit versions, architecture can be used to wrap the differences ([example](https://github.com/lukesampson/scoop/blob/master/bucket/7zip.json)]).
     * `32bit|64bit`: contains architecture-specific instructions (`url`, `hash`, `extract_dir`, `pre_install`, `post_install`, `installer`, `bin`, and `msi` [`msi` is deprecated]).
 * `bin`: A string or array of strings of programs (executables or scripts) to make available on the user's path.
@@ -36,10 +39,10 @@ For more examples, see the app manifests in the [main Scoop bucket](https://gith
 * `pre_install` | `post_install` : A string or array of strings of the commands to executed before or after an application is installed. (Available variables: `$dir`, `$version` many more (_check the `lib/install` script_))
 * `license`: The software license for the program. For well-known licenses, this will be a string like "MIT" or "GPL2". For custom licenses, this should be the URL of the license.
 * `notes`: A string with a message to be displayed after installing the app.
-* `checkver`: App maintainers and developers can use the [bin/checkver](https://github.com/lukesampson/scoop/blob/master/bin/checkver.ps1) tool to check for updated versions of apps. The **optional** `checkver` property in a manifest is a regular expression that can be used to match the current stable version of an app from the app's homepage. For an example, see the [go](https://github.com/lukesampson/scoop/blob/master/bucket/go.json) manifest. If the homepage doesn't have a reliable indication of the current version, you can also specify a different URL to check—for an example see the [ruby](https://github.com/lukesampson/scoop/blob/master/bucket/ruby.json) manifest.
+* `checkver`: App maintainers and developers can use the [bin/checkver](https://github.com/lukesampson/scoop/blob/master/bin/checkver.ps1) tool to check for updated versions of apps. The `checkver` property in a manifest is a regular expression that can be used to match the current stable version of an app from the app's homepage. For an example, see the [go](https://github.com/lukesampson/scoop/blob/master/bucket/go.json) manifest. If the homepage doesn't have a reliable indication of the current version, you can also specify a different URL to check—for an example see the [ruby](https://github.com/lukesampson/scoop/blob/master/bucket/ruby.json) manifest.
 * `autoupdate`: Definition of how the manifest can be updated automatically. [App Manifest Autoupdate Documentation](App-Manifest-Autoupdate)
 
-### Deprecated Options
+### Deprecated Properties
 
 * `msi` *(deprecated)*: Settings for running an MSI installer<br>
 **This property is deprecated and support will be removed in a future version of Scoop.** *The new method is to treat .msi files just like a .zip and extract the files from it without running the full install. You can use the new method simply by not including this `msi` property in your manifest.*
