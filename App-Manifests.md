@@ -22,10 +22,11 @@ For more examples, see the app manifests in the [main Scoop bucket](https://gith
 ### Optional Properties
 
 * `architecture`: If the app has 32- and 64-bit versions, architecture can be used to wrap the differences ([example](https://github.com/lukesampson/scoop/blob/master/bucket/7zip.json)]).
-    * `32bit|64bit`: contains architecture-specific instructions (`url`, `hash`, `extract_dir`, `pre_install`, `post_install`, `installer`, `bin`, and `msi` [`msi` is deprecated]).
+    * `32bit|64bit`: contains architecture-specific instructions (`bin`, `extract_dir`, `hash`, `installer`,  `pre_install`, `post_install`, `url`, and `msi` [`msi` is deprecated]).
+* `autoupdate`: Definition of how the manifest can be updated automatically. [App Manifest Autoupdate Documentation](App-Manifest-Autoupdate)
 * `bin`: A string or array of strings of programs (executables or scripts) to make available on the user's path.
     * you can also create an alias shim which uses a different name to the real executable and (optionally) passes arguments to the executable. Instead of just using a string for the executable, use e.g: `[ "program.exe", "alias", "--arguments" ]`. See [busybox](https://github.com/lukesampson/scoop/blob/master/bucket/busybox.json) for an example.
-* `shortcuts`: Specifies the shortcut values to made available in a users startmenu. The array specifies an executable/Label pair. See [sourcetree](https://github.com/lukesampson/scoop-extras/blob/master/sourcetree.json) for an example.
+* `checkver`: App maintainers and developers can use the [bin/checkver](https://github.com/lukesampson/scoop/blob/master/bin/checkver.ps1) tool to check for updated versions of apps. The `checkver` property in a manifest is a regular expression that can be used to match the current stable version of an app from the app's homepage. For an example, see the [go](https://github.com/lukesampson/scoop/blob/master/bucket/go.json) manifest. If the homepage doesn't have a reliable indication of the current version, you can also specify a different URL to check—for an example see the [ruby](https://github.com/lukesampson/scoop/blob/master/bucket/ruby.json) manifest.
 * `depends`: Runtime dependencies for the app.
 * `env_add_path`: Add this directory to the user's path (or system path if `--global` is used). The directory is relative to the install directory, and must be inside the install directory.
 * `env_set`: Sets one or more environment variables for the user (or system if `--global` is used) ([example](https://github.com/lukesampson/scoop/blob/master/bucket/go.json)).
@@ -36,11 +37,10 @@ For more examples, see the app manifests in the [main Scoop bucket](https://gith
     * `file`: The installer executable file. For installer, this defaults to the last URL downloaded. Must be specified for `uninstaller`.
     * `args`: An array of arguments to pass to the installer. Optional.
     * `keep`: `"true"` if the installer should be kept after running (for future uninstallation, as an example). If omitted or set to any other value, the installer will be deleted after running. See [`vc-redist14`](https://github.com/lukesampson/scoop/blob/master/bucket/vc-redist14.json) for an example. This option will be ignored when used in an `uninstaller` directive.
-* `pre_install` | `post_install` : A string or array of strings of the commands to executed before or after an application is installed. (Available variables: `$dir`, `$version` many more (_check the `lib/install` script_))
 * `license`: The software license for the program. For well-known licenses, this will be a string like "MIT" or "GPL2". For custom licenses, this should be the URL of the license.
 * `notes`: A string with a message to be displayed after installing the app.
-* `checkver`: App maintainers and developers can use the [bin/checkver](https://github.com/lukesampson/scoop/blob/master/bin/checkver.ps1) tool to check for updated versions of apps. The `checkver` property in a manifest is a regular expression that can be used to match the current stable version of an app from the app's homepage. For an example, see the [go](https://github.com/lukesampson/scoop/blob/master/bucket/go.json) manifest. If the homepage doesn't have a reliable indication of the current version, you can also specify a different URL to check—for an example see the [ruby](https://github.com/lukesampson/scoop/blob/master/bucket/ruby.json) manifest.
-* `autoupdate`: Definition of how the manifest can be updated automatically. [App Manifest Autoupdate Documentation](App-Manifest-Autoupdate)
+* `pre_install` | `post_install` : A string or array of strings of the commands to executed before or after an application is installed. (Available variables: `$dir`, `$version` many more (_check the `lib/install` script_))
+* `shortcuts`: Specifies the shortcut values to made available in a users startmenu. The array specifies an executable/Label pair. See [sourcetree](https://github.com/lukesampson/scoop-extras/blob/master/sourcetree.json) for an example.
 
 ### Deprecated Properties
 
