@@ -51,10 +51,15 @@ All the options can be set globally for all architectures or for each architectu
    - `$version`: `3.7.1`
    - `$underscoreVersion`: `3_7_1`
    - `$cleanVersion`: `371`
-   - `$majorVersion`: `3`
-   - `$minorVersion`: `7`
-   - `$patchVersion`: `1`
+   - The `$version` (e.g. `3.7.1.2`) is splitted on each `.` and is assigned to:
+     - `$majorVersion`: `3`
+     - `$minorVersion`: `7`
+     - `$patchVersion`: `1`
+     - `$buildVersion`: `2`
    - `$preReleaseVersion`: Everything after the first `-`, e.g. `3.7.1-rc.1` would result in `rc.1`
+   - Each version regex group (see [checkver property](https://github.com/lukesampson/scoop/wiki/App-Manifests#optional-properties)) adds a `$matchX` variable (named groups are allowed). Matching `v3.7.1/3.7` with `v(?<version>[\d.]+)\/(?<short>[\d.]+)` would result in:
+      - `$match1` or `$matchVersion`: `3.7.1`
+      - `$match2` or `$matchShort`: `3.7`
  - `extract_dir`: Option to update `extract_dir` option (Variables: `$version`)
  - `note`: Optional message to be displayed when the autoupdate command is run
 
