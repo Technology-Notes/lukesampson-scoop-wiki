@@ -1,17 +1,23 @@
 ### Prerequisites
-Before you start, make sure you have Powershell 3 installed. Make sure Powershell is enabled for your Windows account i.e. the execution policy allows running scripts that aren't code-signed.
+Make sure you have **PowerShell 3** or later installed. If you're on *Windows 10* or *Windows Server 2012*, you should have PowerShell 4 or 5 by default, but *Windows 7* and *Windows Server 2008* might have older versions.
 
-    set-executionpolicy unrestricted -s cu
+Make sure you have allowed PowerShell to execute local scripts:
+
+```powershell
+set-executionpolicy remotesigned -scope currentuser
+```
+
+`Unrestricted` will work instead of `RemoteSigned`, but it is less secure so stick with `RemoteSigned` if you're not sure.
 
 ### Installing Scoop
-In a Powershell command console, run:
+In a PowerShell command console, run:
 
     iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
 
 Assuming you didn't see any error messages, Scoop is now ready to run.
 
 ### Using Scoop
-Although Scoop is written in Powershell, it's interface is closer to Git and Mercurial than it is to most Powershell programs.
+Although Scoop is written in PowerShell, it's interface is closer to Git and Mercurial than it is to most PowerShell programs.
 
 To get an overview of Scoop's interface, run:
 
@@ -19,7 +25,7 @@ To get an overview of Scoop's interface, run:
 
 You'll see a list of commands with a brief summary of what each command does. For more detailed information on a command, run `scoop help <command>`, e.g. `scoop help install` (try it!).
 
-Now that you have a rough idea of how scoop commands work, let's try installing something.
+Now that you have a rough idea of how Scoop commands work, let's try installing something.
 
     scoop install curl
 
@@ -43,16 +49,16 @@ You can also find apps by the name of the commands they install. For example,
 This shows you that the 'mercurial' app includes 'hg.exe'.
 
 ### Updating Scoop
-To get the latest version of scoop you have to run the command
+To get the latest version of Scoop you have to run the command
 
     scoop update
 
 This will download the latest version of scoop and updates the local app manifests.
 
-After you updated scoop you can update individual apps
+After you updated Scoop you can update individual apps
 
     scoop update curl
 
-If you want to update all your installed apps you can run
+If you want to update all your installed apps, you can run
 
     scoop update *
