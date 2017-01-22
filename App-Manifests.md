@@ -41,7 +41,7 @@ For more examples, see the app manifests in the [main Scoop bucket](https://gith
 * `notes`: A string with a message to be displayed after installing the app.
 * `pre_install` | `post_install` : A string or array of strings of the commands to executed before or after an application is installed. (Available variables: `$dir`, `$version` many more (_check the `lib/install` script_))
 * `psmodule`: Install as a PowerShell module in `~/scoop/modules`.
-    * `name` (required): the name of the module, which should match at least one file in the extracted directory for PowerShell to recognise this as a module.
+    * `name` (required for `psmodule`): the name of the module, which should match at least one file in the extracted directory for PowerShell to recognise this as a module.
 * `shortcuts`: Specifies the shortcut values to made available in a users startmenu. The array specifies an executable/Label pair. See [sourcetree](https://github.com/lukesampson/scoop-extras/blob/master/sourcetree.json) for an example.
 
 ### Deprecated Properties
