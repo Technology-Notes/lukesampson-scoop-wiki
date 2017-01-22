@@ -1,5 +1,9 @@
 ### Prerequisites
-Make sure you have **PowerShell 3** or later installed. If you're on *Windows 10* or *Windows Server 2012*, you should have PowerShell 4 or 5 by default, but *Windows 7* and *Windows Server 2008* might have older versions.
+Make sure you have **PowerShell 3** or later installed. If you're on *Windows 10* or *Windows Server 2012* you should be all set, but *Windows 7* and *Windows Server 2008* might have older versions.
+
+```powershell
+$psversiontable.psversion.major # should be >= 3
+```
 
 Make sure you have allowed PowerShell to execute local scripts:
 
@@ -7,12 +11,14 @@ Make sure you have allowed PowerShell to execute local scripts:
 set-executionpolicy remotesigned -scope currentuser
 ```
 
-`Unrestricted` will work instead of `RemoteSigned`, but it is less secure so stick with `RemoteSigned` if you're not sure.
+`Unrestricted` will work too, but it is less secure. So stick with `RemoteSigned` if you're not sure.
 
 ### Installing Scoop
 In a PowerShell command console, run:
 
-    iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
+```powershell
+iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
+```
 
 Assuming you didn't see any error messages, Scoop is now ready to run.
 
