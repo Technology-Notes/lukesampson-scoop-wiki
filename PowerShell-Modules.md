@@ -4,7 +4,7 @@ The `~\scoop\modules` directory will be added to your `$env:PSModulePath` enviro
 
 The directories under `~\scoop\modules` aren't normal directories. Each is a **directory junction** which points to the currently installed version of the app/module, which is itself a directory junction pointing to the actual versioned directory. So for a module named `MyPSModue` you might have something like this:
 
-`~\scoop\modules\MyPSModule` -> `~\scoop\apps\mypsmodule\current` -> `~\scoop\apps\mypsmodule\1.16.0.rc2`
+`~\scoop\modules\MyPSModule` &rarr; `~\scoop\apps\mypsmodule\current` &rarr; `~\scoop\apps\mypsmodule\1.16.0.rc2`
 
 The key part of the [Scoop manifest](App-Manifests) for a PowerShell module is this:
 
