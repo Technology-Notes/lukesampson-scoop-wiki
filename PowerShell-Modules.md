@@ -2,7 +2,7 @@ PowerShell modules are installed like other apps, but they are also linked under
 
 The `~\scoop\modules` directory will be added to your `$env:PSModulePath` environment variable, and PowerShell should automatically detect the modules you install here using Scoop.
 
-The directories under `~\scoop\modules` aren't normal directories. Each is a **directory junction** which points to the currently installed version of the app/module, which is itself a directory junction pointing to the actual versioned directory. So for a module named `MyPSModue` you might have something like this:
+The directories under `~\scoop\modules` aren't normal directories. Each is a **directory junction** which points to the currently installed version of the app/module, which is itself a directory junction pointing to the actual versioned directory. So for a module named `MyPSModule` you might have something like this:
 
 `~\scoop\modules\MyPSModule`<br>
 &nbsp;&nbsp;&rarr; *points to* `~\scoop\apps\mypsmodule\current`<br>
