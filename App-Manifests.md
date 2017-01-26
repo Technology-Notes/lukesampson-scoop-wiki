@@ -44,6 +44,15 @@ For more examples, see the app manifests in the [main Scoop bucket](https://gith
     * `name` (required for `psmodule`): the name of the module, which should match at least one file in the extracted directory for PowerShell to recognise this as a module.
 * `shortcuts`: Specifies the shortcut values to made available in a users startmenu. The array specifies an executable/Label pair. See [sourcetree](https://github.com/lukesampson/scoop-extras/blob/master/sourcetree.json) for an example.
 
+### Undocumented Properties
+
+* `_comment`
+* `cookie`
+* `description`
+* `extract_to`
+* `innosetup`
+* `travel_dirs`
+
 ### Deprecated Properties
 
 * `msi` *(deprecated)*: Settings for running an MSI installer<br>
