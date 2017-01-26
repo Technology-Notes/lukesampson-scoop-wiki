@@ -4,3 +4,8 @@ If you've tried Scoop and it's not for you—no problem. You can uninstall Scoop
 
 This will let you know what's going to happen and ask if you're sure—just type 'y' and press enter to confirm.
 
+
+### Broken Install
+
+If you delete `~/scoop` you should be able to reinstall.
+
