@@ -44,7 +44,7 @@ For more examples, see the app manifests in the [main Scoop bucket](https://gith
     * `name` (required for `psmodule`): the name of the module, which should match at least one file in the extracted directory for PowerShell to recognise this as a module.
 * `shortcuts`: Specifies the shortcut values to made available in a users startmenu. The array specifies an executable/Label pair. See [sourcetree](https://github.com/lukesampson/scoop-extras/blob/master/sourcetree.json) for an example.
 * `suggest`: Suggest optional apps that provide complementary features. See [ant](https://github.com/lukesampson/scoop/blob/master/bucket/ant.json) for an example. 
-    * `[Feature Name] = [ app1, app2 ]` e.g. `"JDK": [ "extras/oraclejdk", "openjdk" ]` 
+    * `[Feature Name] = [ app1, app2 ]`<br>e.g. `"JDK": [ "extras/oraclejdk", "openjdk" ]` 
 
 ### Undocumented Properties
 
