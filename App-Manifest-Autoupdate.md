@@ -1,9 +1,30 @@
-Here you will find a in depth explanation how the `autoupdate` part of a app manifest works
+Here you will find an in-depth explanation of how the `autoupdate` part of an app manifest works.
 
 ## Using autoupdate
-In the output of `checkver` you can see if an outdated app has autoupdate available, if so you can run following command to automatically update the manifest
+
+Use `checkver` to query the current version of either a specific app, or all apps of a bucket.
+
+To query the current version of a specific app of the main bucket, run:
+
+    .\bin\checkver.ps1 <app>
+
+To query the current version of all apps of the main bucket, run:
+
+    .\bin\checkver.ps1
+
+or use * in place of the app name:
+
+    .\bin\checkver.ps1 *
+
+which can be used to check all versions of a bucket other than the main bucket (see below).
+
+In the output of `checkver` you can see if an outdated app has autoupdate available. If so, you can run the following command to automatically update the respective app's manifest
 
     .\bin\checkver.ps1 <app> -u
+
+To use a bucket other than the main bucket, specify its directory as a second argument to `checkver`
+
+    .\bin\checkver.ps1 <app> <bucket_dir> -u
 
 It is recommended to verify that the updated manifest still works by installing the app with following command
 
