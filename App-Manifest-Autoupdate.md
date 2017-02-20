@@ -78,11 +78,15 @@ All the options can be set globally for all architectures or for each architectu
      - `$patchVersion`: `1`
      - `$buildVersion`: `2`
    - `$preReleaseVersion`: Everything after the first `-`, e.g. `3.7.1-rc.1` would result in `rc.1`
-   - Each version regex group (see [checkver property](https://github.com/lukesampson/scoop/wiki/App-Manifests#optional-properties)) adds a `$matchX` variable (named groups are allowed). Matching `v3.7.1/3.7` with `v(?<version>[\d.]+)\/(?<short>[\d.]+)` would result in:
+   - Each capturing group in the [checkver property](https://github.com/lukesampson/scoop/wiki/App-Manifests#optional-properties) adds a `$matchX` variable (named groups are allowed). Matching `v3.7.1/3.7` with [`v(?<version>[\d.]+)\/(?<short>[\d.]+)`](https://regex101.com/r/M7RP3p/1) would result in:
       - `$match1` or `$matchVersion`: `3.7.1`
       - `$match2` or `$matchShort`: `3.7`
- - `extract_dir`: Option to update `extract_dir` option (Variables: `$version`)
+ - `extract_dir`: Option to update `extract_dir` (Variables: see above)
  - `note`: Optional message to be displayed when the autoupdate command is run
+
+Some examples with autoupdate and multiple $match variables:
+* [haxe.json](https://github.com/lukesampson/scoop/blob/master/bucket/haxe.json)
+* [openjdk.json](https://github.com/lukesampson/scoop/blob/master/bucket/openjdk.json)
 
 #### Hashing `hash`
 There are several options to obtain the hash of the new file, if nothing is defined the files will be downloaded and hashed locally.
