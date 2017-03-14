@@ -1,3 +1,5 @@
+Auto Update is a tool for package maintainers. It automatically checks for new versions of an app and updates the manifest accordingly. It helps to eliminate much of the tedium of updating manifests, as well as reducing the risk of human error while doing so.
+
 Here you will find an in-depth explanation of how the `autoupdate` part of an app manifest works.
 
 ## Using autoupdate
