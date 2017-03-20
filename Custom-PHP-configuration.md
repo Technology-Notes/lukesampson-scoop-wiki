@@ -1,4 +1,4 @@
-If you want to customize the settings of your PHP Installation you should never edit the `php.ini` file inside the PHP directory. This file will not survive updates.
+If you want to customise the settings of your PHP Installation you should never edit the `php.ini` file inside the PHP directory. This file will not survive updates.
 
 Always create you own custom configuration files inside the configuration scan dir.
 The directory is located at `~/scoop/apps/php/conf`. You can create as many `.ini` files as you like.
