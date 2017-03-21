@@ -8,6 +8,7 @@
 ### Getting Started
 * [Quick Start](wiki/Quick-Start)
 * [Command Help](wiki/Commands)
+* [FAQ](wiki/FAQ)
 * [Uninstalling Scoop](wiki/Uninstalling-Scoop)
 
 ### Concepts
