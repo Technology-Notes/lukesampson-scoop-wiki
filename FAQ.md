@@ -1,5 +1,3 @@
-# FAQ
-
 *Do you have a question that's not answered here? Please create an issue.*
 
 ### How do I update my apps?
@@ -32,6 +30,6 @@ scoop uninstall git
 
 ### Scoop is very slow when installing, locks up the CPU, or shows access denied errors
 
-It's possible that your antivirus or anti-malware program is doing a realtime scan as files are being extracted. Please see [Antivirus and Anti-Malware Problems](https://github.com/lukesampson/scoop/wiki/Antivirus-and-Anti-Malware-Problems) for more information and possible workarounds.
+It's likely that your antivirus or anti-malware program is doing a realtime scan as files are being extracted. Please see [Antivirus and Anti-Malware Problems](https://github.com/lukesampson/scoop/wiki/Antivirus-and-Anti-Malware-Problems) for more information and possible workarounds.
 
 *[todo: insert more FAQS here]*
