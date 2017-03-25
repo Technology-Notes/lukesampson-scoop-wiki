@@ -47,13 +47,14 @@ In the above example, Scoop will download `program.exe` but save it as `dl.7z`, 
     * `keep`: `"true"` if the installer should be kept after running (for future uninstallation, as an example). If omitted or set to any other value, the installer will be deleted after running. See [`vc-redist14`](https://github.com/lukesampson/scoop/blob/master/bucket/vc-redist14.json) for an example. This option will be ignored when used in an `uninstaller` directive.
 * `license`: The software license for the program. For well-known licenses, this will be a string like "MIT" or "GPL2". For custom licenses, this should be the URL of the license.
 * `notes`: A string with a message to be displayed after installing the app.
-* `pre_install` | `post_install` : A string or array of strings of the commands to executed before or after an application is installed. (Available variables: `$dir`, `$version` many more (_check the `lib/install` script_))
+* `pre_install` | `post_install` : A string or array of strings of the commands to executed before or after an application is installed. (Available variables: `$dir`, `$data_dir`, `$version` many more (_check the `lib/install` script_))
 * `psmodule`: Install as a PowerShell module in `~/scoop/modules`.
     * `name` (required for `psmodule`): the name of the module, which should match at least one file in the extracted directory for PowerShell to recognise this as a module.
 * `shortcuts`: Specifies the shortcut values to made available in a users startmenu. The array specifies an executable/Label pair. See [sourcetree](https://github.com/lukesampson/scoop-extras/blob/master/sourcetree.json) for an example.
 * `suggest`: Display a message suggesting optional apps that provide complementary features. See [ant](https://github.com/lukesampson/scoop/blob/master/bucket/ant.json) for an example. 
     * `["Feature Name"] = [ "app1", "app2"... ]`<br>e.g. `"JDK": [ "extras/oraclejdk", "openjdk" ]`<br>
 If any of the apps suggested for the feature are already installed, the feature will be treated as 'fulfilled' and the user won't see any suggestions.
+* **Coming soon:** `persist` A string or array of strings of directories and files to to persist inside the data directory for the app.
 
 ### Undocumented Properties
 
