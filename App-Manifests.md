@@ -62,7 +62,6 @@ If any of the apps suggested for the feature are already installed, the feature 
 * `description`
 * `extract_to`
 * `innosetup`
-* `travel_dirs`
 
 ### Deprecated Properties
 
