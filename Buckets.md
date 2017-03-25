@@ -33,7 +33,7 @@ Here's an example of one way you might go about creating a new bucket, using Git
 1. Create a new GitHub repo called my-bucket
 2. Add an app to your bucket. In a powershell session:
 
-    ```powershell
+```powershell
 git clone https://github.com/<your-username>/my-bucket
 cd my-bucket
 '{ version: "1.0", url: "https://gist.github.com/lukesampson/6446238/raw/hello.ps1", bin: "hello.ps1" }' > hello.json
@@ -43,12 +43,12 @@ git push
 ```
 3. Configure Scoop to use your new bucket:
 
-    ```powershell
+```powershell
 scoop bucket add my-bucket https://github.com/<your-username>/my-bucket
 ```
 4. Check that it works:
 
-    ```powershell
+```powershell
 scoop bucket list # -> you should see 'my-bucket'
 scoop search hello # -> you should see hello listed under, 'my-bucket bucket:'
 scoop install hello
