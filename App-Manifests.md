@@ -54,7 +54,7 @@ In the above example, Scoop will download `program.exe` but save it as `dl.7z`, 
 * `suggest`: Display a message suggesting optional apps that provide complementary features. See [ant](https://github.com/lukesampson/scoop/blob/master/bucket/ant.json) for an example. 
     * `["Feature Name"] = [ "app1", "app2"... ]`<br>e.g. `"JDK": [ "extras/oraclejdk", "openjdk" ]`<br>
 If any of the apps suggested for the feature are already installed, the feature will be treated as 'fulfilled' and the user won't see any suggestions.
-* **Coming soon:** `persist` A string or array of strings of directories and files to to persist inside the data directory for the app.
+* **Coming soon:** `persist` A string or array of strings of directories and files to to persist inside the data directory for the app. [Persistent data](Persistent-data)
 
 ### Undocumented Properties
 
