@@ -30,3 +30,9 @@ Optionally a item can have a different name inside the data directory
 - [MariaDB](/lukesampson/scoop/blob/master/bucket/mariadb.json)
 - [NGINX](/lukesampson/scoop/blob/master/bucket/ngnix.json)
 - [node.js](/lukesampson/scoop/blob/master/bucket/nodejs.json)
+
+## Uninstall
+
+There is a flag to purge all persist data when you uninstall an app. By default the data will be kept until you remove it.
+
+    scoop uninstall -p nodejs
