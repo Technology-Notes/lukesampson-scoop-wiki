@@ -58,7 +58,7 @@ Use a JSON endpoint with rudimentary JSON path expressions to retrieve the versi
 },
 ```
 
-Use latest app release on Github by setting `checkver` to `Ggithub` and the `homepage` to the repository URL. This will try to match the tag with `\/releases\/tag\/(?:v)?([\d.]+)`. *The repository maintainer has to use Github's release feature for this to work. Pre-releases will be ignored!* Example: [nvm](https://github.com/lukesampson/scoop/blob/master/bucket/nvm.json)
+Use latest app release on Github by setting `checkver` to `github` and the `homepage` to the repository URL. This will try to match the tag with `\/releases\/tag\/(?:v)?([\d.]+)`. *The repository maintainer has to use Github's release feature for this to work. Pre-releases will be ignored!* Example: [nvm](https://github.com/lukesampson/scoop/blob/master/bucket/nvm.json)
 ```
 "homepage": "https://github.com/coreybutler/nvm-windows",
 "checkver": "github",
