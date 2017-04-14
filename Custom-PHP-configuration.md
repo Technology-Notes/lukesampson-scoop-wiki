@@ -1,7 +1,7 @@
-If you want to customise the settings of your PHP Installation you should never edit the `php.ini` file inside the PHP directory. This file will not survive updates.
+If you want to customize the settings of your PHP Installation you should never edit the `php.ini` file inside the PHP directory. This file will not survive updates.
 
 Always create you own custom configuration files inside the configuration scan dir.
-The directory is located at `~/scoop/apps/php/conf`. You can create as many `.ini` files as you like.
+The directory is located at `~/scoop/persist/php/cli/conf.d`. You can create as many `.ini` files as you like.
 
 ## Examples
 
@@ -24,7 +24,7 @@ error_reporting = E_ALL
 html_errors = Off
 ```
 
-Enabling php modules, those are the most commonly needed modules. Take a look inside the `php.ini` what is available (`extensions.ini`)
+Enabling PHP modules, those are the most commonly needed modules. Take a look inside the `php.ini` what is available (`extensions.ini`)
 
 ``` ini
 extension=php_curl.dll
@@ -43,4 +43,4 @@ extension=php_sqlite3.dll
 extension=php_tidy.dll
 ```
 
-_Tip: You can git to store you configurations_
+_Tip: You can use git to store your configurations_
