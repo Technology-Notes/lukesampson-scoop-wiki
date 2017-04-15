@@ -175,6 +175,8 @@ Use a JSON endpoint with rudimentary JSON path expressions to retrieve the hash.
 }
 ```
 
+All the options can be set globally for all architectures or for each architecture separately
+
  - `mode`:
    - `extract`: download from `url` and find with the regex
    - `rdf`: extract from a RDF file ([imagemagick](https://github.com/lukesampson/scoop/blob/master/bucket/imagemagick.json))
