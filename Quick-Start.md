@@ -1,4 +1,10 @@
 ### Prerequisites
+To get to the PowerShell prompt 
+  * "Start" --> (Search) "cmd"
+  * Terminal window should appear
+  * "powershell"
+  * Prompt should now start with "PS "
+
 Make sure you have **PowerShell 3** or later installed. If you're on *Windows 10* or *Windows Server 2012* you should be all set, but *Windows 7* and *Windows Server 2008* might have older versions.
 
 ```powershell
