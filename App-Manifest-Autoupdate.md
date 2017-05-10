@@ -195,7 +195,7 @@ There are some complex manifests which reach the limits of the current autoupdat
  - ~~The `pre_install` or `post_install` commands contain references to the version ([python](https://github.com/lukesampson/scoop/blob/master/bucket/python.json), [python-exp](https://github.com/lukesampson/scoop/blob/master/bucket/python-exp.json))~~ There is a variable `$version` around for that
  - The `env_set` is version depend ([sbcl](https://github.com/lukesampson/scoop/blob/master/bucket/sbcl.json))
 
-# Testing autoupdate
+# Testing and running autoupdate
 If you want to confirm an autoupdate works (e.g. after adding it to an existing manifest or creating a new one) change the `version` field to a lower or different version and then run
 
     .\bin\checkver.ps1 <app> -u
