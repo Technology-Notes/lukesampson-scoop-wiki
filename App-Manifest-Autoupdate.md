@@ -178,14 +178,18 @@ Use a JSON endpoint with rudimentary JSON path expressions to retrieve the hash.
 All the options can be set globally for all architectures or for each architecture separately
 
  - `mode`:
-   - `extract`: download from `url` and find with the regex
+   - `extract`: (default) download from `url` and find with the regex
    - `rdf`: extract from a RDF file ([imagemagick](https://github.com/lukesampson/scoop/blob/master/bucket/imagemagick.json))
    - `json`: extract from a JSON file ([openssl](https://github.com/lukesampson/scoop/blob/master/bucket/openssl.json))
-   - `download`: (default) downloads the file and hash it locally
- - `url`: Url of the page to download or the RDF or JSON file (Variables: same as [`autoupdate` url](#add-autoupdate-to-a-manifest) and `$url`)
- - `find`: A regex to extract the hash from the source (Variables: `$basename`) [Defaults to: `^([a-fA-F0-9]+)$` and `([a-fA-F0-9]+)\s+\*?(?:$basename)`]
+   - `download`: (fallback) downloads the file and hash it locally
+ - `url`: URL template for downloading RDF/JSON files or extracting hashes. It supports the following variables:
+   - All variables used for [`autoupdate` URLs](#add-autoupdate-to-a-manifest)
+   - `$url`: autoupdate URL without fragments (`#/dl.7z`) [e.g. `http://example.com/path/file.exe`]
+   - `$baseurl`: autoupdate URL without filename and fragments (`#/dl.7z`) [e.g. `http://example.com/path`]
+ - `find`: A regex to extract the hash from the source. [Defaults to: `^([a-fA-F0-9]+)$` and `([a-fA-F0-9]+)\s+\*?(?:$basename)`]
+   - `$basename`: filename from autoupdate URL
  - `jp`: For JSON files: A JSON path to extract the hash from the source (Variables: `$basename`)
- - `type`: The type of the hash (`sha1`, `sha256` (default), `sha512`, `md5`)
+ - `type`: Deprecated, hash type is determined automatically
 
 # Limitations
 There are some complex manifests which reach the limits of the current autoupdate implementation (_The list of affected manifests is incomplete_)
