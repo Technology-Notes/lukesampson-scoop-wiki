@@ -187,7 +187,7 @@ All the options can be set globally for all architectures or for each architectu
    - `$url`: autoupdate URL without fragments (`#/dl.7z`) [e.g. `http://example.com/path/file.exe`]
    - `$baseurl`: autoupdate URL without filename and fragments (`#/dl.7z`) [e.g. `http://example.com/path`]
  - `find`: A regex to extract the hash from the source. [Defaults to: `^([a-fA-F0-9]+)$` and `([a-fA-F0-9]+)\s+\*?(?:$basename)`]
-   - `$basename`: filename from autoupdate URL
+   - `$basename`: filename from autoupdate URL (ignores fragments `#/dl.7z`)
  - `jp`: For JSON files: A JSON path to extract the hash from the source (Variables: `$basename`)
  - `type`: Deprecated, hash type is determined automatically
 
