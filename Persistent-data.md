@@ -1,6 +1,3 @@
-## Coming soon!
-Check [#1372](/lukesampson/scoop/issues/1372)
-
 ## Data directory
 If you need to store data which should persist between updates you should use `~/scoop/persist/<app>/`.
 Inside the manifest, the path to the data directory is available in the `$persist_dir` variable.
