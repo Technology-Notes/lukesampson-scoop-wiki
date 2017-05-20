@@ -17,7 +17,7 @@
 * [App Manifests](wiki/App-Manifests)
     * [Creating an App Manifest](wiki/Creating-an-app-manifest)
     * [Autoupdate](wiki/App-Manifest-Autoupdate)
-    * Coming soon: [Persistent data](wiki/Persistent-data)
+    * [Persistent data](wiki/Persistent-data)
 * [Dependencies](wiki/Dependencies)
 * [The 'Current' Version Alias](wiki/The-'Current'-Version-Alias)
 
