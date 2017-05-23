@@ -44,7 +44,7 @@ In the above example, Scoop will download `program.exe` but save it as `dl.7z`, 
 * `installer`|`uninstaller`: Instructions for running a non-MSI installer.
     * `file`: The installer executable file. For installer, this defaults to the last URL downloaded. Must be specified for `uninstaller`.
     * `args`: An array of arguments to pass to the installer. Optional.
-    * `keep`: `"true"` if the installer should be kept after running (for future uninstallation, as an example). If omitted or set to any other value, the installer will be deleted after running. See [`vc-redist14`](https://github.com/lukesampson/scoop/blob/master/bucket/vc-redist14.json) for an example. This option will be ignored when used in an `uninstaller` directive.
+    * `keep`: `"true"` if the installer should be kept after running (for future uninstallation, as an example). If omitted or set to any other value, the installer will be deleted after running. See [`extras/oraclejdk`](https://github.com/lukesampson/scoop-extras/blob/master/oraclejdk.json) for an example. This option will be ignored when used in an `uninstaller` directive.
 * `license`: The software license for the program. For well-known licenses, this will be a string like "MIT" or "GPL2". For custom licenses, this should be the URL of the license.
 * `notes`: A string with a message to be displayed after installing the app.
 * `pre_install` | `post_install` : A string or array of strings of the commands to executed before or after an application is installed. (Available variables: `$dir`, `$persist_dir`, `$version` many more (_check the `lib/install` script_))
