@@ -30,31 +30,31 @@ In the above example, Scoop will download `program.exe` but save it as `dl.7z`, 
 ### Optional Properties
 
 * `architecture`: If the app has 32- and 64-bit versions, architecture can be used to wrap the differences ([example](https://github.com/lukesampson/scoop/blob/master/bucket/7zip.json)]).
-    * `32bit|64bit`: contains architecture-specific instructions (`bin`, `extract_dir`, `hash`, `installer`,  `pre_install`, `post_install`, `url`, and `msi` [`msi` is deprecated]).
+    * `32bit|64bit`: contains architecture-specific instructions (`bin`, `checkver`, `extract_dir`, `hash`, `installer`,  `pre_install`, `post_install`, `shortcuts`, `uninstaller`, `url`, and `msi` [`msi` is deprecated]).
 * [`autoupdate`](App-Manifest-Autoupdate#add-autoupdate-to-a-manifest): Definition of how the manifest can be updated automatically.
 * `bin`: A string or array of strings of programs (executables or scripts) to make available on the user's path.
     * you can also create an alias shim which uses a different name to the real executable and (optionally) passes arguments to the executable. Instead of just using a string for the executable, use e.g: `[ "program.exe", "alias", "--arguments" ]`. See [busybox](https://github.com/lukesampson/scoop/blob/master/bucket/busybox.json) for an example.
 * [`checkver`](App-Manifest-Autoupdate#add-checkver-to-a-manifest): App maintainers and developers can use the [bin/checkver](https://github.com/lukesampson/scoop/blob/master/bin/checkver.ps1) tool to check for updated versions of apps. The `checkver` property in a manifest is a regular expression that can be used to match the current stable version of an app from the app's homepage. For an example, see the [go](https://github.com/lukesampson/scoop/blob/master/bucket/go.json) manifest. If the homepage doesn't have a reliable indication of the current version, you can also specify a different URL to check—for an example see the [ruby](https://github.com/lukesampson/scoop/blob/master/bucket/ruby.json) manifest.
 * `depends`: Runtime dependencies for the app which will be installed automatically. See also `suggest` (below) for an alternative to `depends`.
-* `env_add_path`: Add this directory to the user's path (or system path if `--global` is used). The directory is relative to the install directory, and must be inside the install directory.
+* `env_add_path`: Add this directory to the user's path (or system path if `--global` is used). The directory is relative to the install directory and must be inside the install directory.
 * `env_set`: Sets one or more environment variables for the user (or system if `--global` is used) ([example](https://github.com/lukesampson/scoop/blob/master/bucket/go.json)).
 * `extract_dir`: If `url` points to a compressed file (.zip, .7z, .tar, .gz, .lzma, and .lzh are supported), Scoop will extract just the directory specified from it.
 * `hash`: A string or array of strings with a file hash for each URL in `url`. Hashes are SHA256 by default, but you can use SHA1 or MD5 by prefixing the hash string with 'sha1:' or 'md5:'.
 * `homepage`: The home page for the program.
 * `installer`|`uninstaller`: Instructions for running a non-MSI installer.
-    * `file`: The installer executable file. For installer, this defaults to the last URL downloaded. Must be specified for `uninstaller`.
+    * `file`: The installer executable file. For `installer` this defaults to the last URL downloaded. Must be specified for `uninstaller`.
     * `args`: An array of arguments to pass to the installer. Optional.
     * `keep`: `"true"` if the installer should be kept after running (for future uninstallation, as an example). If omitted or set to any other value, the installer will be deleted after running. See [`extras/oraclejdk`](https://github.com/lukesampson/scoop-extras/blob/master/oraclejdk.json) for an example. This option will be ignored when used in an `uninstaller` directive.
 * `license`: The software license for the program. For well-known licenses, this will be a string like "MIT" or "GPL2". For custom licenses, this should be the URL of the license.
 * `notes`: A string with a message to be displayed after installing the app.
-* `pre_install` | `post_install` : A string or array of strings of the commands to executed before or after an application is installed. (Available variables: `$dir`, `$persist_dir`, `$version` many more (_check the `lib/install` script_))
+* `pre_install` | `post_install` : A string or array of strings of the commands to be executed before or after an application is installed. (Available variables: `$dir`, `$persist_dir`, `$version` many more (_check the `lib/install` script_))
 * `psmodule`: Install as a PowerShell module in `~/scoop/modules`.
-    * `name` (required for `psmodule`): the name of the module, which should match at least one file in the extracted directory for PowerShell to recognise this as a module.
-* `shortcuts`: Specifies the shortcut values to made available in a users startmenu. The array specifies an executable/Label pair. See [sourcetree](https://github.com/lukesampson/scoop-extras/blob/master/sourcetree.json) for an example.
+    * `name` (required for `psmodule`): the name of the module, which should match at least one file in the extracted directory for PowerShell to recognize this as a module.
+* `shortcuts`: Specifies the shortcut values to make available in the startmenu. The array specifies an executable/Label pair. See [sourcetree](https://github.com/lukesampson/scoop-extras/blob/master/sourcetree.json) for an example.
 * `suggest`: Display a message suggesting optional apps that provide complementary features. See [ant](https://github.com/lukesampson/scoop/blob/master/bucket/ant.json) for an example. 
     * `["Feature Name"] = [ "app1", "app2"... ]`<br>e.g. `"JDK": [ "extras/oraclejdk", "openjdk" ]`<br>
 If any of the apps suggested for the feature are already installed, the feature will be treated as 'fulfilled' and the user won't see any suggestions.
-* **Coming soon:** `persist` A string or array of strings of directories and files to to persist inside the data directory for the app. [Persistent data](Persistent-data)
+* `persist` A string or array of strings of directories and files to persist inside the data directory for the app. [Persistent data](Persistent-data)
 
 ### Undocumented Properties
 
