@@ -1,37 +1,37 @@
-### Overview
-* [So What?](So-What%3F)
-* [How is Scoop different to Chocolatey?](Chocolatey-Comparison)
-* [How is Scoop different to Cygwin and MSYS?](How-is-Scoop-different-to-Cygwin-and-MSYS%3F)
+- [Overview](https://github.com/lukesampson/scoop/wiki)
+  - [So What?](So-What%3F)
+  - [How is Scoop different to Chocolatey?](Chocolatey-Comparison)
+  - [How is Scoop different to Cygwin and MSYS?](How-is-Scoop-different-to-Cygwin-and-MSYS%3F)
 
-### Getting Started
-* [Quick Start](Quick-Start)
-* [Command Help](Commands)
-* [FAQ](FAQ)
-* [Uninstalling Scoop](Uninstalling-Scoop)
+- Getting Started
+  - [Quick Start](Quick-Start)
+  - [Command Help](Commands)
+  - [FAQ](FAQ)
+  - [Uninstalling Scoop](Uninstalling-Scoop)
 
-### Concepts
-* [Apps](Apps)
-* [Buckets](Buckets)
-* [App Manifests](App-Manifests)
-    * [Creating an App Manifest](Creating-an-app-manifest)
-    * [Autoupdate](App-Manifest-Autoupdate)
-    * [Persistent data](Persistent-data)
-* [Dependencies](Dependencies)
-* [The 'Current' Version Alias](The-'Current'-Version-Alias)
+- Concepts
+  - [Apps](Apps)
+  - [Buckets](Buckets)
+  - [App Manifests](App-Manifests)
+      - [Creating an App Manifest](Creating-an-app-manifest)
+      - [Autoupdate](App-Manifest-Autoupdate)
+      - [Persistent data](Persistent-data)
+  - [Dependencies](Dependencies)
+  - [The 'Current' Version Alias](The-'Current'-Version-Alias)
 
-### Guides
-* [Theming Powershell](Theming-Powershell)
-* [SSH](SSH-on-Windows)
-* [GitHub with SSH Key](GitHub-with-SSH-Key)
-* [Customise PHP configuration](Custom-PHP-configuration)
-* [Apache with PHP](Apache-with-PHP)
-* [Java](Java)
+- Guides
+  - [Theming Powershell](Theming-Powershell)
+  - [SSH](SSH-on-Windows)
+  - [GitHub with SSH Key](GitHub-with-SSH-Key)
+  - [Customise PHP configuration](Custom-PHP-configuration)
+  - [Apache with PHP](Apache-with-PHP)
+  - [Java](Java)
 
-### Misc
-* [System-wide installs](Global-Installs)
-* [Switching between Ruby and Python Versions](Switching-Ruby-And-Python-Versions)
-* [Why Powershell?](Why-Powershell%3F)
-* [Example Setup Scripts](Example-Setup-Scripts)
-* [Using Scoop behind a proxy server](Using-Scoop-behind-a-proxy)
-* [Can I use Scoop in bash?](Can-I-Use-Scoop-In-Bash%3F)
-* [PowerShell modules](PowerShell-Modules)
+- Misc
+  - [System-wide installs](Global-Installs)
+  - [Switching between Ruby and Python Versions](Switching-Ruby-And-Python-Versions)
+  - [Why Powershell?](Why-Powershell%3F)
+  - [Example Setup Scripts](Example-Setup-Scripts)
+  - [Using Scoop behind a proxy server](Using-Scoop-behind-a-proxy)
+  - [Can I use Scoop in bash?](Can-I-Use-Scoop-In-Bash%3F)
+  - [PowerShell modules](PowerShell-Modules)
