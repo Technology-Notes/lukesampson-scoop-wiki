@@ -2,13 +2,11 @@
   - [So What?](So-What%3F)
   - [How is Scoop different to Chocolatey?](Chocolatey-Comparison)
   - [How is Scoop different to Cygwin and MSYS?](How-is-Scoop-different-to-Cygwin-and-MSYS%3F)
-
 - Getting Started
   - [Quick Start](Quick-Start)
   - [Command Help](Commands)
   - [FAQ](FAQ)
   - [Uninstalling Scoop](Uninstalling-Scoop)
-
 - Concepts
   - [Apps](Apps)
   - [Buckets](Buckets)
@@ -18,7 +16,6 @@
       - [Persistent data](Persistent-data)
   - [Dependencies](Dependencies)
   - [The 'Current' Version Alias](The-'Current'-Version-Alias)
-
 - Guides
   - [Theming Powershell](Theming-Powershell)
   - [SSH](SSH-on-Windows)
@@ -26,7 +23,6 @@
   - [Customise PHP configuration](Custom-PHP-configuration)
   - [Apache with PHP](Apache-with-PHP)
   - [Java](Java)
-
 - Misc
   - [System-wide installs](Global-Installs)
   - [Switching between Ruby and Python Versions](Switching-Ruby-And-Python-Versions)
