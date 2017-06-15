@@ -1,4 +1,5 @@
-- [Overview](https://github.com/lukesampson/scoop/wiki)
+- [Home](https://github.com/lukesampson/scoop/wiki)
+- Overview
   - [So What?](So-What%3F)
   - [How is Scoop different to Chocolatey?](Chocolatey-Comparison)
   - [How is Scoop different to Cygwin and MSYS?](How-is-Scoop-different-to-Cygwin-and-MSYS%3F)
