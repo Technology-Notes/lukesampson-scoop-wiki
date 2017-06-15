@@ -4,7 +4,7 @@
   - [How is Scoop different to Chocolatey?](Chocolatey-Comparison)
   - [How is Scoop different to Cygwin and MSYS?](How-is-Scoop-different-to-Cygwin-and-MSYS%3F)
 - Getting Started
-  - [Quick Start](Quick-Start)
+  - [Quick Start / Installing Scoop](Quick-Start)
   - [Command Help](Commands)
   - [FAQ](FAQ)
   - [Uninstalling Scoop](Uninstalling-Scoop)
