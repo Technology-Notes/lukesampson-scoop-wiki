@@ -27,8 +27,11 @@ The same thing works for Python
 scoop bucket add versions
 
 scoop install python27 python
-python --version # -> Python 3.3.2
+python --version # -> Python 3.6.1
 
 scoop reset python27
-python --version # -> Python 2.7.5
+python --version # -> Python 2.7.13
+
+scoop reset python
+python --version # -> Python 2.6.1
 ```
