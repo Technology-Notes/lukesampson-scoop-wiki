@@ -26,7 +26,7 @@ Scoop:
 * doesn't pollute your path
 * has a command interface similar to Git and similar tools
 * makes it easy to discover commands that you don't know, or have forgotten
-* makes is easy to tell people how to install your programs
+* makes it easy to tell people how to install your programs
 * has a curated collection of apps, while at the same time...
 * makes it easy to create your own apps and collections of apps
 * values your time and attention
