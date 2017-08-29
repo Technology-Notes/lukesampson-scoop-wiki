@@ -5,9 +5,11 @@ Here you will find an in-depth explanation of how the `autoupdate` part of an ap
 # Using autoupdate
 
 Use `checkver` to query the current version of either a specific app or all apps of a bucket.
+Open a powershell/cmd, then `cd` into the directory of the bucket repository and run the following commands.
 
-To query the current version of a specific app of the main bucket, run:
+To query the current version of a specific app the bucket, run:
 
+    cd <bucket repository>
     .\bin\checkver.ps1 <app>
 
 To query the current version of all apps of the main bucket, run:
@@ -200,8 +202,9 @@ There are some complex manifests which reach the limits of the current autoupdat
  - The `env_set` is version depend ([sbcl](https://github.com/lukesampson/scoop/blob/master/bucket/sbcl.json))
 
 # Testing and running autoupdate
-If you want to confirm an autoupdate works (e.g. after adding it to an existing manifest or creating a new one) change the `version` field to a lower or different version and then run
+If you want to confirm an autoupdate works (e.g. after adding it to an existing manifest or creating a new one) change the `version` field to a lower or different version and then run or use the `-f` parameter
 
+    cd <bucket repository>
     .\bin\checkver.ps1 <app> -u
 
 Check if the `url`, `extract_dir` and `hash` properties have the correct values. Try to install/uninstall the app and submit your changes.
