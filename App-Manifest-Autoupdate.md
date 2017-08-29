@@ -5,7 +5,7 @@ Here you will find an in-depth explanation of how the `autoupdate` part of an ap
 # Using autoupdate
 
 Use `checkver` to query the current version of either a specific app or all apps of a bucket.
-Open a powershell/cmd, then `cd` into the directory of the bucket repository and run the following commands.
+Open a powershell/cmd, then `cd` into the buckets repository directory and run the following commands.
 
 To query the current version of a specific app the bucket, run:
 
