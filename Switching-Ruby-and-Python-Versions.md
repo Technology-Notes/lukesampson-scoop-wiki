@@ -33,5 +33,5 @@ scoop reset python27
 python --version # -> Python 2.7.13
 
 scoop reset python
-python --version # -> Python 2.6.1
+python --version # -> Python 3.6.1
 ```
