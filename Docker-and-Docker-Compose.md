@@ -12,7 +12,7 @@ Set-up Docker stack:
 
 Create our Docker base machine (will be named _default_):
 
-    docker-machine create
+    docker-machine create default
 
 ## Each time starting working with Docker
 
