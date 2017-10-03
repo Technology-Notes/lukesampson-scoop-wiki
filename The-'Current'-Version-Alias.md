@@ -29,7 +29,7 @@ If you're paying close attention, you might notice the extra `l` in the `Mode` c
 
 If you're not familiar with directory junctions, you can think of them as similar to symbolic links, or even shortcuts. They are pointers to other locations in the file system. There are some important implementation differences between junctions and symbolic links, which you can read about [here](https://msdn.microsoft.com/en-us/library/windows/desktop/aa365006(v=vs.85).aspx) if you're interested.
 
-The reason Scoop uses junctions instead of symbolic links is that, unlike symbolic links, junctions don't require admin permissions to create (although this [looks set to change soon](https://blogs.windows.com/buildingapps/2016/12/02/symlinks-windows-10/#cpLA6xrKTwb5fOf7.97)).
+The reason Scoop uses junctions instead of symbolic links is that symbolic links require admin permissions to create (although this [looks set to change soon](https://blogs.windows.com/buildingapps/2016/12/02/symlinks-windows-10/#cpLA6xrKTwb5fOf7.97)).
 
 ### Why Use a Junction? Aren't Shims Enough? ###
 
