@@ -25,7 +25,7 @@ Optionally an item can have a different name inside the data directory
 ### Examples
 - [MySQL](/lukesampson/scoop/blob/master/bucket/mysql.json)
 - [MariaDB](/lukesampson/scoop/blob/master/bucket/mariadb.json)
-- [NGINX](/lukesampson/scoop/blob/master/bucket/ngnix.json)
+- [NGINX](/lukesampson/scoop/blob/master/bucket/nginx.json)
 - [node.js](/lukesampson/scoop/blob/master/bucket/nodejs.json)
 - [PHP](/lukesampson/scoop/blob/master/bucket/php.json)
 
