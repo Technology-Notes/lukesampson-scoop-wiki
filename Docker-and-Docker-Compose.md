@@ -2,10 +2,6 @@ Requirements: [Virtualbox](https://www.virtualbox.org/) or [VmWare](https://www.
 
 ## First time, set-up Docker and create a base machine
 
-Docker is on the extras repo of Scoop:
-
-    scoop bucket add extras
-
 Set-up Docker stack:
 
     scoop install docker docker-compose docker-machine
