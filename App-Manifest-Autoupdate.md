@@ -86,7 +86,10 @@ This example will provide `$version` and `$matchShort` as variables. Example: [g
   - `url`: Page where the version can be found
   - `re`: Regex for finding the version
   - `github`: Url to the apps Github repository
-  - `jp`: JSON path expression for finding the version ([JSONPath Expression Tester](https://jsonpath.curiousconcept.com/))
+  - `jp`: JSON path expression for finding the version ([JSONPath Expression Tester]
+(https://jsonpath.curiousconcept.com/))
+  - `reverse: true`: match the last occurrence found (default is to match the first occurrence)
+  - `replace`: replace the matched value with a calculated value
 
 # Add `autoupdate` to a manifest
 For the autoupdate feature to work it needs a [`checkver` property](#add-checkver-to-a-manifest) to find the latest version number.
