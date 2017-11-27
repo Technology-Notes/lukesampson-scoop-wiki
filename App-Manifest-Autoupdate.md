@@ -87,8 +87,8 @@ This example will provide `$version` and `$matchShort` as variables. Example: [g
   - `re`: Regex for finding the version
   - `github`: Url to the apps Github repository
   - `jp`: JSON path expression for finding the version ([JSONPath Expression Tester](https://jsonpath.curiousconcept.com/))
-  - `reverse: true`: match the last occurrence found (default is to match the first occurrence). Example: [x264.json](https://github.com/lukesampson/scoop/blob/master/bucket/x264.json#L26)
-  - `replace`: replace the matched value with a calculated value.Example: [sysinternals.json](https://github.com/lukesampson/scoop-extras/blob/master/sysinternals.json#L9)
+  - `reverse: true`: match the last occurrence found (default is to match the first occurrence). Example: [x264](https://github.com/lukesampson/scoop/blob/master/bucket/x264.json#L26)
+  - `replace`: replace the matched value with a calculated value.Example: [sysinternals](https://github.com/lukesampson/scoop-extras/blob/master/sysinternals.json#L9)
 
 # Add `autoupdate` to a manifest
 For the autoupdate feature to work it needs a [`checkver` property](#add-checkver-to-a-manifest) to find the latest version number.
@@ -138,8 +138,8 @@ All the options can be set globally for all architectures or for each architectu
  - `hash`: Set this [property](#add-hash-to-autoupdate) for obtaining hash values without download the actual files.
 
 Some examples with autoupdate and multiple `$match` variables:
-* [haxe.json](https://github.com/lukesampson/scoop/blob/master/bucket/haxe.json)
-* [openjdk.json](https://github.com/lukesampson/scoop/blob/master/bucket/openjdk.json)
+* [haxe](https://github.com/lukesampson/scoop/blob/master/bucket/haxe.json)
+* [openjdk](https://github.com/lukesampson/scoop/blob/master/bucket/openjdk.json)
 
 # Add `hash` to `autoupdate`
 There are several options to obtain the hash of the new file. If the app provider publishes hash values it is possible to extract these from their website or hashfile. If nothing is defined or something goes wrong while downloading/extracting the hash values the files will be downloaded and hashed locally.
@@ -183,8 +183,8 @@ All the options can be set globally for all architectures or for each architectu
 
  - `mode`:
    - `extract`: (default) download from `url` and find with the regex
-   - `rdf`: extract from a RDF file ([imagemagick](https://github.com/lukesampson/scoop/blob/master/bucket/imagemagick.json))
-   - `json`: extract from a JSON file ([openssl](https://github.com/lukesampson/scoop/blob/master/bucket/openssl.json))
+   - `rdf`: extract from a RDF file. Example: [imagemagick](https://github.com/lukesampson/scoop/blob/master/bucket/imagemagick.json)
+   - `json`: extract from a JSON file. Example: [openssl](https://github.com/lukesampson/scoop/blob/master/bucket/openssl.json)
    - `download`: (fallback) downloads the file and hash it locally
  - `url`: URL template for downloading RDF/JSON files or extracting hashes. It supports the following variables:
    - All variables used for [`autoupdate` URLs](#add-autoupdate-to-a-manifest)
@@ -198,10 +198,10 @@ All the options can be set globally for all architectures or for each architectu
 # Limitations
 There are some complex manifests which reach the limits of the current autoupdate implementation (_The list of affected manifests is incomplete_)
 
- - The binaries specified in the `bin` option change with the version number ([pngcrush](https://github.com/lukesampson/scoop/blob/master/bucket/pngcrush.json), …)
- - There are multiple `url` needed to be updated ([python-exp](https://github.com/lukesampson/scoop/blob/master/bucket/python-exp.json))
- - ~~The `pre_install` or `post_install` commands contain references to the version ([python](https://github.com/lukesampson/scoop/blob/master/bucket/python.json), [python-exp](https://github.com/lukesampson/scoop/blob/master/bucket/python-exp.json))~~ There is a variable `$version` around for that
- - The `env_set` is version depend ([sbcl](https://github.com/lukesampson/scoop/blob/master/bucket/sbcl.json))
+ - The binaries specified in the `bin` option change with the version number. Example: [pngcrush](https://github.com/lukesampson/scoop/blob/master/bucket/pngcrush.json), …
+ - There are multiple `url` needed to be updated. Example: [python-exp](https://github.com/lukesampson/scoop/blob/master/bucket/python-exp.json)
+<!— - ~~The `pre_install` or `post_install` commands contain references to the version ([python](https://github.com/lukesampson/scoop/blob/master/bucket/python.json), [python-exp](https://github.com/lukesampson/scoop/blob/master/bucket/python-exp.json))~~ There is a variable `$version` around for that —->
+ - The `env_set` is version dependent. Example: [sbcl](https://github.com/lukesampson/scoop/blob/master/bucket/sbcl.json)
 
 # Testing and running autoupdate
 If you want to confirm an autoupdate works (e.g. after adding it to an existing manifest or creating a new one) change the `version` field to a lower or different version and then run or use the `-f` parameter
