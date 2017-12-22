@@ -26,6 +26,14 @@ In a PowerShell command console, run:
 iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
 ```
 
+### Installing Scoop to Custom Directory
+Assuming the target directory is `D:\Applications\Scoop`, in a PowerShell command console, run:
+```powershell
+[environment]::setEnvironmentVariable('SCOOP','D:\Applications\Scoop','User')
+$env:SCOOP='D:\Applications\Scoop'
+iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
+```
+
 Assuming you didn't see any error messages, Scoop is now ready to run.
 
 ### Using Scoop
