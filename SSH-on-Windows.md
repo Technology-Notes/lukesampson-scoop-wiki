@@ -49,7 +49,7 @@ If you used the default file as above, your private key will be created at `~/.s
 
 Before we can connect to our server (e.g. `example.org`) with our SSH key, we need to authorize the key we'll be using by copying our public key to the remote server:
 
-    cat ~/.ssh/id_rsa.pub | ssh username@example.org 'mkdir ~/.ssh; cat >> ~/.ssh/authorized_keys'
+    cat ~/.ssh/id_rsa.pub | ssh username@example.org 'mkdir -p ~/.ssh; cat >> ~/.ssh/authorized_keys'
 
 Now try connecting again:
 
