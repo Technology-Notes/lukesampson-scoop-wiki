@@ -1,8 +1,8 @@
-By default, Scoop installs apps just for your user account. Apps are installed under ~/appdata/local, and only your environment variables are modified. This is usually fine, especially in your dev environment.
+By default, Scoop installs apps just for your user account. Apps are installed under ~\scoop\apps, and only your environment variables are modified. This is usually fine, especially in your dev environment.
 
 In some cases you might want to install an app system-wide so that it's accessible to other users, including the local system account. Scoop provides a `--global` switch to support this case.
 
-Global installs require admin permissions, because they install to /ProgramData/scoop, and set system environment variables. For this reason, this example uses the `sudo` command, which is a rough equivalent of the UNIX command to run a command with superuser privileges. You can install this by running:
+Global installs require admin permissions, because they install to \ProgramData\scoop, and set system environment variables. For this reason, this example uses the `sudo` command, which is a rough equivalent of the UNIX command to run a command with superuser privileges. You can install this by running:
 
     scoop install sudo
 
