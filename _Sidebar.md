@@ -27,7 +27,7 @@
 - Misc
   - [System-wide installs](Global-Installs)
   - [Switching between Ruby and Python Versions](Switching-Ruby-And-Python-Versions)
-  - [Why Powershell?](Why-Powershell%3F)
+  - [Why PowerShell?](Why-PowerShell%3F)
   - [Example Setup Scripts](Example-Setup-Scripts)
   - [Using Scoop behind a proxy server](Using-Scoop-behind-a-proxy)
   - [Can I use Scoop in bash?](Can-I-Use-Scoop-In-Bash%3F)
