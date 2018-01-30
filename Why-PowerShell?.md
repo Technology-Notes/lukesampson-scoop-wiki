@@ -1,11 +1,10 @@
-Scoop tries to 'just work' whether you run it from Powershell or cmd.exe, but **I recommend using Powershell** instead. Here's why.
+Scoop tries to 'just work' whether you run it from PowerShell or cmd.exe, but **I recommend using PowerShell** instead. Here's why.
 
 ### Yes, Powershell has problems
 
 * The `Verb-Noun` verbosity, commands that were seemingly not designed to be typed
-* It's disabled by default
 * The ISE—a GUI for a command line interface. I know the commands are hard to type—but is point-and-clicking a solution?
-* The name Powershell, and the unofficial abbreviation PoSH. Cringe.
+* The name PowerShell, and the unofficial abbreviation PoSH. Cringe.
 * &ldquo;Everything's an object!&rdquo; ends up feeling clumsy. Sometimes text is just easier to work with. Support for primitives, arrays and hashes would have been enough.
 * Modules. Who knows how they work?
 * Doesn't seem like a first class shell within Windows
@@ -14,7 +13,7 @@ Scoop tries to 'just work' whether you run it from Powershell or cmd.exe, but **
 
 ### Nevertheless..
 
-You should still use Powershell. Why? Because you can ignore most of these problems, and you're still left with a great, flexible, dynamic, functional scripting language.
+You should still use PowerShell. Why? Because you can ignore most of these problems, and you're still left with a great, flexible, dynamic, functional scripting language.
 
 You don't have to write `Verb-Noun` 'cmdlets', just write a script. Return text from your powershell scripts if you want&mdash;because text is the universal interface. Parse your own parameters (or dot-source [getopt](https://github.com/lukesampson/psutils/blob/master/getopt.ps1)). If someone mentions PoSH, ridicule them publicly (kidding).
 
@@ -24,7 +23,7 @@ So once you ignore the bad points, what are you left with?
 * **A fast REPL** (like ScriptCS, but easier and more dynamic)
 * **The only scripting language that you can rely on being installed on Windows**
 * **Great language support for primitive types, arrays and hashes**
-* **The feeling of pride that comes from using an obscure shell**. Zsh? Fish? Pfft. Virtually *no-one* uses Powershell (not sure on the actual numbers there).
+* **The feeling of pride that comes from using an obscure shell**. Zsh? Fish? Pfft. Virtually *no-one* uses PowerShell (not sure on the actual numbers there).
 
 Yes, you're stuck using the ancient and seemingly-forgotten Windows Console, but you can get that working fairly nicely with [a little customization](https://github.com/lukesampson/scoop/wiki/Theming-Powershell).
 
