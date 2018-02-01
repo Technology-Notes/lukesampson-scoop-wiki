@@ -32,7 +32,7 @@
 ### Misc
 * [System-wide installs](wiki/Global-Installs)
 * [Switching between Ruby and Python Versions](wiki/Switching-Ruby-And-Python-Versions)
-* [Why Powershell?](wiki/Why-Powershell%3F)
+* [Why PowerShell?](wiki/Why-PowerShell%3F)
 * [Example Setup Scripts](wiki/Example-Setup-Scripts)
 * [Using Scoop behind a proxy server](wiki/Using-Scoop-behind-a-proxy)
 * [Can I use Scoop in bash?](wiki/Can-I-Use-Scoop-In-Bash%3F)
