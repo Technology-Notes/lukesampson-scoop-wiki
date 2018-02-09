@@ -43,6 +43,7 @@ In the above example, Scoop will download `program.exe` but save it as `dl.7z`, 
 * `homepage`: The home page for the program.
 * `installer`|`uninstaller`: Instructions for running a non-MSI installer.
     * `file`: The installer executable file. For `installer` this defaults to the last URL downloaded. Must be specified for `uninstaller`.
+    * `script`: A powershell script to use instead of `file`.
     * `args`: An array of arguments to pass to the installer. Optional.
     * `keep`: `"true"` if the installer should be kept after running (for future uninstallation, as an example). If omitted or set to any other value, the installer will be deleted after running. See [`extras/oraclejdk`](https://github.com/lukesampson/scoop-extras/blob/master/oraclejdk.json) for an example. This option will be ignored when used in an `uninstaller` directive.
 * `license`: The software license for the program. For well-known licenses, this will be a string like "MIT" or "GPL2". For custom licenses, this should be the URL of the license.
