@@ -24,6 +24,7 @@ help             Show help for a command
 home             Opens the app homepage
 install          Install apps
 list             List installed apps
+prefix           Returns the path to the specified app
 reset            Reset an app to resolve conflicts
 search           Search available apps
 status           Show status and check for new app versions
