@@ -209,3 +209,25 @@ If you want to confirm an autoupdate works (e.g. after adding it to an existing 
     .\bin\checkver.ps1 <app> -u
 
 Check if the `url`, `extract_dir` and `hash` properties have the correct values. Try to install/uninstall the app and submit your changes.
+
+# Example Workflow with scoop status/update
+scoop status compares your installed version against the current copy of scoop and bucket repos on your machine. If these are not updated it will output wrong version information. e.g.:
+
+installed version: 2.1.2
+local scoop version: 2.1.3
+online repo version: 2.1.4
+scoop status will show version 2.1.3
+Running scoop update before scoop status is recommended (and enforced every 3 hours). Then it will show version 2.1.4
+
+scoop update just git pulls the main scoop repo to ~\scoop\apps\scoop\current and every configured bucket to ~\scoop\buckets\<name>
+
+bin\checkver is only for maintenance and updating the manifests so they can be commited to the repo.
+
+Example Workflow:
+
+.\bin\checkver -dir ./ * -u (updates all manifest in the repo)
+git commit -m "Updated apps"
+git push
+scoop update
+scoop status
+scoop update <app>
