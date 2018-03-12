@@ -33,7 +33,7 @@ It is recommended to verify that the updated manifest still works by installing 
 Simplest solution is to use an regex and it will match it to the source of `homepage`. Example: [7zip](https://github.com/lukesampson/scoop/blob/master/bucket/7zip.json)
 - `homepage` Page where the version can be found
 - `checkver` Regex for finding the version
-```
+```json
 "homepage": "http://www.7-zip.org/",
 "checkver": "Download 7-zip ([^\\ ]+)",
 ```
@@ -42,7 +42,7 @@ Use another url if the `homepage` doesn't contain the version. Example: [gradle]
 - `homepage` will be ignored
 - `checkver.url` Page where the version can be found
 - `checkver.re` Regex for finding the version
-```
+```json
 "homepage": "https://gradle.org",
 "checkver": {
     "url": "https://gradle.org/install",
@@ -53,7 +53,7 @@ Use another url if the `homepage` doesn't contain the version. Example: [gradle]
 Use a JSON endpoint with rudimentary JSON path expressions to retrieve the version. Example: [nuget](https://github.com/lukesampson/scoop/blob/master/bucket/nuget.json)
 - `checkver.url` JSON endpoint where the version can be found
 - `checkver.jp` JSON path expression for finding the version ([JSONPath Expression Tester](https://jsonpath.curiousconcept.com/))
-```
+```json
 "checkver": {
     "url": "https://dist.nuget.org/index.json",
     "jp": "$.artifacts[0].versions[0].version"
@@ -61,13 +61,13 @@ Use a JSON endpoint with rudimentary JSON path expressions to retrieve the versi
 ```
 
 Use latest app release on Github by setting `checkver` to `github` and the `homepage` to the repository URL. This will try to match the tag with `\/releases\/tag\/(?:v)?([\d.]+)`. *The repository maintainer has to use Github's release feature for this to work. Pre-releases will be ignored!* Example: [nvm](https://github.com/lukesampson/scoop/blob/master/bucket/nvm.json)
-```
+```json
 "homepage": "https://github.com/coreybutler/nvm-windows",
 "checkver": "github",
 ```
 
 Or use different urls for the homepage and repository. Example: [cmder](https://github.com/lukesampson/scoop/blob/master/bucket/cmder.json)
-```
+```json
 "homepage": "http://cmder.net",
 "checkver": {
     "github": "https://github.com/cmderdev/cmder"
@@ -76,7 +76,7 @@ Or use different urls for the homepage and repository. Example: [cmder](https://
 
 Use capture groups for complex versions and use the results in the [`autoupdate` property](#add-autoupdate-to-a-manifest).
 This example will provide `$version` and `$matchShort` as variables. Example: [git](https://github.com/lukesampson/scoop/blob/master/bucket/git.json)
-```
+```json
 "checkver": {
     "url": "https://github.com/git-for-windows/git/releases/latest",
     "re": "v(?<version>[\\d\\w.]+)/PortableGit-(?<short>[\\d.]+).*\\.exe"
@@ -99,7 +99,7 @@ Some example manifests using the `autoupdate` feature:
 [nginx](https://github.com/lukesampson/scoop/blob/master/bucket/nginx.json),
 [imagemagick](https://github.com/lukesampson/scoop/blob/master/bucket/imagemagick.json)
 
-```
+```json
 "autoupdate": {
     "note": "Thanks for using autoupdate, please test your updates!",
     "architecture": {
@@ -112,7 +112,7 @@ Some example manifests using the `autoupdate` feature:
     },
 }
 ```
-```
+```json
 "autoupdate": {
     "url": "https://example.org/dl/example-$version.zip"
 }
@@ -145,7 +145,7 @@ Some examples with autoupdate and multiple `$match` variables:
 There are several options to obtain the hash of the new file. If the app provider publishes hash values it is possible to extract these from their website or hashfile. If nothing is defined or something goes wrong while downloading/extracting the hash values the files will be downloaded and hashed locally.
 
 Use the same URL as the file and append `.sha256` to it. Example: [openjdk](https://github.com/lukesampson/scoop/blob/master/bucket/openjdk.json)
-```
+```json
 "hash": {
     "mode": "extract",
     "url": "$url.sha256"
@@ -153,7 +153,7 @@ Use the same URL as the file and append `.sha256` to it. Example: [openjdk](http
 ```
 
 Use a different URL to checksums file (can contain multiple hashes and files). Example: [nodejs](https://github.com/lukesampson/scoop/blob/master/bucket/nodejs.json)
-```
+```json
 "hash": {
     "mode": "extract",
     "url": "https://nodejs.org/dist/v$version/SHASUMS256.txt.asc"
@@ -162,7 +162,7 @@ Use a different URL to checksums file (can contain multiple hashes and files). E
 
 Use a different regex to extract the hash.
 Example: [apache](https://github.com/lukesampson/scoop/blob/master/bucket/apache.json)
-```
+```json
 "hash": {
     "mode": "extract",
     "url": "$url.txt",
@@ -171,7 +171,7 @@ Example: [apache](https://github.com/lukesampson/scoop/blob/master/bucket/apache
 ```
 
 Use a JSON endpoint with rudimentary JSON path expressions to retrieve the hash. Example: [openssl](https://github.com/lukesampson/scoop/blob/master/bucket/openssl.json)
-```
+```json
 "hash": {
     "mode": "json",
     "jp": "$.files.$basename.sha256",
@@ -211,28 +211,22 @@ If you want to confirm an autoupdate works (e.g. after adding it to an existing 
 Check if the `url`, `extract_dir` and `hash` properties have the correct values. Try to install/uninstall the app and submit your changes.
 
 # Example Workflow with scoop status/update
-scoop status compares your installed version against the current copy of scoop and bucket repos on your machine. If these are not updated it will output wrong version information. e.g.:
+`scoop status` compares your installed version against the current copy of scoop and bucket repos on your machine. If these are not updated it will output wrong version information. e.g.:
+* installed version: 2.1.2
+* local scoop version: 2.1.3
+* online repo version: 2.1.4
 
--installed version: 2.1.2
+`scoop status` will show version 2.1.3
+Running `scoop update` before `scoop status` is recommended (and enforced every 3 hours). Then it will show version 2.1.4
 
--local scoop version: 2.1.3
+`scoop update` just `git pull`s the main scoop repo to `~\scoop\apps\scoop\current` and every configured bucket to `~\scoop\buckets\<name>`
 
--online repo version: 2.1.4
-
--scoop status will show version 2.1.3
-
-Running scoop update before scoop status is recommended (and enforced every 3 hours). Then it will show version 2.1.4
-
-scoop update just git pulls the main scoop repo to ~\scoop\apps\scoop\current and every configured bucket to ~\scoop\buckets\<name>
-
-bin\checkver is only for maintenance and updating the manifests so they can be commited to the repo.
+`bin\checkver` is only for maintenance and updating the manifests so they can be commited to the repo.
 
 Example Workflow:
-```
-.\bin\checkver -dir ./ * -u (updates all manifest in the repo)
-git commit -m "Updated apps"
-git push
-scoop update
-scoop status
-scoop update <app>
-```
+* `.\bin\checkver -dir ./ * -u` (updates all manifest in the repo)
+* `git commit -m "Updated apps"`
+* `git push`
+* `scoop update`
+* `scoop status`
+* `scoop update <app>`
