@@ -147,7 +147,6 @@ There are several options to obtain the hash of the new file. If the app provide
 Use the same URL as the file and append `.sha256` to it. Example: [openjdk](https://github.com/lukesampson/scoop/blob/master/bucket/openjdk.json)
 ```json
 "hash": {
-    "mode": "extract",
     "url": "$url.sha256"
 }
 ```
@@ -155,7 +154,6 @@ Use the same URL as the file and append `.sha256` to it. Example: [openjdk](http
 Use a different URL to checksums file (can contain multiple hashes and files). Example: [nodejs](https://github.com/lukesampson/scoop/blob/master/bucket/nodejs.json)
 ```json
 "hash": {
-    "mode": "extract",
     "url": "https://nodejs.org/dist/v$version/SHASUMS256.txt.asc"
 }
 ```
@@ -164,7 +162,6 @@ Use a different regex to extract the hash.
 Example: [apache](https://github.com/lukesampson/scoop/blob/master/bucket/apache.json)
 ```json
 "hash": {
-    "mode": "extract",
     "url": "$url.txt",
     "find": "SHA256-Checksum for: (?:$basename):\\s+([a-fA-F0-9]{64})"
 }
@@ -182,7 +179,7 @@ Use a JSON endpoint with rudimentary JSON path expressions to retrieve the hash.
 All the options can be set globally for all architectures or for each architecture separately
 
  - `mode`:
-   - `extract`: (default) download from `url` and find with the regex
+   - `extract`: (default, can be omitted) download from `url` and find with the regex
    - `rdf`: extract from a RDF file. Example: [imagemagick](https://github.com/lukesampson/scoop/blob/master/bucket/imagemagick.json)
    - `json`: extract from a JSON file. Example: [openssl](https://github.com/lukesampson/scoop/blob/master/bucket/openssl.json)
    - `download`: (fallback) downloads the file and hash it locally
