@@ -9,6 +9,14 @@ There's an optional [extras bucket](https://github.com/lukesampson/scoop-extras)
 
 And Scoop supports adding other buckets. Anyone can set up their own bucket with their own set of apps, and other people can add and install from this bucket—they just need to know the location of the bucket's Git repository.
 
+### Known buckets
+
+There is a list of known buckets by the community, those can be seen in `buckets.json`, to see the list of known buckets execute:
+
+```
+scoop bucket known
+```
+
 ### Installing from other buckets
 If you want to install from a bucket besides the main one, you need to configure Scoop to know about the bucket. For example, to add the optional 'extras' bucket, run:
 
