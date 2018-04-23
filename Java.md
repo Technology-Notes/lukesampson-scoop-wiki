@@ -16,4 +16,4 @@ You can switch back and forth between the 2 JDKs at any time.
 
 ### Java Bucket
 
-There is a `java` bucket maintained by @se35710 for more info go to the [scoop-java project](https://github.com/se35710/scoop-java).
+There is a `java` bucket maintained by **[@se35710](https://github.com/se35710/)** for more info go to the [scoop-java project](https://github.com/se35710/scoop-java).
