@@ -1,19 +1,49 @@
 ### Choice of JDKs
 
-There are 2 Java development kits available with Scoop.
+Java development kits (JDK) and runtime environments (JRE) are available through the [Scoop Java bucket](https://github.com/se35710/scoop-java).
 
-OpenJDK is the default, and can be installed with `scoop install openjdk`.
+To add the bucket, run `scoop bucket add java` 
 
-Oracle's JDK is also available, but not being open source, it's in the `java` [bucket](https://github.com/lukesampson/scoop/wiki/Buckets). So to install it, you'll need to first run `scoop bucket add java`, and then you can install the Oracle JDK with `scoop install oraclejdk`.
+[OpenJDK](https://github.com/se35710/scoop-java/blob/master/openjdk.json) is the preferred JDK (because of it's Open Source [license](http://openjdk.java.net/legal/gplv2+ce.html)), and can be installed with `scoop install openjdk`. The Scoop Java bucket contains four different OpenJDK builds: [OpenJDK](http://openjdk.java.net), [Zulu](https://www.azul.com/products/zulu-and-zulu-enterprise), [ojdkbuild](https://github.com/ojdkbuild/ojdkbuild) and [AdoptOpenJDK](https://adoptopenjdk.net). The latter with both Hotspot and OpenJ9 JVMs.
 
-### Switching JDKs
+Oracle’s Java is also available, in three flavours: [JDK](https://github.com/se35710/scoop-java/blob/master/oraclejdk.json), [Server JRE](https://github.com/se35710/scoop-java/blob/master/oraclejre-server.json) and [JRE](https://github.com/se35710/scoop-java/blob/master/oraclejre.json). The Server JRE is a runtime environment specifically targeted for deploying Java in server environments, for example running [Apache Tomcat](https://github.com/lukesampson/scoop-extras/blob/master/tomcat.json).
+For browser support and Java Web Start read more [here](https://blogs.oracle.com/java-platform-group/launching-web-start-applications).
 
-Java apps in the main (default) bucket will typically depend on `openjdk`. The reason Scoop defaults to `openjdk` rather than leaving the decision of JDKs up to the user is that we want to make it "just work" when you install a Java-based app like Ant.
+### Switching Javas
 
-You can however switch to Oracle JDK with `scoop reset oraclejdk`, assuming you've already installed it with `scoop install oraclejdk`.
+There are two solutions available today for switching java:
 
-You can switch back and forth between the 2 JDKs at any time.
+1. `scoop reset <java>@<version>`
+2. Using [find-java](https://github.com/lukesampson/scoop-extras/blob/master/find-java.json) from [extras](https://github.com/lukesampson/scoop-extras)
 
-### Java Bucket
+`scoop reset` works very well for the current session, and will also update the user's path.
 
-There is a `java` bucket maintained by **[@se35710](https://github.com/se35710/)** for more info go to the [scoop-java project](https://github.com/se35710/scoop-java).
+Globally installed javas takes precedence over user installed javas, so running `sudo scoop install -g oraclejdk-lts` will install a java that is always default for new sessions.
+
+Consider the following:
+```
+PS C:> scoop install oraclejdk-lts
+Installing 'oraclejdk-lts' (8u172-b11) [64bit]
+PS C:> scoop install oraclejdk10
+Installing 'oraclejdk10' (10.0.1-10) [64bit]
+PS C:> scoop install zulu6
+Installing 'zulu6' (6.18.1.5) [64bit]
+PS C:> scoop install openjdk10
+Installing 'openjdk10' (10.0.1) [64bit]
+PS C:> java -version
+openjdk version "10.0.1" 2018-04-17
+OpenJDK Runtime Environment (build 10.0.1+10)
+OpenJDK 64-Bit Server VM (build 10.0.1+10, mixed mode)
+PS C:> scoop reset zulu6
+Resetting zulu6 (6.18.1.5).
+Linking ~\scoop\apps\zulu6\current => ~\scoop\apps\zulu6\6.18.1.5
+PS C:> java -version
+openjdk version "1.6.0-99"
+OpenJDK Runtime Environment (Zulu 6.18.1.5-win64) (build 1.6.0-99-b99)
+OpenJDK 64-Bit Server VM (Zulu 6.18.1.5-win64) (build 23.77-b99, mixed mode)
+PS C:> scoop reset oraclejdk-lts
+PS C:> java -version
+java version "1.8.0_172"
+Java(TM) SE Runtime Environment (build 1.8.0_172-b11)
+Java HotSpot(TM) 64-Bit Server VM (build 25.172-b11, mixed mode)
+```
