@@ -7,14 +7,14 @@ If you identify with lots of the following statements, then Scoop has been desig
 * You're familiar with UNIX tools, and you wish there were more of them on Windows
 * You read Hacker News and you feel like you're 'stuck' on Windows and missing out on lots of cool things
 * You wish there was an easier way to tell other developers how to install programs (maybe your own programs)
-* You use Homebrew and apt-get and think, "this is awesome".
+* You use Homebrew/apt-get and think, "this is awesome".
 
 ### What can Scoop do for me?
-* Lets you script your dev/prod environment setup (repeatable!)
-* Installs tools so they 'just work', the way they work on other platforms (e.g. ssh)
+* Lets you script your development/production environment setup (repeatable!)
+* Installs tools so they 'just work', the way they work on other platforms (e.g. SSH)
 * Lets you stay on the command line, where you can work fast
-* Extends Powershell so you can use programs that work really well with text, the universal interface.
-* Lets you sharpen skills that transfer to Linux and Max OS X
+* Extends PowerShell so you can use programs that work really well with text, the universal interface.
+* Lets you sharpen skills that transfer to Linux and macOS
 
 ### But I already use X, why should I use Scoop?
 There are similar tools available, like [Chocolatey](http://chocolatey.org), [Ninite](http://ninite.com) and [CoApp](http://coapp.org). While there's a more in-depth comparison with Chocolatey [here](Chocolatey-Comparison), here are some general reasons why you might like to try Scoop.
@@ -30,6 +30,6 @@ Scoop:
 * has a curated collection of apps, while at the same time...
 * makes it easy to create your own apps and collections of apps
 * values your time and attention
-* reads the Readme for you
+* reads the README for you
 
 There are other, less objective reasons to give Scoop a try. Maybe you like Chocolatey but you don't like the name, or typing `cinst` feels weird, or you're not a fan of messages about 'Chocolatey gods'.
