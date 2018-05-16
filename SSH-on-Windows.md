@@ -7,6 +7,10 @@ First, install SSH from a Powershell prompt:
 
     scoop install openssh
 
+Or, for the latest version of openssh:
+
+    scoop install win32-openssh
+
 ### Connect with SSH using a password
 
 Say you have a web server running at `example.org`. You should now be able to connect to it with
