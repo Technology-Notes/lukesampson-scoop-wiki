@@ -25,7 +25,7 @@
   - [Apache with PHP](Apache-with-PHP)
   - [Java](Java)
 - Misc
-  - [System-wide installs](Global-Installs)
+  - [System-wide (global) installs](Global-Installs)
   - [Switching between Ruby and Python Versions](Switching-Ruby-And-Python-Versions)
   - [Why PowerShell?](Why-PowerShell%3F)
   - [Example Setup Scripts](Example-Setup-Scripts)
