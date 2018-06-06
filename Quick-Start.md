@@ -36,6 +36,13 @@ iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
 
 Assuming you didn't see any error messages, Scoop is now ready to run.
 
+### Installing global apps to Custom Directory
+```powershell
+[environment]::setEnvironmentVariable('SCOOP_GLOBAL','F:\GlobalScoopApps','Machine')
+$env:SCOOP_GLOBAL='F:\GlobalScoopApps'
+scoop install -g <app>
+```
+
 ### Using Scoop
 Although Scoop is written in PowerShell, it's interface is closer to Git and Mercurial than it is to most PowerShell programs.
 
