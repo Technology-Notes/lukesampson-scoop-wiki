@@ -48,7 +48,7 @@ In the above example, Scoop will download `program.exe` but save it as `dl.7z`, 
     * `script`: A string of commands to be executed as an installer/uninstaller instead of `file`.
     * `args`: An array of arguments to pass to the installer. Optional.
     * `keep`: `"true"` if the installer should be kept after running (for future uninstallation, as an example). If omitted or set to any other value, the installer will be deleted after running. See [`extras/oraclejdk`](https://github.com/lukesampson/scoop-extras/blob/master/oraclejdk.json) for an example. This option will be ignored when used in an `uninstaller` directive.
-* `license`: The software license for the program. For well-known licenses, please use the identifier found at https://spdx.org/licenses/ For other licenses, use the URL of the license, if available. Otherwise, use “Freeware”, “Shareware”, or “Custom”, as appropriate.
+* `license`: The software license for the program. For well-known licenses, please use the identifier found at https://spdx.org/licenses/ For other licenses, use the URL of the license, if available. Otherwise, use “Freeware”, “Proprietary”, or “Shareware”, as appropriate. If dual licensed, seperate licenses with a comma.
 * `notes`: A string with a message to be displayed after installing the app.
 * `persist` A string or array of strings of directories and files to persist inside the data directory for the app. [Persistent data](Persistent-data)
 * `pre_install` | `post_install` : A string or array of strings of the commands to be executed before or after an application is installed. (Available variables: `$dir`, `$persist_dir`, `$version` many more (_check the `lib/install` script_))
