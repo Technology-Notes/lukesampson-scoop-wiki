@@ -45,15 +45,15 @@ In the above example, Scoop will download `program.exe` but save it as `dl.7z`, 
 * `homepage`: The home page for the program.
 * `installer`|`uninstaller`: Instructions for running a non-MSI installer.
     * `file`: The installer executable file. For `installer` this defaults to the last URL downloaded. Must be specified for `uninstaller`.
-    * `script`: A string of commands to be executed as an installer/uninstaller instead of `file`.
+    * `script`: A one-line string, or array of strings, of commands to be executed as an installer/uninstaller instead of `file`.
     * `args`: An array of arguments to pass to the installer. Optional.
     * `keep`: `"true"` if the installer should be kept after running (for future uninstallation, as an example). If omitted or set to any other value, the installer will be deleted after running. See [`extras/oraclejdk`](https://github.com/lukesampson/scoop-extras/blob/master/oraclejdk.json) for an example. This option will be ignored when used in an `uninstaller` directive.
 * `license`: A string or hash of the software license for the program. For well-known licenses, please use the identifier found at https://spdx.org/licenses/ For other licenses, use the URL of the license, if available. Otherwise, use “Freeware”, “Proprietary”, “Public Domain”, or “Shareware”, as appropriate. If multiple licenses, seperate licenses with a comma (,). If dual licensed, seperate licenses with a pipe symbol (|).
   * `identifier`: The SPDX identifier, or “Freeware”, “Proprietary”, “Public Domain”, or “Shareware”, as appropriate
   * `url`: For non-SPDX licenses, include a link to the license.
-* `notes`: A string with a message to be displayed after installing the app.
+* `notes`: A one-line string, or array of strings, with a message to be displayed after installing the app.
 * `persist` A string or array of strings of directories and files to persist inside the data directory for the app. [Persistent data](Persistent-data)
-* `pre_install` | `post_install` : A string or array of strings of the commands to be executed before or after an application is installed. (Available variables: `$dir`, `$persist_dir`, `$version` many more (_check the `lib/install` script_))
+* `pre_install` | `post_install` : A one-line string, or array of strings, of the commands to be executed before or after an application is installed. (Available variables: `$dir`, `$persist_dir`, `$version` many more (_check the `lib/install` script_))
 * `psmodule`: Install as a PowerShell module in `~/scoop/modules`.
     * `name` (required for `psmodule`): the name of the module, which should match at least one file in the extracted directory for PowerShell to recognize this as a module.
 * `shortcuts`: Specifies the shortcut values to make available in the startmenu. See [sourcetree](https://github.com/lukesampson/scoop-extras/blob/master/sourcetree.json) for an example. The array has to contain a executable/label pair. The third and fourth element are optional.
@@ -67,6 +67,7 @@ If any of the apps suggested for the feature are already installed, the feature 
 
 ### Undocumented Properties
 
+* `##`
 * `_comment`
 * `cookie`
 * `description`
