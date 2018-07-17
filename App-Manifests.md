@@ -67,7 +67,6 @@ In the above example, Scoop will download `program.exe` but save it as `dl.7z`, 
 * `suggest`: Display a message suggesting optional apps that provide complementary features. See [ant](https://github.com/lukesampson/scoop/blob/master/bucket/ant.json) for an example. 
     * `["Feature Name"] = [ "app1", "app2"... ]`<br>e.g. `"JDK": [ "extras/oraclejdk", "openjdk" ]`<br>
 If any of the apps suggested for the feature are already installed, the feature will be treated as 'fulfilled' and the user won't see any suggestions.
-* `_comment`: A one-line string, or array of strings, containing comments. Same as `##`. Deprecated. Use `##` instead.
 
 ### Undocumented Properties
 
@@ -75,6 +74,7 @@ If any of the apps suggested for the feature are already installed, the feature 
 
 ### Deprecated Properties
 
+* `_comment`: A one-line string, or array of strings, containing comments. Use `##` instead.
 * `extract_to`: No longer used.
 * `msi` *(deprecated)*: Settings for running an MSI installer<br>
 **This property is deprecated and support will be removed in a future version of Scoop.** *The new method is to treat .msi files just like a .zip and extract the files from it without running the full install. You can use the new method simply by not including this `msi` property in your manifest.*
