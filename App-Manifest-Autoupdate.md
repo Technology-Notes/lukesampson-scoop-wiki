@@ -123,6 +123,7 @@ All the options can be set globally for all architectures or for each architectu
  - `url`: an url template for generating the new url. It supports the following variables:
    - `$version`: `3.7.1`
    - `$underscoreVersion`: `3_7_1`
+   - `$dashVersion`: `3-7-1`
    - `$cleanVersion`: `371`
    - The `$version` (e.g. `3.7.1.2`) is splitted on each `.` and is assigned to:
      - `$majorVersion`: `3`
