@@ -30,7 +30,7 @@
 * [Java](wiki/Java)
 
 ### Misc
-* [System-wide installs](wiki/Global-Installs)
+* [System-wide (global) installs](wiki/Global-Installs)
 * [Switching between Ruby and Python Versions](wiki/Switching-Ruby-And-Python-Versions)
 * [Why PowerShell?](wiki/Why-PowerShell%3F)
 * [Example Setup Scripts](wiki/Example-Setup-Scripts)
