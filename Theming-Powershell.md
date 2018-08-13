@@ -12,8 +12,8 @@ scoop install 7zip git openssh concfg
 # back-up current console settings
 concfg export console-backup.json
 
-# use solarized color theme, in a small window
-concfg import solarized small
+# use solarized color theme
+concfg import solarized-dark
 
 # You'll see this warning:
 #     overrides in the registry and shortcut files might interfere with
