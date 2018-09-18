@@ -5,7 +5,7 @@ Here you will find an in-depth explanation of how the `autoupdate` part of an ap
 # Using autoupdate
 
 Use `checkver` to query the current version of either a specific app or all apps of a bucket.
-Open a powershell/cmd, then `cd` into the buckets repository directory and run the following commands.
+Open a PowerShell/cmd, then `cd` into the buckets repository directory and run the following commands.
 
 To query the current version of a specific app the bucket, run:
 
@@ -41,7 +41,7 @@ Simplest solution is to use an regex and it will match it to the source of `home
 Use another url if the `homepage` doesn't contain the version. Example: [gradle](https://github.com/lukesampson/scoop/blob/master/bucket/gradle.json)
 - `homepage` will be ignored
 - `checkver.url` Page where the version can be found
-- `checkver.re` Regex for finding the version
+- `checkver.re` or `checkver.regex` Regex for finding the version
 ```json
 "homepage": "https://gradle.org",
 "checkver": {
@@ -52,7 +52,7 @@ Use another url if the `homepage` doesn't contain the version. Example: [gradle]
 
 Use a JSON endpoint with rudimentary JSON path expressions to retrieve the version. Example: [nuget](https://github.com/lukesampson/scoop/blob/master/bucket/nuget.json)
 - `checkver.url` JSON endpoint where the version can be found
-- `checkver.jp` JSON path expression for finding the version ([JSONPath Expression Tester](https://jsonpath.curiousconcept.com/))
+- `checkver.jp` or `checkver.jsonpath` JSON path expression for finding the version ([JSONPath Expression Tester](https://jsonpath.curiousconcept.com/))
 ```json
 "checkver": {
     "url": "https://dist.nuget.org/index.json",
@@ -60,7 +60,7 @@ Use a JSON endpoint with rudimentary JSON path expressions to retrieve the versi
 },
 ```
 
-Use latest app release on Github by setting `checkver` to `github` and the `homepage` to the repository URL. This will try to match the tag with `\/releases\/tag\/(?:v)?([\d.]+)`. *The repository maintainer has to use Github's release feature for this to work. Pre-releases will be ignored!* Example: [nvm](https://github.com/lukesampson/scoop/blob/master/bucket/nvm.json)
+Use the latest app release on Github by setting `checkver` to `github` and the `homepage` to the repository URL. This will try to match the tag with `\/releases\/tag\/(?:v)?([\d.]+)`. *The repository maintainer has to use Github's release feature for this to work. Pre-releases will be ignored!* Example: [nvm](https://github.com/lukesampson/scoop/blob/master/bucket/nvm.json)
 ```json
 "homepage": "https://github.com/coreybutler/nvm-windows",
 "checkver": "github",
@@ -83,10 +83,10 @@ This example will provide `$version` and `$matchShort` as variables. Example: [g
 },
 ```
 - `checkver`: Regex for finding the version on the `homepage`
-  - `url`: Page where the version can be found
-  - `re`: Regex for finding the version
+  - `url`: Page where the version can be found (supports [version variables](#version-variables))
+  - `re|regex`: Regex for finding the version
   - `github`: Url to the apps Github repository
-  - `jp`: JSON path expression for finding the version ([JSONPath Expression Tester](https://jsonpath.curiousconcept.com/))
+  - `jp|jsonpath`: JSON path expression for finding the version ([JSONPath Expression Tester](https://jsonpath.curiousconcept.com/))
   - `reverse: true`: match the last occurrence found (default is to match the first occurrence). Example: [x264](https://github.com/lukesampson/scoop/blob/master/bucket/x264.json#L26)
   - `replace`: replace the matched value with a calculated value.Example: [sysinternals](https://github.com/lukesampson/scoop-extras/blob/master/sysinternals.json#L9)
 
@@ -120,21 +120,9 @@ Some example manifests using the `autoupdate` feature:
 
 All the options can be set globally for all architectures or for each architecture separately
 
- - `url`: an url template for generating the new url. It supports the following variables:
-   - `$version`: `3.7.1`
-   - `$underscoreVersion`: `3_7_1`
-   - `$dashVersion`: `3-7-1`
-   - `$cleanVersion`: `371`
-   - The `$version` (e.g. `3.7.1.2`) is splitted on each `.` and is assigned to:
-     - `$majorVersion`: `3`
-     - `$minorVersion`: `7`
-     - `$patchVersion`: `1`
-     - `$buildVersion`: `2`
-   - `$preReleaseVersion`: Everything after the first `-`, e.g. `3.7.1-rc.1` would result in `rc.1`
-   - Each capturing group in the [`checkver` property](#add-checkver-to-a-manifest) adds a `$matchX` variable (named groups are allowed). Matching `v3.7.1/3.7` with [`v(?<version>[\d.]+)\/(?<short>[\d.]+)`](https://regex101.com/r/M7RP3p/1) would result in:
-      - `$match1` or `$matchVersion`: `3.7.1`
-      - `$match2` or `$matchShort`: `3.7`
- - `extract_dir`: Option to update `extract_dir` (Variables: see above)
+ - `url`: an url template for generating the new url. (supports [version variables](#version-variables))
+   - Scoop will rename files by appending `#/dl.7z` or `#/pngcrush.exe` to the URL (useful for extracting installers or renaming executables version string)
+ - `extract_dir`: Option to update `extract_dir` (supports [version variables](#version-variables))
  - `note`: Optional message to be displayed when the autoupdate command is run
  - `hash`: Set this [property](#add-hash-to-autoupdate) for obtaining hash values without download the actual files.
 
@@ -185,13 +173,32 @@ All the options can be set globally for all architectures or for each architectu
    - `json`: extract from a JSON file. Example: [openssl](https://github.com/lukesampson/scoop/blob/master/bucket/openssl.json)
    - `download`: (fallback) downloads the file and hash it locally
  - `url`: URL template for downloading RDF/JSON files or extracting hashes. It supports the following variables:
-   - All variables used for [`autoupdate` URLs](#add-autoupdate-to-a-manifest)
+   - Supports all [version variables](#version-variables)
    - `$url`: autoupdate URL without fragments (`#/dl.7z`) [e.g. `http://example.com/path/file.exe`]
    - `$baseurl`: autoupdate URL without filename and fragments (`#/dl.7z`) [e.g. `http://example.com/path`]
- - `find`: A regex to extract the hash from the source. [Defaults to: `^([a-fA-F0-9]+)$` and `([a-fA-F0-9]+)\s+\*?(?:$basename)`]
+ - `find|regex`: A regex to extract the hash from the source. [Defaults to: `^([a-fA-F0-9]+)$` and `([a-fA-F0-9]+)\s+\*?(?:$basename)`]
    - `$basename`: filename from autoupdate URL (ignores fragments `#/dl.7z`)
- - `jp`: For JSON files: A JSON path to extract the hash from the source (Variables: `$basename`)
+ - `jp|jsonpath`: For JSON files: A JSON path to extract the hash from the source (Variables: `$basename`)
  - `type`: Deprecated, hash type is determined automatically
+
+# Version variables
+The following variables are available:
+
+- `$version`: `3.7.1`
+- `$underscoreVersion`: `3_7_1`
+- `$dashVersion`: `3-7-1`
+- `$cleanVersion`: `371`
+- The `$version` (e.g. `3.7.1.2`) is splitted on each `.` and is assigned to:
+    - `$majorVersion`: `3`
+    - `$minorVersion`: `7`
+    - `$patchVersion`: `1`
+    - `$buildVersion`: `2`
+- `$matchHead`: Returns first two or three digits seperated by a dot (e.g. `3.7.1-rc.1` = `3.7.1` or `3.7-rc.1` = `3.7`)
+- `$matchTail`: Returns the rest of `$matchHead` (e.g. `3.7.1-rc.1` = `-rc.1` or `3.7-rc.1` = `-rc.1`)
+- `$preReleaseVersion`: Everything after the first `-` (e.g. `3.7.1-rc.1` would result in `rc.1`)
+- Each capturing group in the [`checkver` property](#add-checkver-to-a-manifest) adds a `$matchX` variable (named groups are allowed). Matching `v3.7.1/3.7` with [`v(?<version>[\d.]+)\/(?<short>[\d.]+)`](https://regex101.com/r/M7RP3p/1) would result in:
+    - `$match1` or `$matchVersion`: `3.7.1`
+    - `$match2` or `$matchShort`: `3.7`
 
 # Limitations
 There are some complex manifests which reach the limits of the current autoupdate implementation (_The list of affected manifests is incomplete_)
@@ -209,7 +216,7 @@ If you want to confirm an autoupdate works (e.g. after adding it to an existing 
 Check if the `url`, `extract_dir` and `hash` properties have the correct values. Try to install/uninstall the app and submit your changes.
 
 # Example Workflow with scoop status/update
-`scoop status` compares your installed version against the current copy of scoop and bucket repos on your machine. If these are not updated it will output wrong version information. e.g.:
+`scoop status` compares your installed version against the current copy of scoop and bucket repository on your machine. If these are not updated it will output wrong version information. e.g.:
 * installed version: 2.1.2
 * local scoop version: 2.1.3
 * online repo version: 2.1.4
@@ -219,7 +226,7 @@ Running `scoop update` before `scoop status` is recommended (and enforced every 
 
 `scoop update` just `git pull`s the main scoop repo to `~\scoop\apps\scoop\current` and every configured bucket to `~\scoop\buckets\<name>`
 
-`bin\checkver` is only for maintenance and updating the manifests so they can be commited to the repo.
+`bin\checkver` is only for maintenance and updating the manifests so they can be committed to the repo.
 
 Example Workflow:
 * `.\bin\checkver -dir ./ * -u` (updates all manifest in the repo)
