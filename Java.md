@@ -6,14 +6,13 @@ To add the bucket, run `scoop bucket add java`
 
 [OpenJDK](https://github.com/se35710/scoop-java/blob/master/openjdk.json) is the preferred JDK (because of its Open Source [license](http://openjdk.java.net/legal/gplv2+ce.html)), and can be installed with `scoop install openjdk`. The Scoop Java bucket contains four different OpenJDK builds: [OpenJDK](http://openjdk.java.net), [Zulu](https://www.azul.com/products/zulu-and-zulu-enterprise), [ojdkbuild](https://github.com/ojdkbuild/ojdkbuild) and [AdoptOpenJDK](https://adoptopenjdk.net). The latter with both Hotspot and OpenJ9 JVMs.
 
-Oracle’s Java is also available, in three flavours: [JDK](https://github.com/se35710/scoop-java/blob/master/oraclejdk.json), [Server JRE](https://github.com/se35710/scoop-java/blob/master/oraclejre-server.json) and [JRE](https://github.com/se35710/scoop-java/blob/master/oraclejre.json). The Server JRE is a runtime environment specifically targeted for deploying Java in server environments, for example running [Apache Tomcat](https://github.com/lukesampson/scoop-extras/blob/master/tomcat.json).
-For browser support and Java Web Start read more [here](https://blogs.oracle.com/java-platform-group/launching-web-start-applications).
+Oracle’s Java is also available, in two versions: [JDK](https://github.com/se35710/scoop-java/blob/master/oraclejdk.json), [JDK-LTS](https://github.com/se35710/scoop-java/blob/master/oraclejdk-lits.json). The JDK-LTS version follows Oracle's new LTS releases (available since version 11).
 
 ### Switching Javas
 
 There are two solutions available today for switching java:
 
-1. `scoop reset <java>@<version>`
+1. `scoop reset <java>[@<version>]`
 2. Using [find-java](https://github.com/lukesampson/scoop-extras/blob/master/find-java.json) from [extras](https://github.com/lukesampson/scoop-extras)
 
 `scoop reset` works very well for the current session, and will also update the user's path.
