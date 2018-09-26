@@ -6,7 +6,7 @@ To add the bucket, run `scoop bucket add java`
 
 [OpenJDK](https://github.com/se35710/scoop-java/blob/master/openjdk.json) is the preferred JDK (because of its Open Source [license](http://openjdk.java.net/legal/gplv2+ce.html)), and can be installed with `scoop install openjdk`. The Scoop Java bucket contains four different OpenJDK builds: [OpenJDK](http://openjdk.java.net), [Zulu](https://www.azul.com/products/zulu-and-zulu-enterprise), [ojdkbuild](https://github.com/ojdkbuild/ojdkbuild) and [AdoptOpenJDK](https://adoptopenjdk.net). The latter with both Hotspot and OpenJ9 JVMs.
 
-Oracle’s Java is also available, in two versions: [JDK](https://github.com/se35710/scoop-java/blob/master/oraclejdk.json), [JDK-LTS](https://github.com/se35710/scoop-java/blob/master/oraclejdk-lits.json). The JDK-LTS version follows Oracle's new LTS releases (available since version 11).
+Oracle’s Java is also available, in two versions: [JDK](https://github.com/se35710/scoop-java/blob/master/oraclejdk.json), [JDK-LTS](https://github.com/se35710/scoop-java/blob/master/oraclejdk-lts.json). The JDK-LTS version follows Oracle's new LTS releases (available since version 11).
 
 ### Switching Javas
 
