@@ -3,6 +3,9 @@ This guide will help you use SSH on Windows to connect to an SSH server. You'll 
 This guide assumes you have [installed Scoop](https://github.com/lukesampson/scoop/wiki/Quick-Start) and have a Linux machine running an SSH server—we'll need something to connect to. It also assumes that you're basically familiar with [what SSH is all about](http://en.wikipedia.org/wiki/Secure_Shell) and just want to know how to use it on Windows.
 
 ### Install
+
+> If you're using Windows 10 version 1803 (April 2018) or above, a built-in win32-openssh has been installed in your system and been added to the system PATH. You can run `scoop which ssh` to locate the ssh that you're using, and you can chose to skip external openssh installation.
+
 First, install SSH from a Powershell prompt:
 
     scoop install openssh
