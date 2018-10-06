@@ -71,7 +71,7 @@ scoop config proxy username:password@proxy.example.org:8080
 ##### Bypassing the proxy configured in Internet Options
 
 ```powershell
-scoop config proxy none
+scoop config rm proxy
 ```
 
 ##### Using a password containing `@` or `:`
