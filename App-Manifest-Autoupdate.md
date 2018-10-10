@@ -88,7 +88,7 @@ This example will provide `$version` and `$matchShort` as variables. Example: [g
   - `github`: Url to the apps Github repository
   - `jp|jsonpath`: JSON path expression for finding the version ([JSONPath Expression Tester](https://jsonpath.curiousconcept.com/))
   - `reverse: true`: match the last occurrence found (default is to match the first occurrence). Example: [x264](https://github.com/lukesampson/scoop/blob/master/bucket/x264.json#L26)
-  - `replace`: replace the matched value with a calculated value.Example: [sysinternals](https://github.com/lukesampson/scoop-extras/blob/master/sysinternals.json#L9)
+  - `replace`: replace the matched value with a calculated value. Example: [sysinternals](https://github.com/lukesampson/scoop-extras/blob/master/sysinternals.json#L9)
 
 # Add `autoupdate` to a manifest
 For the autoupdate feature to work it needs a [`checkver` property](#add-checkver-to-a-manifest) to find the latest version number.
