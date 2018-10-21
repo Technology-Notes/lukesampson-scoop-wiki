@@ -128,12 +128,12 @@ All the options can be set globally for all architectures or for each architectu
 
 Some examples with autoupdate and multiple `$match` variables:
 * [haxe](https://github.com/lukesampson/scoop/blob/master/bucket/haxe.json)
-* [openjdk](https://github.com/lukesampson/scoop/blob/master/bucket/openjdk.json)
+* [openjdk](https://github.com/se35710/scoop-java/blob/master/openjdk.json)
 
 # Add `hash` to `autoupdate`
 There are several options to obtain the hash of the new file. If the app provider publishes hash values it is possible to extract these from their website or hashfile. If nothing is defined or something goes wrong while downloading/extracting the hash values the files will be downloaded and hashed locally.
 
-Use the same URL as the file and append `.sha256` to it. Example: [openjdk](https://github.com/lukesampson/scoop/blob/master/bucket/openjdk.json)
+Use the same URL as the file and append `.sha256` to it. Example: [openjdk](https://github.com/se35710/scoop-java/blob/master/openjdk.json)
 ```json
 "hash": {
     "url": "$url.sha256"
