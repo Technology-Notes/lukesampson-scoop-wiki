@@ -62,4 +62,4 @@ scoop search hello # -> you should see hello listed under, 'my-bucket bucket:'
 scoop install hello
 hello # -> you should see 'Hello, <windows-username>!'
 ```
-5. To share your bucket, all you need to do is tell people how to add you bucket, i.e. by running the command in step 3.
+5. To share your bucket, all you need to do is tell people how to add you bucket, i.e. by running the command in step 3. If you want your bucket listed in the [Scoop Directory](https://github.com/rasa/scoop-directory) , add a topic of `scoop-bucket` to its github page.
