@@ -10,6 +10,8 @@ First, install SSH from a Powershell prompt:
 
     scoop install openssh
 
+P.S. if you want to use ssh with git, you may prefer to install `git-with-openssh` by `scoop install git-with-openssh`
+
 Or, for the latest version of openssh:
 
     scoop install win32-openssh
@@ -64,18 +66,15 @@ Now try connecting again:
 
 This time, instead of being asked for your `username` password, you should be asked for the password for your private key.
 
-### Save your SSH key password in Windows Credential Manager
+### Better SSH experience with Pshazz
 
-Now, every time you you connect with `ssh username@example.org` you'll be asked for the private key password.
+Now, every time you restart your PC and open a console session you need to start the SSH Agent manually, and every time you connect with `ssh username@example.org` you'll be asked for the private key password.
 
-You can use [Pshazz](https://github.com/lukesampson/pshazz) to save your password in Windows Credential Manager.
+You can use [Pshazz](https://github.com/lukesampson/pshazz) to automatically start the SSH Agent and cache your the key passphrase.
 
     scoop install pshazz
 
-You should see a GUI dialog popup asking for your password. Enter it and check the 'Save password' box.
-![](https://github.com/lukesampson/scoop/raw/gh-pages/images/docs/askpass.png)
-
-You should see a message like `Identity added: /c/Users/username//.ssh/id_rsa (/c/Users/username//.ssh/id_rsa)`. Try connecting over SSH again:
+Then pshazz use start the SSH Agent automatically and add your keys. You'll be asked for the key passphrase for the first time. Try connecting over SSH:
 
     ssh username@example.org
 
@@ -87,13 +86,11 @@ To see what happened, type:
 
 The thumbprint for your SSH key should be shown. `ssh-agent` will try using this key whenever you use SSH now.
 
-You should be able to see that your password is saved in Windows Credential Manager by running:
+What's more, Pshazz support tab completion on `ssh` command:
 
-    cmdkey /list:ssh:$home\.ssh\id_rsa
+    ssh <TAB>
 
-Each time you start a Powershell session, Pshazz will start up `ssh-agent` if it's not already running and add your key for you using the saved password.
-
-### Customising SSH settings
+You will see all hosts in your `~/.ssh/config`.
 
 You might notice that your SSH sessions are timing out. To prevent this I like to add a ServerAliveInterval to my ~/.ssh/config (you might need to create this file if it doesn't exist):
 
