@@ -74,7 +74,7 @@ You can use [Pshazz](https://github.com/lukesampson/pshazz) to automatically sta
 
     scoop install pshazz
 
-Then pshazz use start the SSH Agent automatically and add your keys. You'll be asked for the key passphrase for the first time. Try connecting over SSH:
+Then Pshazz will start the SSH Agent automatically and add your keys. You'll be asked for the key passphrase for the first time. Try connecting over SSH:
 
     ssh username@example.org
 
