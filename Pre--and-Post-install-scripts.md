@@ -1,6 +1,6 @@
+## Variables
+
 These variables are available for use in `pre_install` / `post_install` scripts:
-
-
 
 
 | Variable        | Example                                      | Description      |
@@ -22,3 +22,12 @@ These variables are available for use in `pre_install` / `post_install` scripts:
 | `$cfg`          | `{SCOOP_BRANCH, SCOOP_REPO, lastupdate}`     | Scoop configuration (powershell object)
 
 (_check the [`lib/install`](https://github.com/lukesampson/scoop/blob/master/lib/install.ps1) script for more details_)
+
+## Functions
+
+### `appdir`
+
+Reference another scoop application. Eg, to check if another application is installed you can use:
+
+`"post_install": [ "if (Test-Path \"$(appdir otherapp)\\current\\otherapp.exe\") { <# .. do something .. #> }"`
+
