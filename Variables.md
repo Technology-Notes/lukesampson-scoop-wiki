@@ -18,5 +18,5 @@ These variables are available for use in `pre_install` / `post_install` scripts:
 | `$cachedir`     | `C:\Users\username\scoop\cache`              | 
 | `$bucketsdir`   | `C:\Users\username\scoop\buckets`            | 
 | `$modulesdir`   | `C:\Users\username\scoop\modules`            | 
-| `$cfgpath       | `~/.scoop`                                   | Path to Scoop configuration
+| `$cfgpath`      | `~/.scoop`                                   | Path to Scoop configuration
 | `$cfg`          | `{SCOOP_BRANCH, SCOOP_REPO, lastupdate}`     | Scoop configuration (powershell object)
