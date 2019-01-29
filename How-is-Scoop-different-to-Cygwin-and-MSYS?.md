@@ -1,4 +1,4 @@
-The most concise comparison I've come across for these 2 projects is an answer by Mike Zick in [this thread](http://sourceforge.net/mailarchive/forum.php?thread_name=200506130821.11185.mszick%40morethan.org&forum_name=mingw-msys).
+The most concise description of these 2 projects is an answer by Mike Zick in [this thread](http://sourceforge.net/mailarchive/forum.php?thread_name=200506130821.11185.mszick%40morethan.org&forum_name=mingw-msys).
 
 > Cygwin is an operating system wrapper<br>
 > The goal of Cygwin is to provide a Linux Programming API.
@@ -7,7 +7,7 @@ The most concise comparison I've come across for these 2 projects is an answer b
 > Msys is a command shell substitute<br>
 > The goal of Msys is to provide a POSIX scripting environment.
 
-It's probably not a completely accurate or comprehensive comparison, but it is fairly easy to grasp.
+It's probably not a completely accurate or comprehensive description, but it is fairly easy to grasp.
 
 So to parallel this for Scoop:
 
