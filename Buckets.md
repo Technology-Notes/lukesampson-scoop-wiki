@@ -38,7 +38,7 @@ You can run `scoop help bucket` for more information on buckets.
 
 Here's an example of one way you might go about creating a new bucket, using GitHub to host it. You don't have to use GitHub though—you can use whatever source control repo you like, or even just a Git repo on your local or network drive.
 
-1. Create a new GitHub repo called my-bucket
+1. Create a new GitHub repo called e.g. `my-bucket`
 2. Add an app to your bucket. In a powershell session:
 
 ```powershell
