@@ -37,7 +37,7 @@ Simplest solution is to use an regex and it will match it to the source of `home
 "homepage": "http://www.7-zip.org/",
 "checkver": "Download 7-zip ([^\\ ]+)",
 ```
-If you don't know regex or want to test if your regex matches on the right text you can use an online (tool)[https://regex101.com/].
+If you don't know regex or want to test if your regex matches on the right text you can use an online (tool)[https://regex101.com/] .
 
 Use another url if the `homepage` doesn't contain the version. Example: [gradle](https://github.com/lukesampson/scoop/blob/master/bucket/gradle.json)
 - `homepage` will be ignored
