@@ -177,7 +177,7 @@ All the options can be set globally for all architectures or for each architectu
    - Supports all [version variables](#version-variables)
    - `$url`: autoupdate URL without fragments (`#/dl.7z`) [e.g. `http://example.com/path/file.exe`]
    - `$baseurl`: autoupdate URL without filename and fragments (`#/dl.7z`) [e.g. `http://example.com/path`]
- - `find|regex`: A regex to extract the hash from the source. [Defaults to: `^([a-fA-F0-9]+)$` and `([a-fA-F0-9]+)\s+\*?(?:$basename)`]
+ - `find|regex`: A regex to extract the hash from the source. [Defaults to: `^([a-fA-F0-9]+)$` and `([a-fA-F0-9]{32,128})[\x20\t]+.*`$basename(?:[\x20\t]+\d+)?`]
    - `$basename`: filename from autoupdate URL (ignores fragments `#/dl.7z`)
  - `jp|jsonpath`: For JSON files: A JSON path to extract the hash from the source (Variables: `$basename`)
  - `type`: Deprecated, hash type is determined automatically
@@ -212,6 +212,7 @@ There are some complex manifests which reach the limits of the current autoupdat
 If you want to confirm an autoupdate works (e.g. after adding it to an existing manifest or creating a new one) change the `version` field to a lower or different version and then run or use the `-f` parameter
 
     cd <bucket repository>
+    $env:SCOOP_DEBUG = $true
     .\bin\checkver.ps1 <app> -u
 
 Check if the `url`, `extract_dir` and `hash` properties have the correct values. Try to install/uninstall the app and submit your changes.
