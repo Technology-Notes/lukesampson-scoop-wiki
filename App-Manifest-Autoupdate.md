@@ -212,7 +212,7 @@ There are some complex manifests which reach the limits of the current autoupdat
 If you want to confirm an autoupdate works (e.g. after adding it to an existing manifest or creating a new one) change the `version` field to a lower or different version and then run or use the `-f` parameter
 
     cd <bucket repository>
-    $env:SCOOP_DEBUG = $true
+    scoop config debug $true
     .\bin\checkver.ps1 <app> -u
 
 Check if the `url`, `extract_dir` and `hash` properties have the correct values. Try to install/uninstall the app and submit your changes.
