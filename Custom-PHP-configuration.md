@@ -27,6 +27,8 @@ html_errors = Off
 Enabling PHP modules, those are the most commonly needed modules. Take a look inside the `php.ini` what is available (`extensions.ini`)
 
 ``` ini
+extension_dir=ext
+
 extension=php_curl.dll
 extension=php_fileinfo.dll
 extension=php_gd2.dll
