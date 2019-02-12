@@ -59,9 +59,9 @@ In the above example, Scoop will download `program.exe` but save it as `dl.7z`, 
 * `pre_install` | `post_install` : A one-line string, or array of strings, of the commands to be executed before or after an application is installed. These can use variables like `$dir`, `$persist_dir`, and `$version`. See [Pre- and post-install Scripts](Pre--and-Post-install-scripts) for more details. 
 * `psmodule`: Install as a PowerShell module in `~/scoop/modules`.
     * `name` (required for `psmodule`): the name of the module, which should match at least one file in the extracted directory for PowerShell to recognize this as a module.
-* `shortcuts`: Specifies the shortcut values to make available in the startmenu. See [sourcetree](https://github.com/lukesampson/scoop-extras/blob/master/sourcetree.json) for an example. The array has to contain a executable/label pair. The third and fourth element are optional.
+* `shortcuts`: Specifies the shortcut values to make available in the startmenu. See [sourcetree](https://github.com/lukesampson/scoop-extras/blob/master/bucket/sourcetree.json) for an example. The array has to contain a executable/label pair. The third and fourth element are optional.
   1. Path to target file [required]
-  2. Name of the shortcut (supports subdirectories: `<AppsSubDir>\\<AppShortcut>` [e.g. sysinternals](https://github.com/lukesampson/scoop-extras/blob/master/sysinternals.json)) [required]
+  2. Name of the shortcut (supports subdirectories: `<AppsSubDir>\\<AppShortcut>` [e.g. sysinternals](https://github.com/lukesampson/scoop-extras/blob/master/bucket/sysinternals.json)) [required]
   3. Start parameters [optional]
   4. Path to icon file [optional]
 * `suggest`: Display a message suggesting optional apps that provide complementary features. See [ant](https://github.com/lukesampson/scoop/blob/master/bucket/ant.json) for an example. 
