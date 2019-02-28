@@ -27,24 +27,25 @@ iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
 ```
 
 ### Installing Scoop to Custom Directory
-Assuming the target directory is `D:\Applications\Scoop`, in a PowerShell command console, run:
+Assuming the target directory is `C:\scoop`, in a PowerShell command console, run:
 ```powershell
-[environment]::setEnvironmentVariable('SCOOP','D:\Applications\Scoop','User')
-$env:SCOOP='D:\Applications\Scoop'
+$env:SCOOP='C:\scoop'
+[environment]::setEnvironmentVariable('SCOOP',$env:SCOOP,'User')
 iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
 ```
 
 Assuming you didn't see any error messages, Scoop is now ready to run.
 
-### Installing global apps to Custom Directory
+### Installing global apps to custom directory
+Assuming the target directory is `C:\apps`, in a admin-enabled PowerShell command console, run:
 ```powershell
-[environment]::setEnvironmentVariable('SCOOP_GLOBAL','F:\GlobalScoopApps','Machine')
-$env:SCOOP_GLOBAL='F:\GlobalScoopApps'
+$env:SCOOP_GLOBAL='c:\apps'
+[environment]::setEnvironmentVariable('SCOOP_GLOBAL',$env:SCOOP_GLOBAL,'Machine')
 scoop install -g <app>
 ```
 
 ### Using Scoop
-Although Scoop is written in PowerShell, it's interface is closer to Git and Mercurial than it is to most PowerShell programs.
+Although Scoop is written in PowerShell, its interface is closer to Git and Mercurial than it is to most PowerShell programs.
 
 To get an overview of Scoop's interface, run:
 
