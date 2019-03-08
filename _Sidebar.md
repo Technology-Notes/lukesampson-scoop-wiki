@@ -4,7 +4,7 @@
   - [How is Scoop different to Chocolatey?](Chocolatey-Comparison)
   - [How is Scoop different to Cygwin and MSYS?](How-is-Scoop-different-to-Cygwin-and-MSYS%3F)
 - Getting Started
-  - [Quick Start / Installing Scoop](Quick-Start)
+  - [Quick Start](Quick-Start)
   - [Command Help](Commands)
   - [FAQ](FAQ)
   - [Uninstalling Scoop](Uninstalling-Scoop)
@@ -22,9 +22,10 @@
   - [Theming Powershell](Theming-Powershell)
   - [SSH](SSH-on-Windows)
   - [GitHub with SSH Key](GitHub-with-SSH-Key)
-  - [Customise PHP configuration](Custom-PHP-configuration)
+  - [Customize PHP configuration](Custom-PHP-configuration)
   - [Apache with PHP](Apache-with-PHP)
   - [Java](Java)
+  - [Docker and Docker Compose](Docker-and-Docker-Compose)
 - Misc
   - [System-wide (global) installs](Global-Installs)
   - [Switching between Ruby and Python Versions](Switching-Ruby-And-Python-Versions)
