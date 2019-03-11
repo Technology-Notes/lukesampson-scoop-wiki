@@ -1,8 +1,8 @@
 - [Home](https://github.com/lukesampson/scoop/wiki)
 - Overview
-  - [So What?](So-What%3F)
+  - [So What?](So-What)
   - [How is Scoop different to Chocolatey?](Chocolatey-Comparison)
-  - [How is Scoop different to Cygwin and MSYS?](How-is-Scoop-different-to-Cygwin-and-MSYS%3F)
+  - [How is Scoop different to Cygwin and MSYS?](Cygwin-and-MSYS-Comparison)
 - Getting Started
   - [Quick Start](Quick-Start)
   - [Command Help](Commands)
@@ -29,8 +29,8 @@
 - Misc
   - [System-wide (global) installs](Global-Installs)
   - [Switching between Ruby and Python Versions](Switching-Ruby-And-Python-Versions)
-  - [Why PowerShell?](Why-PowerShell%3F)
+  - [Why PowerShell?](Why-PowerShell)
   - [Example Setup Scripts](Example-Setup-Scripts)
   - [Using Scoop behind a proxy server](Using-Scoop-behind-a-proxy)
-  - [Can I use Scoop in bash?](Can-I-Use-Scoop-In-Bash%3F)
+  - [Can I use Scoop in bash?](Can-I-Use-Scoop-In-Bash)
   - [PowerShell modules](PowerShell-Modules)
