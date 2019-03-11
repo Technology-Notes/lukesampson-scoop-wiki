@@ -2,9 +2,9 @@
 
 ## Overview
 
-* [So What?](wiki/So-What%3F)
+* [So What?](wiki/So-What)
 * [How is Scoop different to Chocolatey?](wiki/Chocolatey-Comparison)
-* [How is Scoop different to Cygwin and MSYS?](wiki/How-is-Scoop-different-to-Cygwin-and-MSYS%3F)
+* [How is Scoop different to Cygwin and MSYS?](wiki/Cygwin-and-MSYS-Comparison)
 
 ## Getting Started
 
@@ -39,8 +39,8 @@
 
 * [System-wide (global) installs](wiki/Global-Installs)
 * [Switching between Ruby and Python Versions](wiki/Switching-Ruby-And-Python-Versions)
-* [Why PowerShell?](wiki/Why-PowerShell%3F)
+* [Why PowerShell?](wiki/Why-PowerShell)
 * [Example Setup Scripts](wiki/Example-Setup-Scripts)
 * [Using Scoop behind a proxy server](wiki/Using-Scoop-behind-a-proxy)
-* [Can I use Scoop in bash?](wiki/Can-I-Use-Scoop-In-Bash%3F)
+* [Can I use Scoop in bash?](wiki/Can-I-Use-Scoop-In-Bash)
 * [PowerShell modules](wiki/PowerShell-Modules)
