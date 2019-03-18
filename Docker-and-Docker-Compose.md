@@ -35,3 +35,4 @@ Getting our Docker machine:
 ## Accessing from WSL environment
 ```
 eval $(docker-machine.exe env docker-host --shell wsl ) && export DOCKER_CERT_PATH=$(wslpath $DOCKER_CERT_PATH)
+```
