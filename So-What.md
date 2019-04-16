@@ -32,4 +32,4 @@ Scoop:
 * values your time and attention
 * reads the README for you
 
-There are other, less objective reasons to give Scoop a try. Maybe you like Chocolatey but you don't like the name, or typing `cinst` feels weird, or you're not a fan of messages about 'Chocolatey gods'.
+There are other, less objective reasons to give Scoop a try. Maybe you want to be able to install apps without Admin privileges. Maybe you like Chocolatey but you don't like the name, or typing `cinst` feels weird, or you're not a fan of messages about 'Chocolatey gods'.
