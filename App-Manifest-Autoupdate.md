@@ -110,7 +110,7 @@ Some example manifests using the `autoupdate` feature:
         "32bit": {
             "url": "https://example.org/dl/example-v$version-x86.msi"
         }
-    },
+    }
 }
 ```
 ```json
