@@ -1,7 +1,7 @@
 ### What are buckets?
 In Scoop, buckets are collections of apps. Or, to be more specific, a bucket is a Git repository containing JSON [app manifests](App-Manifests) which describe how to install an app.
 
-Scoop has a [main bucket](https://github.com/lukesampson/scoop/tree/master/bucket) which is bundled with Scoop and this is always available as the primary source for installing apps.
+Scoop has a [main bucket](https://github.com/ScoopInstaller/Main/tree/master/bucket) which is bundled with Scoop and this is always available as the primary source for installing apps.
 
 By default, when you run `scoop install <app>`, it looks in the main bucket, but it's possible to install from other buckets too.
 
