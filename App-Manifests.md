@@ -30,18 +30,18 @@ In the above example, Scoop will download `program.exe` but save it as `dl.7z`, 
 ### Optional Properties
 
 * `##`: A one-line string, or array of strings, containing comments.
-* `architecture`: If the app has 32- and 64-bit versions, architecture can be used to wrap the differences ([example](https://github.com/lukesampson/scoop/blob/master/bucket/7zip.json)]).
+* `architecture`: If the app has 32- and 64-bit versions, architecture can be used to wrap the differences ([example](https://github.com/ScoopInstaller/Main/blob/master/bucket/7zip.json)]).
     * `32bit|64bit`: contains architecture-specific instructions (`bin`, `checkver`, `extract_dir`, `hash`, `installer`,  `pre_install`, `post_install`, `shortcuts`, `uninstaller`, `url`, and `msi` [`msi` is deprecated]).
 * [`autoupdate`](App-Manifest-Autoupdate#add-autoupdate-to-a-manifest): Definition of how the manifest can be updated automatically.
 * `bin`: A string or array of strings of programs (executables or scripts) to make available on the user's path.
-    * You can also create an alias shim which uses a different name to the real executable and (optionally) passes arguments to the executable. Instead of just using a string for the executable, use e.g: `[ "program.exe", "alias", "--arguments" ]`. See [busybox](https://github.com/lukesampson/scoop/blob/master/bucket/busybox.json) for an example.
+    * You can also create an alias shim which uses a different name to the real executable and (optionally) passes arguments to the executable. Instead of just using a string for the executable, use e.g: `[ "program.exe", "alias", "--arguments" ]`. See [busybox](https://github.com/ScoopInstaller/Main/blob/master/bucket/busybox.json) for an example.
     * However if you declare just one shim like this, you must ensure it's enclosed in an outer array, e.g: 
       `"bin": [ [ "program.exe", "alias" ] ]`. Otherwise it will be read as separate shims.
-* [`checkver`](App-Manifest-Autoupdate#add-checkver-to-a-manifest): App maintainers and developers can use the [bin/checkver](https://github.com/lukesampson/scoop/blob/master/bin/checkver.ps1) tool to check for updated versions of apps. The `checkver` property in a manifest is a regular expression that can be used to match the current stable version of an app from the app's homepage. For an example, see the [go](https://github.com/lukesampson/scoop/blob/master/bucket/go.json) manifest. If the homepage doesn't have a reliable indication of the current version, you can also specify a different URL to check—for an example see the [ruby](https://github.com/lukesampson/scoop/blob/master/bucket/ruby.json) manifest.
+* [`checkver`](App-Manifest-Autoupdate#add-checkver-to-a-manifest): App maintainers and developers can use the [bin/checkver](https://github.com/lukesampson/scoop/blob/master/bin/checkver.ps1) tool to check for updated versions of apps. The `checkver` property in a manifest is a regular expression that can be used to match the current stable version of an app from the app's homepage. For an example, see the [go](https://github.com/ScoopInstaller/Main/blob/master/bucket/go.json) manifest. If the homepage doesn't have a reliable indication of the current version, you can also specify a different URL to check—for an example see the [ruby](https://github.com/ScoopInstaller/Main/blob/master/bucket/ruby.json) manifest.
 * `depends`: Runtime dependencies for the app which will be installed automatically. See also `suggest` (below) for an alternative to `depends`.
 * ` description`: A one line string containing a short description of the program. Don’t include the name of the program, if it’s the same as the app’s filename.
 * `env_add_path`: Add this directory to the user's path (or system path if `--global` is used). The directory is relative to the install directory and must be inside the install directory.
-* `env_set`: Sets one or more environment variables for the user (or system if `--global` is used) ([example](https://github.com/lukesampson/scoop/blob/master/bucket/go.json)).
+* `env_set`: Sets one or more environment variables for the user (or system if `--global` is used) ([example](https://github.com/ScoopInstaller/Main/blob/master/bucket/go.json)).
 * `extract_dir`: If `url` points to a compressed file (.zip, .7z, .tar, .gz, .lzma, and .lzh are supported), Scoop will extract just the directory specified from it.
 * `extract_to`: If `url` points to a compressed file (.zip, .7z, .tar, .gz, .lzma, and .lzh are supported), Scoop will extract all content to the directory specified ([example](https://github.com/lukesampson/scoop-extras/blob/master/bucket/irfanview.json)).
 * `hash`: A string or array of strings with a file hash for each URL in `url`. Hashes are SHA256 by default, but you can use SHA512, SHA1 or MD5 by prefixing the hash string with 'sha512:', 'sha1:' or 'md5:'.
@@ -65,7 +65,7 @@ In the above example, Scoop will download `program.exe` but save it as `dl.7z`, 
   2. Name of the shortcut (supports subdirectories: `<AppsSubDir>\\<AppShortcut>` [e.g. sysinternals](https://github.com/lukesampson/scoop-extras/blob/master/bucket/sysinternals.json)) [required]
   3. Start parameters [optional]
   4. Path to icon file [optional]
-* `suggest`: Display a message suggesting optional apps that provide complementary features. See [ant](https://github.com/lukesampson/scoop/blob/master/bucket/ant.json) for an example. 
+* `suggest`: Display a message suggesting optional apps that provide complementary features. See [ant](https://github.com/ScoopInstaller/Main/blob/master/bucket/ant.json) for an example. 
     * `["Feature Name"] = [ "app1", "app2"... ]`<br>e.g. `"JDK": [ "extras/oraclejdk", "openjdk" ]`<br>
 If any of the apps suggested for the feature are already installed, the feature will be treated as 'fulfilled' and the user won't see any suggestions.
 
