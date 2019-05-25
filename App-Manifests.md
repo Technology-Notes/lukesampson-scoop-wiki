@@ -12,7 +12,7 @@ An app manifest is a JSON file that describes how to install a program.
 
 When this manifest is run with `scoop install` it will download the zip file specified by `url`, extract the "cowsay-psh-master" directory from the zip file, and then make the `cowsay.ps1` script available on your path.
 
-For more examples, see the app manifests in the [main Scoop bucket](https://github.com/lukesampson/scoop/tree/master/bucket).
+For more examples, see the app manifests in the [main Scoop bucket](https://github.com/ScoopInstaller/Main/tree/master/bucket).
 
 ### Required Properties
 
