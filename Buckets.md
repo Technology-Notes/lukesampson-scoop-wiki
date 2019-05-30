@@ -11,7 +11,7 @@ And Scoop supports adding other buckets. Anyone can set up their own bucket with
 
 ### Known buckets
 
-There is a list of known buckets by the community, those can be seen in [`buckets.json`](https://github.com/lukesampson/scoop/blob/master/buckets.json), to see the list of known buckets execute:
+There is a list of known buckets by the community, those can be seen in [`buckets.json`](https://github.com/ScoopInstaller/Main/blob/master/buckets.json), to see the list of known buckets execute:
 
 ```
 scoop bucket known
@@ -22,7 +22,7 @@ If you want to install from a bucket besides the main one, you need to configure
 
     scoop bucket add extras
 
-The 'extras' bucket is a [special bucket](https://github.com/lukesampson/scoop/blob/master/buckets.json), in that it's "well known", i.e. Scoop already knows where this bucket is so you don't have to specify its location.
+The 'extras' bucket is a [special bucket](https://github.com/ScoopInstaller/Main/blob/master/buckets.json), in that it's "well known", i.e. Scoop already knows where this bucket is so you don't have to specify its location.
 
 Just say the extras bucket wasn't well known, the way you'd add it would be:
 
