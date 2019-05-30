@@ -2,7 +2,7 @@
 If you need to store data which should persist between updates you should use `~/scoop/persist/<app>/`.
 Inside the manifest, the path to the data directory is available in the `$persist_dir` variable.
 
-The [PHP](/lukesampson/scoop/blob/master/bucket/php.json) package uses it for the configuration files.
+The [PHP](/ScoopInstaller/Main/blob/master/bucket/php.json) package uses it for the configuration files.
 
 ## App manifest
 Directories and files can be added to the `persist` definition inside the app manifest.
@@ -23,11 +23,11 @@ Optionally an item can have a different name inside the data directory
 }
 ```
 ### Examples
-- [MySQL](/lukesampson/scoop/blob/master/bucket/mysql.json)
-- [MariaDB](/lukesampson/scoop/blob/master/bucket/mariadb.json)
-- [NGINX](/lukesampson/scoop/blob/master/bucket/nginx.json)
-- [node.js](/lukesampson/scoop/blob/master/bucket/nodejs.json)
-- [PHP](/lukesampson/scoop/blob/master/bucket/php.json)
+- [MySQL](/ScoopInstaller/Main/blob/master/bucket/mysql.json)
+- [MariaDB](/ScoopInstaller/Main/blob/master/bucket/mariadb.json)
+- [NGINX](/ScoopInstaller/Main/blob/master/bucket/nginx.json)
+- [node.js](/ScoopInstaller/Main/blob/master/bucket/nodejs.json)
+- [PHP](/ScoopInstaller/Main/blob/master/bucket/php.json)
 
 ## Uninstall
 
