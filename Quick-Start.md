@@ -5,10 +5,10 @@ To get to the PowerShell prompt
   * "powershell"
   * Prompt should now start with "PS "
 
-Make sure you have **PowerShell 3** or later installed. If you're on *Windows 10* or *Windows Server 2012* you should be all set, but *Windows 7* and *Windows Server 2008* might have older versions.
+Make sure you have **PowerShell 5.0** or later installed. If you're on *Windows 10* or *Windows Server 2012* you should be all set, but *Windows 7* and *Windows Server 2008* might have older versions.
 
 ```powershell
-$psversiontable.psversion.major # should be >= 3
+$psversiontable.psversion.major # should be >= 5.0
 ```
 
 Make sure you have allowed PowerShell to execute local scripts:
