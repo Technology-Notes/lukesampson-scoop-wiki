@@ -30,7 +30,7 @@ It is recommended to verify that the updated manifest still works by installing 
 
 # Add `checkver` to a manifest
 
-Simplest solution is to use an regex and it will match it to the source of `homepage`. Example: [7zip](https://github.com/lukesampson/scoop/blob/master/bucket/7zip.json)
+Simplest solution is to use an regex and it will match it to the source of `homepage`. Example: [7zip](https://github.com/ScoopInstaller/Main/blob/master/bucket/7zip.json)
 - `homepage` Page where the version can be found
 - `checkver` Regex for finding the version
 ```json
@@ -39,7 +39,7 @@ Simplest solution is to use an regex and it will match it to the source of `home
 ```
 If you don't know regex or want to test if your regex matches on the right text you can use an online [tool](https://regex101.com/) .
 
-Use another url if the `homepage` doesn't contain the version. Example: [gradle](https://github.com/lukesampson/scoop/blob/master/bucket/gradle.json)
+Use another url if the `homepage` doesn't contain the version. Example: [gradle](https://github.com/ScoopInstaller/Main/blob/master/bucket/gradle.json)
 - `homepage` will be ignored
 - `checkver.url` Page where the version can be found
 - `checkver.re` or `checkver.regex` Regex for finding the version
@@ -51,7 +51,7 @@ Use another url if the `homepage` doesn't contain the version. Example: [gradle]
 },
 ```
 
-Use a JSON endpoint with rudimentary JSON path expressions to retrieve the version. Example: [nuget](https://github.com/lukesampson/scoop/blob/master/bucket/nuget.json)
+Use a JSON endpoint with rudimentary JSON path expressions to retrieve the version. Example: [nuget](https://github.com/ScoopInstaller/Main/blob/master/bucket/nuget.json)
 - `checkver.url` JSON endpoint where the version can be found
 - `checkver.jp` or `checkver.jsonpath` JSON path expression for finding the version ([JSONPath Expression Tester](https://jsonpath.curiousconcept.com/))
 ```json
@@ -61,13 +61,13 @@ Use a JSON endpoint with rudimentary JSON path expressions to retrieve the versi
 },
 ```
 
-Use the latest app release on Github by setting `checkver` to `github` and the `homepage` to the repository URL. This will try to match the tag with `\/releases\/tag\/(?:v)?([\d.]+)`. *The repository maintainer has to use Github's release feature for this to work. Pre-releases will be ignored!* Example: [nvm](https://github.com/lukesampson/scoop/blob/master/bucket/nvm.json)
+Use the latest app release on Github by setting `checkver` to `github` and the `homepage` to the repository URL. This will try to match the tag with `\/releases\/tag\/(?:v)?([\d.]+)`. *The repository maintainer has to use Github's release feature for this to work. Pre-releases will be ignored!* Example: [nvm](https://github.com/ScoopInstaller/Main/blob/master/bucket/nvm.json)
 ```json
 "homepage": "https://github.com/coreybutler/nvm-windows",
 "checkver": "github",
 ```
 
-Or use different urls for the homepage and repository. Example: [cmder](https://github.com/lukesampson/scoop/blob/master/bucket/cmder.json)
+Or use different urls for the homepage and repository. Example: [cmder](https://github.com/ScoopInstaller/Main/blob/master/bucket/cmder.json)
 ```json
 "homepage": "http://cmder.net",
 "checkver": {
@@ -76,7 +76,7 @@ Or use different urls for the homepage and repository. Example: [cmder](https://
 ```
 
 Use capture groups for complex versions and use the results in the [`autoupdate` property](#add-autoupdate-to-a-manifest).
-This example will provide `$version` and `$matchShort` as variables. Example: [git](https://github.com/lukesampson/scoop/blob/master/bucket/git.json)
+This example will provide `$version` and `$matchShort` as variables. Example: [git](https://github.com/ScoopInstaller/Main/blob/master/bucket/git.json)
 ```json
 "checkver": {
     "url": "https://github.com/git-for-windows/git/releases/latest",
@@ -88,17 +88,17 @@ This example will provide `$version` and `$matchShort` as variables. Example: [g
   - `re|regex`: Regex for finding the version
   - `github`: Url to the apps Github repository
   - `jp|jsonpath`: JSON path expression for finding the version ([JSONPath Expression Tester](https://jsonpath.curiousconcept.com/))
-  - `reverse: true`: match the last occurrence found (default is to match the first occurrence). Example: [x264](https://github.com/lukesampson/scoop/blob/master/bucket/x264.json#L26)
+  - `reverse: true`: match the last occurrence found (default is to match the first occurrence). Example: [x264](https://github.com/ScoopInstaller/Main/blob/master/bucket/x264.json#L26)
   - `replace`: replace the matched value with a calculated value. Example: [sysinternals](https://github.com/lukesampson/scoop-extras/blob/7321801bf96b172fd4c8bd09ffa2cb5d8cdf1b0d/bucket/sysinternals.json#L13)
 
 # Add `autoupdate` to a manifest
 For the autoupdate feature to work it needs a [`checkver` property](#add-checkver-to-a-manifest) to find the latest version number.
 
 Some example manifests using the `autoupdate` feature:
-[NodeJS](https://github.com/lukesampson/scoop/blob/master/bucket/nodejs.json),
-[PHP](https://github.com/lukesampson/scoop/blob/master/bucket/php.json),
-[nginx](https://github.com/lukesampson/scoop/blob/master/bucket/nginx.json),
-[imagemagick](https://github.com/lukesampson/scoop/blob/master/bucket/imagemagick.json)
+[NodeJS](https://github.com/ScoopInstaller/Main/blob/master/bucket/nodejs.json),
+[PHP](https://github.com/ScoopInstaller/Main/blob/master/bucket/php.json),
+[nginx](https://github.com/ScoopInstaller/Main/blob/master/bucket/nginx.json),
+[imagemagick](https://github.com/ScoopInstaller/Main/blob/master/bucket/imagemagick.json)
 
 ```json
 "autoupdate": {
@@ -128,7 +128,7 @@ All the options can be set globally for all architectures or for each architectu
  - `hash`: Set this [property](#add-hash-to-autoupdate) for obtaining hash values without download the actual files.
 
 Some examples with autoupdate and multiple `$match` variables:
-* [haxe](https://github.com/lukesampson/scoop/blob/master/bucket/haxe.json)
+* [haxe](https://github.com/ScoopInstaller/Main/blob/master/bucket/haxe.json)
 * [openjdk](https://github.com/se35710/scoop-java/blob/master/openjdk.json)
 
 # Add `hash` to `autoupdate`
@@ -141,7 +141,7 @@ Use the same URL as the file and append `.sha256` to it. Example: [openjdk](http
 }
 ```
 
-Use a different URL to checksums file (can contain multiple hashes and files). Example: [nodejs](https://github.com/lukesampson/scoop/blob/master/bucket/nodejs.json)
+Use a different URL to checksums file (can contain multiple hashes and files). Example: [nodejs](https://github.com/ScoopInstaller/Main/blob/master/bucket/nodejs.json)
 ```json
 "hash": {
     "url": "https://nodejs.org/dist/v$version/SHASUMS256.txt.asc"
@@ -149,7 +149,7 @@ Use a different URL to checksums file (can contain multiple hashes and files). E
 ```
 
 Use a different regex to extract the hash.
-Example: [apache](https://github.com/lukesampson/scoop/blob/master/bucket/apache.json)
+Example: [apache](https://github.com/ScoopInstaller/Main/blob/master/bucket/apache.json)
 ```json
 "hash": {
     "url": "$url.txt",
@@ -157,7 +157,7 @@ Example: [apache](https://github.com/lukesampson/scoop/blob/master/bucket/apache
 }
 ```
 
-Use a JSON endpoint with rudimentary JSON path expressions to retrieve the hash. Example: [openssl](https://github.com/lukesampson/scoop/blob/master/bucket/openssl.json)
+Use a JSON endpoint with rudimentary JSON path expressions to retrieve the hash. Example: [openssl](https://github.com/ScoopInstaller/Main/blob/master/bucket/openssl.json)
 ```json
 "hash": {
     "mode": "json",
@@ -170,8 +170,8 @@ All the options can be set globally for all architectures or for each architectu
 
  - `mode`:
    - `extract`: (default, can be omitted) download from `url` and find with the regex
-   - `rdf`: extract from a RDF file. Example: [imagemagick](https://github.com/lukesampson/scoop/blob/master/bucket/imagemagick.json)
-   - `json`: extract from a JSON file. Example: [openssl](https://github.com/lukesampson/scoop/blob/master/bucket/openssl.json)
+   - `rdf`: extract from a RDF file. Example: [imagemagick](https://github.com/ScoopInstaller/Main/blob/master/bucket/imagemagick.json)
+   - `json`: extract from a JSON file. Example: [openssl](https://github.com/ScoopInstaller/Main/blob/master/bucket/openssl.json)
    - `download`: (fallback) downloads the file and hash it locally
  - `url`: URL template for downloading RDF/JSON files or extracting hashes. It supports the following variables:
    - Supports all [version variables](#version-variables)
@@ -204,9 +204,9 @@ The following variables are available:
 # Limitations
 There are some complex manifests which reach the limits of the current autoupdate implementation (_The list of affected manifests is incomplete_)
 
- - The binaries specified in the `bin` option change with the version number. Example: [pngcrush](https://github.com/lukesampson/scoop/blob/master/bucket/pngcrush.json), …
- - There are multiple `url` needed to be updated. Example: [python-exp](https://github.com/lukesampson/scoop/blob/master/bucket/python-exp.json)
- - The `env_set` is version dependent. Example: [sbcl](https://github.com/lukesampson/scoop/blob/master/bucket/sbcl.json)
+ - The binaries specified in the `bin` option change with the version number. Example: [pngcrush](https://github.com/ScoopInstaller/Main/blob/master/bucket/pngcrush.json), …
+ - There are multiple `url` needed to be updated. Example: [python-exp](https://github.com/ScoopInstaller/Main/blob/master/bucket/python-exp.json)
+ - The `env_set` is version dependent. Example: [sbcl](https://github.com/ScoopInstaller/Main/blob/master/bucket/sbcl.json)
 
 # Testing and running autoupdate
 If you want to confirm an autoupdate works (e.g. after adding it to an existing manifest or creating a new one) change the `version` field to a lower or different version and then run or use the `-f` parameter
