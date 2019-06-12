@@ -2,11 +2,26 @@
 
 Java development kits (JDK) and runtime environments (JRE) are available through the [Scoop Java bucket](https://github.com/scoopinstaller/java).
 
-To add the bucket, run `scoop bucket add java` 
+To add the bucket, run:
+```
+scoop bucket add java
+```
 
-[OpenJDK](https://github.com/ScoopInstaller/Java/blob/master/bucket/openjdk.json) is the preferred JDK (because of its Open Source [license](http://openjdk.java.net/legal/gplv2+ce.html)), and can be installed with `scoop install openjdk`. The Scoop Java bucket contains five different OpenJDK builds: [OpenJDK](http://openjdk.java.net), [Zulu](https://www.azul.com/products/zulu-and-zulu-enterprise), [ojdkbuild](https://github.com/ojdkbuild/ojdkbuild), [Amazon Corretto](https://aws.amazon.com/corretto) and [AdoptOpenJDK](https://adoptopenjdk.net). The latter with both HotSpot and OpenJ9 JVMs.
+[OpenJDK](https://github.com/ScoopInstaller/Java/blob/master/bucket/openjdk.json) is the preferred JDK (because of its Open Source [license](http://openjdk.java.net/legal/gplv2+ce.html)), and can be installed with:
+```
+scoop install openjdk
+```
 
-[Oracle’s Java](https://www.oracle.com/technetwork/java/index.html) is also available in the [oraclejdk](https://github.com/ScoopInstaller/Java/blob/master/bucket/oraclejdk.json ) manifest.
+The Scoop Java bucket contains five different OpenJDK builds:
+
+- [OpenJDK](http://openjdk.java.net)
+- [Zulu](https://www.azul.com/products/zulu-and-zulu-enterprise)
+- [ojdkbuild](https://github.com/ojdkbuild/ojdkbuild)
+- [Amazon Corretto](https://aws.amazon.com/corretto)
+- [AdoptOpenJDK](https://adoptopenjdk.net)
+  - AdoptOpenJDK has versions with HotSpot and Eclipse OpenJ9 JVMs.
+
+[Oracle’s Java](https://www.oracle.com/technetwork/java/index.html) is also available in the [oraclejdk](https://github.com/ScoopInstaller/Java/blob/master/bucket/oraclejdk.json) manifest.
 
 ### Switching Javas
 
