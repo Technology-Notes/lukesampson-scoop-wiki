@@ -1,4 +1,4 @@
-### Choice of JDKs
+## Choice of JDKs
 
 Java development kits (JDK) and runtime environments (JRE) are available through the [Scoop Java bucket](https://github.com/scoopinstaller/java).
 
@@ -23,7 +23,8 @@ The Scoop Java bucket contains five different OpenJDK builds:
 
 [Oracle’s Java](https://www.oracle.com/technetwork/java/index.html) is also available in the [oraclejdk](https://github.com/ScoopInstaller/Java/blob/master/bucket/oraclejdk.json) manifest.
 
-### Switching Javas
+
+## Switching Javas
 
 There are two solutions available today for switching java:
 
