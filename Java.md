@@ -1,4 +1,4 @@
-## Choice of JDKs
+# Choice of JDKs
 
 Java development kits (JDK) and runtime environments (JRE) are available through the [Scoop Java bucket](https://github.com/scoopinstaller/java).
 
@@ -7,24 +7,83 @@ To add the bucket, run:
 scoop bucket add java
 ```
 
-[OpenJDK](https://github.com/ScoopInstaller/Java/blob/master/bucket/openjdk.json) is the preferred JDK (because of its Open Source [license](http://openjdk.java.net/legal/gplv2+ce.html)), and can be installed with:
+
+## OpenJDK
+
+[OpenJDK](http://openjdk.java.net) is the preferred JDK (because of its Open Source [license](http://openjdk.java.net/legal/gplv2+ce.html)).
+
+The Scoop Java bucket contains five different OpenJDK builds.
+
+### Oracle OpenJDK
+
+Oracle's OpenJDK version ([openjdk.json](https://github.com/ScoopInstaller/Java/blob/master/bucket/openjdk.json)) can be installed with:
+
 ```
 scoop install openjdk
 ```
 
-The Scoop Java bucket contains five different OpenJDK builds:
+### AdoptOpenJDK
 
-- [OpenJDK](http://openjdk.java.net)
+[AdoptOpenJDK](https://adoptopenjdk.net) has versions with HotSpot and Eclipse OpenJ9 JVMs.
+
+#### Oracle HotSpot JVM
+
+##### AdoptOpenJDK 12 with Oracle HotSpot JVM
+
+[adopt12-hotspot.json](https://github.com/ScoopInstaller/Java/blob/master/bucket/adopt12-hotspot.json) can be installed with:
+
+```
+scoop install adopt12-hotspot
+```
+
+##### AdoptOpenJDK 12 JRE with Oracle HotSpot JVM (runtime environment)
+
+[adopt12-hotspot-jre.json](https://github.com/ScoopInstaller/Java/blob/master/bucket/adopt12-hotspot-jre.json) can be installed with:
+
+```
+scoop install adopt12-hotspot-jre
+```
+
+#### Eclipse OpenJ9 JVM
+
+##### AdoptOpenJDK 12 with Eclipse OpenJ9 JVM
+
+[adopt12-openj9.json](https://github.com/ScoopInstaller/Java/blob/master/bucket/adopt12-hotspot-jre.json) can be installed with:
+
+```
+scoop install adopt12-openj9
+```
+
+##### AdoptOpenJDK 12 JRE with Eclipse OpenJ9 JVM (runtime environment)
+
+[adopt12-openj9-jre.json](https://github.com/ScoopInstaller/Java/blob/master/bucket/adopt12-hotspot-jre.json) can be installed with:
+
+```
+scoop install adopt12-openj9-jre
+```
+
+
+### Zulu
+
 - [Zulu](https://www.azul.com/products/zulu-and-zulu-enterprise)
+
+
+### ojdkbuild
+
 - [ojdkbuild](https://github.com/ojdkbuild/ojdkbuild)
+
+
+### Amazon Corretto
+
 - [Amazon Corretto](https://aws.amazon.com/corretto)
-- [AdoptOpenJDK](https://adoptopenjdk.net)
-  - AdoptOpenJDK has versions with HotSpot and Eclipse OpenJ9 JVMs.
+
+
+## Oracle JDK
 
 [Oracle’s Java](https://www.oracle.com/technetwork/java/index.html) is also available in the [oraclejdk](https://github.com/ScoopInstaller/Java/blob/master/bucket/oraclejdk.json) manifest.
 
 
-## Switching Javas
+# Switching Javas
 
 There are two solutions available today for switching java:
 
@@ -33,9 +92,11 @@ There are two solutions available today for switching java:
 
 `scoop reset` works very well for the current session, and will also update the user's path.
 
-Globally installed javas takes precedence over user installed javas, so running `sudo scoop install -g oraclejdk-lts` will install a java that is always default for new sessions.
+Globally installed javas takes precedence over user-installed javas, so running `sudo scoop install -g oraclejdk-lts` will install a java that is always default for new sessions.
 
-Consider the following:
+
+## Example of switching between versions
+
 ```
 PS C:> scoop install oraclejdk-lts
 Installing 'oraclejdk-lts' (8u172-b11) [64bit]
