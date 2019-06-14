@@ -148,9 +148,9 @@ Use `checkver.reverse: true` to let `checkver.regex` match the last occurrence f
 }
 ```
 
-Use capture groups in `checkver.regex` for complex versions (with `checkver.replace`) and use the results in the [`autoupdate`](#adding-autoupdate-to-a-manifest) property. Each capturing group adds a `$matchX` variable (`$match1, $match2...` or `${1}, ${2}...` for unnamed groups, `$matchName1, $matchName2...` for named groups with name `name1, name2...`. *Notice the only uppercase character in variable name*).
+Use capture groups in `checkver.regex` will make [captured variables](#captured-variables) that could be used in `checkver.replace` for complex versions or in [`autoupdate`](#adding-autoupdate-to-a-manifest) property.
 
-This example will provide `$version` and `$matchShort` as variables. Example: [git](https://github.com/ScoopInstaller/Main/blob/master/bucket/git.json)
+This example will provide `$matchVersion` and `$matchShort` as variables (used in `autoupdate`). Example: [git](https://github.com/ScoopInstaller/Main/blob/master/bucket/git.json)
 
 ```json
 "checkver": {
@@ -180,6 +180,7 @@ This exmple will provide `${1}, ${2}, ${3}` (used in `checkver.replace`) and `$m
   - `xpath`: "string". XPath expression for finding the version
   - `reverse`: "boolean". If or not match the last occurrence found
   - `replace`: "string". Replace the matched value with a calculated value
+    - Supports [captured variables](#captured-variables)
   - `useragent`: "string". User-Agent that used to get webpage content (only used in [fiddler](https://github.com/ScoopInstaller/Main-extras/blob/master/bucket/fiddler.json))
     - Supports [version variables](#version-variables)
 
@@ -270,7 +271,7 @@ Some example manifests using the `autoupdate` feature:
 }
 ```
 
-Some examples using the `autoupdate` feature with `$match` variables (from [`checkver`](#adding-checkver-to-a-manifest)) or [version variables](#version-variables):
+Some examples using the `autoupdate` feature with [captured variables](#captured-variables) or [version variables](#version-variables):
 
 - [openjdk](https://github.com/ScoopInstaller/Java/blob/master/openjdk.json)
 
@@ -315,9 +316,11 @@ All the properties except `autoupdate.note` can be set globally for all architec
 
 - `url`: "uri". An URL template for generating the new url
   - **scoop** will rename files by appending `#/dl.7z` or `#/pngcrush.exe` to the URL (useful for extracting installers or renaming executables version string)
+  - Supports [captured variables](#captured-variables)
   - Supports [version variables](#version-variables)
 - `hash`: "object". Set this [property](#adding-hash-to-autoupdate) for obtaining hash values without download the actual files
 - `extract_dir`: "string". Option to update `extract_dir`
+  - Supports [captured variables](#captured-variables)
   - Supports [version variables](#version-variables)
 - `note`: "string". Optional message to be displayed when the autoupdate command is run
 
@@ -335,25 +338,9 @@ Hash value can be directly extracted by the following method (`autoupdate.hash.m
 
 ## Specifying URL in `hash.url`
 
-`url` in `hash` property accepts URL with `$match` variables (from [`checkver`](#adding-checkver-to-a-manifest)), [version variables](#version-variables) or [URL variables](#url-variables).
+`url` in `hash` property accepts URL with [captured variables](#captured-variables), [version variables](#version-variables) or [URL variables](#url-variables).
 
-- Use [version variables](#version-variables). Example: [julia](https://github.com/ScoopInstaller/Main/blob/master/julia.json)
-
-```json
-"hash": {
-    "url": "https://julialang-s3.julialang.org/bin/checksums/julia-$version.sha256"
-}
-```
-
-- Use [URL variables](#url-variables) and append suffix to it. Example: [apache](https://github.com/ScoopInstaller/Main/blob/master/apache.json)
-
-```json
-"hash": {
-    "url": "$url_fossies.sha256"
-}
-```
-
-- Use `$match` variables. Example: [qemu](https://github.com/ScoopInstaller/Main/blob/master/bucket/qemu.json)
+- Use [captured variables](#captured-variables). Example: [qemu](https://github.com/ScoopInstaller/Main/blob/master/bucket/qemu.json)
 
 ```json
 "checkver": {
@@ -374,6 +361,22 @@ Hash value can be directly extracted by the following method (`autoupdate.hash.m
             }
         }
     }
+}
+```
+
+- Use [version variables](#version-variables). Example: [julia](https://github.com/ScoopInstaller/Main/blob/master/julia.json)
+
+```json
+"hash": {
+    "url": "https://julialang-s3.julialang.org/bin/checksums/julia-$version.sha256"
+}
+```
+
+- Use [URL variables](#url-variables) and append suffix to it. Example: [apache](https://github.com/ScoopInstaller/Main/blob/master/apache.json)
+
+```json
+"hash": {
+    "url": "$url_fossies.sha256"
 }
 ```
 
@@ -518,22 +521,38 @@ All the properties can be set globally for all architectures or for each archite
   - `sourceforge`: *Automatic*. Predefined for SourceForge
   - `download`: Downloads the app file and hash it locally (Fallback)
 - `url`: "uri". URL template for downloading RDF/JSON files or extracting hashes
+  - Supports [captured variables](#captured-variables)
   - Supports [version variables](#version-variables)
   - Supports [URL variables](#url-variables)
 - `regex|find`: "regex". RegEx expression to extract the hash
   - Defaults: `^([a-fA-F0-9]+)$` and `([a-fA-F0-9]{32,128})[\x20\t]+.*$basename(?:[\x20\t]+\d+)?`
+  - Supports [captured variables](#captured-variables)
   - Supports [version Variables](#version-variables)
   - Supports [URL variables](#url-variables)
   - Supports [hash variables](#hash-variables)
 - `jsonpath|jp`: "jsonpath". JSONPath expression to extract the hash
+  - Supports [captured variables](#captured-variables)
   - Supports [version Variables](#version-variables)
   - Supports [URL variables](#url-variables)
 - `xpath`: "string". XPath expression to extract the hash
+  - Supports [captured variables](#captured-variables)
   - Supports [version Variables](#version-variables)
   - Supports [URL variables](#url-variables)
 - *`type`: "string|enum". Deprecated, hash type is determined automatically*
 
 # Internal substitutable variables
+
+## Captured variables
+
+- Used in `checkver.replace`
+  - `${1}`, `${2}`, `${3}`...: Unnamed groups
+  - `${name1}`, `${Name2}`, `${NAME3}`...: Named groups
+    - `(?<name1>...)`, `(?<Name2>...)`, `(?<NAME3>...)`...
+- Used in `autoupdate`
+  - `$match1`, `$match2`, `$match3`...: Unnamed groups
+  - `$matchName1`, `$matchName2`, `$matchName3`...: Named groups
+    - `(?<name1>...)`, `(?<Name2>...)`, `(?<NAME3>...)`...
+    - *Notice the only uppercase character in variable name*
 
 ## Version variables
 
