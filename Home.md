@@ -33,7 +33,7 @@
 * [Customize PHP configuration](wiki/Custom-PHP-configuration)
 * [Apache with PHP](wiki/Apache-with-PHP)
 * [Java](wiki/Java)
-* [Docker and Docker Compose](wiki/Docker-and-Docker-Compose)
+* [Docker](wiki/Docker)
 
 ## Misc
 
