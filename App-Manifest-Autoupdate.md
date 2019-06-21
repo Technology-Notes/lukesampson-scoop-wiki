@@ -181,7 +181,7 @@ This exmple will provide `${1}, ${2}, ${3}` (used in `checkver.replace`) and `$m
   - `reverse`: "boolean". If or not match the last occurrence found
   - `replace`: "string". Replace the matched value with a calculated value
     - Supports [captured variables](#captured-variables)
-  - `useragent`: "string". User-Agent that used to get webpage content (only used in [fiddler](https://github.com/ScoopInstaller/Main-extras/blob/master/bucket/fiddler.json))
+  - `useragent`: "string". User-Agent that used to get webpage content (only used in [fiddler](https://github.com/lukesampson/scoop-extras/blob/master/bucket/fiddler.json))
     - Supports [version variables](#version-variables)
 
 # Adding `autoupdate` to a manifest
