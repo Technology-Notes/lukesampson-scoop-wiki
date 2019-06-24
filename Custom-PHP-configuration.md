@@ -24,7 +24,7 @@ error_reporting = E_ALL
 html_errors = Off
 ```
 
-Enabling PHP modules, those are the most commonly needed modules. Take a look inside the `php.ini` what is available (`extensions.ini`)
+Enabling PHP modules, those are the most commonly needed modules. Take a look inside the `php.ini` to know what is available (`extensions.ini`)
 
 ``` ini
 extension_dir=ext
