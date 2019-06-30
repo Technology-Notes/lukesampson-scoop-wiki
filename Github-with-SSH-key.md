@@ -33,6 +33,10 @@ Pshazz includes a plugin for SSH that can save your SSH key password in Windows 
 
     scoop install pshazz
 
+And you can set up git client to store your GitHub access token to Windows Credential Manager by:
+
+    git config --global credential.helper manager
+
 You should see a popup asking for your SSH key password: enter it and check the box to save your password. Back in your Powershell session, you should see an `Identity Added` message. Whenever you start a Powershell session from now on, Pshazz will make sure the `ssh-agent` is running and load your private key using your saved password.
 
 ### Test it out
