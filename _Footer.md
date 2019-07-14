@@ -1,0 +1,1 @@
+# Docs on scoop for windows
