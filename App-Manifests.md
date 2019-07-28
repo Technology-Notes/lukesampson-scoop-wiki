@@ -21,7 +21,7 @@ For more examples, see the app manifests in the [main Scoop bucket](https://gith
 ### Optional Properties
 
 * <a name="comment"/>`##`: A one-line string, or array of strings, containing comments.
-* <a name="architecture"/>`architecture`: If the app has 32- and 64-bit versions, architecture can be used to wrap the differences ([example](https://github.com/ScoopInstaller/Main/blob/master/bucket/7zip.json)]).
+* <a name="architecture"/>`architecture`: If the app has 32- and 64-bit versions, architecture can be used to wrap the differences ([example](https://github.com/ScoopInstaller/Main/blob/master/bucket/7zip.json)).
     * `32bit|64bit`: contains architecture-specific instructions (`bin`, `checkver`, `extract_dir`, `hash`, `installer`,  `pre_install`, `post_install`, `shortcuts`, `uninstaller`, `url`, and `msi` [`msi` is deprecated]).
 * <a name="autoupdate"/>[`autoupdate`](App-Manifest-Autoupdate#add-autoupdate-to-a-manifest): Definition of how the manifest can be updated automatically.
 * <a name="bin"/>`bin`: A string or array of strings of programs (executables or scripts) to make available on the user's path.
