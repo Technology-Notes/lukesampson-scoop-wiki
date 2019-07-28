@@ -16,16 +16,7 @@ For more examples, see the app manifests in the [main Scoop bucket](https://gith
 
 ### Required Properties
 
-* `version`: The version of the app that this manifest installs.
-* `url`: The URL or URLs of files to download. If there's more than one URL, you can use a JSON * array, e.g. `"url": [ "http://example.org/program.zip", "http://example.org/dependencies.zip" ]`. URLs can be HTTP, HTTPS or FTP.
-
-To change the filename of the downloaded URL, you can append a URL fragment (starting with `#`) to URLs. For example,
-
-`"http://example.org/program.exe"` -> `"http://example.org/program.exe#/dl.7z"`
-
-Note the fragment must start with `#/` for this to work.
-
-In the above example, Scoop will download `program.exe` but save it as `dl.7z`, which will then be extracted automatically with 7-Zip. This technique is commonly used in Scoop manifests to bypass executable installers which might have undesirable side-effects like registry changes, files placed outside the install directory, or an admin elevation prompt.
+* `version`: The version of the app that this manifest installs, per the [JSON schema definition](https://github.com/lukesampson/scoop/blob/master/schema.json#L526).
 
 ### Optional Properties
 
@@ -47,7 +38,7 @@ In the above example, Scoop will download `program.exe` but save it as `dl.7z`, 
 * `hash`: A string or array of strings with a file hash for each URL in `url`. Hashes are SHA256 by default, but you can use SHA512, SHA1 or MD5 by prefixing the hash string with 'sha512:', 'sha1:' or 'md5:'.
 * `homepage`: The home page for the program.
 * `innosetup`: set to the boolean `true` (without quotes) if the installer is InnoSetup based.
-* `installer`|`uninstaller`: Instructions for running a non-MSI installer.
+* `installer`: Instructions for running a non-MSI installer.
     * `file`: The installer executable file. For `installer` this defaults to the last URL downloaded. Must be specified for `uninstaller`.
     * `script`: A one-line string, or array of strings, of commands to be executed as an installer/uninstaller instead of `file`.
     * `args`: An array of arguments to pass to the installer. Optional.
@@ -57,7 +48,8 @@ In the above example, Scoop will download `program.exe` but save it as `dl.7z`, 
   * `url`: For non-SPDX licenses, include a link to the license.
 * `notes`: A one-line string, or array of strings, with a message to be displayed after installing the app.
 * `persist` A string or array of strings of directories and files to persist inside the data directory for the app. [Persistent data](Persistent-data)
-* `pre_install` | `post_install` : A one-line string, or array of strings, of the commands to be executed before or after an application is installed. These can use variables like `$dir`, `$persist_dir`, and `$version`. See [Pre- and post-install Scripts](Pre--and-Post-install-scripts) for more details. 
+* `post_install`: A one-line string, or array of strings, of the commands to be executed after an application is installed. These can use variables like `$dir`, `$persist_dir`, and `$version`. See [Pre- and post-install Scripts](Pre--and-Post-install-scripts) for more details. 
+* `pre_install`: Same options as `post_install`, but executed before an application is installed.
 * `psmodule`: Install as a PowerShell module in `~/scoop/modules`.
     * `name` (required for `psmodule`): the name of the module, which should match at least one file in the extracted directory for PowerShell to recognize this as a module.
 * `shortcuts`: Specifies the shortcut values to make available in the startmenu. See [sourcetree](https://github.com/lukesampson/scoop-extras/blob/master/bucket/sourcetree.json) for an example. The array has to contain a executable/label pair. The third and fourth element are optional.
@@ -68,6 +60,12 @@ In the above example, Scoop will download `program.exe` but save it as `dl.7z`, 
 * `suggest`: Display a message suggesting optional apps that provide complementary features. See [ant](https://github.com/ScoopInstaller/Main/blob/master/bucket/ant.json) for an example. 
     * `["Feature Name"] = [ "app1", "app2"... ]`<br>e.g. `"JDK": [ "extras/oraclejdk", "openjdk" ]`<br>
 If any of the apps suggested for the feature are already installed, the feature will be treated as 'fulfilled' and the user won't see any suggestions.
+* `uninstaller`: Same options as `installer`, but the file/script is run to uninstall the application.
+* `url`: The URL or URLs of files to download. If there's more than one URL, you can use a JSON * array, e.g. `"url": [ "http://example.org/program.zip", "http://example.org/dependencies.zip" ]`. URLs can be HTTP, HTTPS or FTP.
+  * To change the filename of the downloaded URL, you can append a URL fragment (starting with `#`) to URLs. For example,
+  * `"http://example.org/program.exe"` -> `"http://example.org/program.exe#/dl.7z"`
+  * Note the fragment must start with `#/` for this to work.
+  * In the above example, Scoop will download `program.exe` but save it as `dl.7z`, which will then be extracted automatically with 7-Zip. This technique is commonly used in Scoop manifests to bypass executable installers which might have undesirable side-effects like registry changes, files placed outside the install directory, or an admin elevation prompt.
 
 ### Undocumented Properties
 
