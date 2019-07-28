@@ -11,7 +11,7 @@ And Scoop supports adding other buckets. Anyone can set up their own bucket with
 
 ### Known buckets
 
-There is a list of known buckets by the community, those can be seen in [`buckets.json`](https://github.com/ScoopInstaller/Main/blob/master/buckets.json), to see the list of known buckets execute:
+There is a list of known buckets by the community, those can be seen in [`buckets.json`](https://github.com/lukesampson/scoop/blob/master/buckets.json), to see the list of known buckets execute:
 
 ```
 scoop bucket known
