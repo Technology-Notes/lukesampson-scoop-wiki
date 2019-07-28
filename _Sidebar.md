@@ -25,7 +25,7 @@
   - [Customize PHP configuration](Custom-PHP-configuration)
   - [Apache with PHP](Apache-with-PHP)
   - [Java](Java)
-  - [Docker and Docker Compose](Docker-and-Docker-Compose)
+  - [Docker and Docker Compose](Docker)
 - Misc
   - [System-wide (global) installs](Global-Installs)
   - [Switching between Ruby and Python Versions](Switching-Ruby-And-Python-Versions)
