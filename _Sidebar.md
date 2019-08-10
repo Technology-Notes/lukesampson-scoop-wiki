@@ -1,8 +1,8 @@
 - [Home](https://github.com/lukesampson/scoop/wiki)
 - Overview
   - [So What?](So-What)
-  - [How is Scoop different to Chocolatey?](Chocolatey-Comparison)
-  - [How is Scoop different to Cygwin and MSYS?](Cygwin-and-MSYS-Comparison)
+  - [How is Scoop different from Chocolatey?](Chocolatey-Comparison)
+  - [How is Scoop different from Cygwin and MSYS?](Cygwin-and-MSYS-Comparison)
 - Getting Started
   - [Quick Start](Quick-Start)
   - [Command Help](Commands)
