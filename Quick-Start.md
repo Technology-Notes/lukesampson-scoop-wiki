@@ -23,7 +23,11 @@ set-executionpolicy remotesigned -scope currentuser
 In a PowerShell command console, run:
 
 ```powershell
-iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
+Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
+```
+or the shorter:
+```powershell
+iwr -useb get.scoop.sh | iex
 ```
 
 ### Installing Scoop to Custom Directory
@@ -31,7 +35,7 @@ Assuming the target directory is `C:\scoop`, in a PowerShell command console, ru
 ```powershell
 $env:SCOOP='C:\scoop'
 [environment]::setEnvironmentVariable('SCOOP',$env:SCOOP,'User')
-iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
+iwr -useb get.scoop.sh | iex
 ```
 
 Assuming you didn't see any error messages, Scoop is now ready to run.
