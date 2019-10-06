@@ -33,5 +33,3 @@ Scoop:
 * reads the README for you
 
 There are other, less objective reasons to give Scoop a try. Maybe you want to be able to install apps without Admin privileges. Maybe you like Chocolatey but you don't like the name, or typing `cinst` feels weird, or you're not a fan of messages about 'Chocolatey gods'.
-
-note- to be honest about **install apps without Admin privileges**, you need admin privileges for setting $env:SCOOP_GLOBAL as its stored in the system environment variables. you don't need it for setting $env:SCOOP as its in user environment variables.
