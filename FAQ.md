@@ -69,16 +69,6 @@ Use `scoop uninstall [app]`. E.g. for Git:
 scoop uninstall git
 ```
 
-### How do I uninstall a specific version of an app?
-
-Use `scoop uninstall [app]@[version]`. E.g. for Git:
-
-```
-scoop uninstall git@2.19.0.windows.1
-```
-
-This will uninstall version 2.19 of Git, but will preserve other versions you might have installed.
-
 ### Scoop is very slow when installing, locks up the CPU, or shows access denied errors
 
 It's likely that your antivirus or anti-malware program is doing a realtime scan as files are being extracted. Please see [Antivirus and Anti-Malware Problems](https://github.com/lukesampson/scoop/wiki/Antivirus-and-Anti-Malware-Problems) for more information and possible workarounds.
