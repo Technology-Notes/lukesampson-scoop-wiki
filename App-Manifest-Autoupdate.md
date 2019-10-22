@@ -159,7 +159,7 @@ This example will provide `$matchVersion` and `$matchShort` as variables (used i
 }
 ```
 
-This exmple will provide `${1}, ${2}, ${3}` (used in `checkver.replace`) and `$matchSha` (used in `autoupdate`) as variables. Example: [pshazz](https://github.com/ScoopInstaller/Main/blob/master/bucket/pshazz.json)
+This example will provide `${1}, ${2}, ${3}` (used in `checkver.replace`) and `$matchSha` (used in `autoupdate`) as variables. Example: [pshazz](https://github.com/ScoopInstaller/Main/blob/master/bucket/pshazz.json)
 
 ```json
 "checkver": {
