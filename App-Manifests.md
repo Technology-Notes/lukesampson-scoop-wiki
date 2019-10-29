@@ -16,7 +16,7 @@ For more examples, see the app manifests in the [main Scoop bucket](https://gith
 
 ### Required Properties
 
-* `version`: The version of the app that this manifest installs, per the [JSON schema definition](https://github.com/lukesampson/scoop/blob/master/schema.json#L526).
+* `version`: The version of the app that this manifest installs, per the [JSON schema definition](https://github.com/lukesampson/scoop/blob/master/schema.json#L527-L530).
 
 ### Optional Properties
 
