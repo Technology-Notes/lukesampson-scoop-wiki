@@ -1,13 +1,9 @@
-- [Home](https://github.com/lukesampson/scoop/wiki)
+- [Home]
 - Overview
-  - [So What?](So-What)
-  - [How is Scoop different from Chocolatey?](Chocolatey-Comparison)
-  - [How is Scoop different from Cygwin and MSYS?](Cygwin-and-MSYS-Comparison)
 - Getting Started
   - [Quick Start](Quick-Start)
   - [Command Help](Commands)
   - [FAQ](FAQ)
-  - [Uninstalling Scoop](Uninstalling-Scoop)
 - Concepts
   - [Apps](Apps)
   - [Buckets](Buckets)
