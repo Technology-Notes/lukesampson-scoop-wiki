@@ -5,8 +5,8 @@ The directory is located at `~/scoop/persist/php/cli/conf.d`. You can create as 
 
 ## Examples
 
-### Custom settings
-Some basic settings like the timezone and limits (`custom.ini`)
+### Custom settings `custom.ini`
+Some basic settings like the timezone and limits
 
 ```ini
 date.timezone = Europe/Berlin
@@ -16,8 +16,8 @@ post_max_size = 128M
 upload_max_filesize = 128M
 ```
 
-### Debugging
-Enabling debugging (`debug.ini`)
+### Debugging `debug.ini`
+Enabling debugging
 
 ```ini
 display_errors = On
@@ -25,8 +25,8 @@ display_startup_errors = On
 error_reporting = E_ALL
 html_errors = Off
 ```
-#### Using Xdebug
-Install Xdebug via `scoop bucket add extras` and `scoop install php-xdebug`. (`xdebug.ini`)
+#### Using Xdebug `xdebug.ini`
+Install Xdebug via `scoop bucket add extras` and `scoop install php-xdebug`.
 ```ini
 zend_extension=C:\Users\<user>\scoop\apps\php-xdebug\current\php_xdebug.dll
 [xdebug]
@@ -35,8 +35,8 @@ xdebug.remote_autostart=on
 xdebug.remote_connect_back=on
 ```
 
-### Enabling PHP modules
-Take a look inside the `php.ini` to know what is available (`extensions.ini`)
+### Enabling PHP modules `extensions.ini`
+Take a look inside the `php.ini` to know what is available.
 
 ```ini
 extension_dir=ext
@@ -80,12 +80,8 @@ extension=sqlite3
 ```
 
 
-### Setup Curl and Openssl
-Install `cacert.pem` via `scoop install cacert`.
-
-Enable `extension=curl` and `extension=openssl` in `extensions.ini`
-
-Configure curl and openssl to use the `cacert.pem` (`cacert.ini`)
+### Setup Curl and Openssl `cacert.ini`
+Install `cacert.pem` via `scoop install cacert` and configure curl and openssl to use the `cacert.pem`.
 ```ini
 [curl]
 curl.cainfo="C:\Users\<user>\scoop\apps\cacert\current\cacert.pem"
