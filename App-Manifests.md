@@ -47,7 +47,7 @@ For more examples, see the app manifests in the [main Scoop bucket](https://gith
   * `identifier`: The SPDX identifier, or “Freeware”, “Proprietary”, “Public Domain”, “Shareware”, or “Unknown”, as appropriate.
   * `url`: For non-SPDX licenses, include a link to the license. It is acceptable to include links to SPDX licenses, as well.
   * If it is difficult to determine all of the different licenses, it is acceptable to add `,...` at the end of the SPDX list. If there are both open-source and not open-source licenses, please list all non-open source licenses first (e.g., Freeware/Proprietary/Shareware).
-  * If you unable to determine what license the application has, use "Unknown".
+  * If you are unable to determine what license the application has, use "Unknown".
 * <a name="notes"/>`notes`: A one-line string, or array of strings, with a message to be displayed after installing the app.
 * <a name="persist"/>`persist` A string or array of strings of directories and files to persist inside the data directory for the app. [Persistent data](Persistent-data)
 * <a name="post_install"/>`post_install`: A one-line string, or array of strings, of the commands to be executed after an application is installed. These can use variables like `$dir`, `$persist_dir`, and `$version`. See [Pre- and post-install Scripts](Pre--and-Post-install-scripts) for more details. 
