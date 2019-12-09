@@ -7,6 +7,7 @@ By default `%PHP_INI_SCAN_DIR%` is set to `~\scoop\apps\php\current\cli;~\scoop\
 - Your custom `php.ini` should be put into `~\scoop\apps\php\current\cli`
 - You can put custom `.ini` files into `~\scoop\apps\php\current\cli\conf.d`
 - You can create as many `.ini` files in `~\scoop\apps\php\current\cli\conf.d` as you like
+- The `~\scoop\apps\php\current\cli` directory is a symlink to `~\scoop\persist\php\cli`, so it survives updates
 
 ## Some examples `.ini` files
 
