@@ -273,7 +273,7 @@ Some example manifests using the `autoupdate` feature:
 
 Some examples using the `autoupdate` feature with [captured variables](#captured-variables) or [version variables](#version-variables):
 
-- [openjdk](https://github.com/ScoopInstaller/Java/blob/master/openjdk.json)
+- [openjdk](https://github.com/ScoopInstaller/Java/blob/master/bucket/openjdk.json)
 
 ```json
 "checkver": {
@@ -364,7 +364,7 @@ Hash value can be directly extracted by the following method (`autoupdate.hash.m
 }
 ```
 
-- Use [version variables](#version-variables). Example: [julia](https://github.com/ScoopInstaller/Main/blob/master/julia.json)
+- Use [version variables](#version-variables). Example: [julia](https://github.com/ScoopInstaller/Main/blob/master/bucket/julia.json)
 
 ```json
 "hash": {
@@ -372,7 +372,7 @@ Hash value can be directly extracted by the following method (`autoupdate.hash.m
 }
 ```
 
-- Use [URL variables](#url-variables) and append suffix to it. Example: [apache](https://github.com/ScoopInstaller/Main/blob/master/apache.json)
+- Use [URL variables](#url-variables) and append suffix to it. Example: [apache](https://github.com/ScoopInstaller/Main/blob/master/bucket/apache.json)
 
 ```json
 "hash": {
