@@ -42,5 +42,5 @@
 * [Why PowerShell?](wiki/Why-PowerShell)
 * [Example Setup Scripts](wiki/Example-Setup-Scripts)
 * [Using Scoop behind a proxy server](wiki/Using-Scoop-behind-a-proxy)
-* [Can I use Scoop in bash?](wiki/Can-I-Use-Scoop-In-Bash)
+* [Can I use Scoop in bash?](wiki/Can-I-Use-Scoop-in-Bash,-Zsh,-etc%3F)
 * [PowerShell modules](wiki/PowerShell-Modules)
