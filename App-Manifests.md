@@ -3,10 +3,17 @@ An app manifest is a JSON file that describes how to install a program.
 ##### A simple example:
 ```json
 {
-    "version": "1.0",
+    "version": "0.2013.07.19",
+    "homepage": "https://github.com/lukesampson/cowsay-psh",
+    "description": "Cowsay/think in Powershell",
+    "license": "Unknown",
     "url": "https://github.com/lukesampson/cowsay-psh/archive/master.zip",
+    "hash": "c65cdfbf43b15f65742831f812003a92abeaa5d416374d5d75a53388d0b59148",
     "extract_dir": "cowsay-psh-master",
-    "bin": "cowsay.ps1"
+    "bin": [
+        "cowsay.ps1",
+        "cowthink.ps1"
+    ]
 }
 ```
 
@@ -17,6 +24,11 @@ For more examples, see the app manifests in the [main Scoop bucket](https://gith
 ### Required Properties
 
 * `version`: The version of the app that this manifest installs, per the [JSON schema definition](https://github.com/lukesampson/scoop/blob/master/schema.json#L527-L530).
+* <a name="hash"/>`hash`: A string or array of strings with a file hash for each URL in `url`. Hashes are SHA256 by default, but you can use SHA512, SHA1 or MD5 by prefixing the hash string with 'sha512:', 'sha1:' or 'md5:'.
+* <a name="bin"/>`bin`: A string or array of strings of programs (executables or scripts) to make available on the user's path.
+    * You can also create an alias shim which uses a different name to the real executable and (optionally) passes arguments to the executable. Instead of just using a string for the executable, use e.g: `[ "program.exe", "alias", "--arguments" ]`. See [busybox](https://github.com/ScoopInstaller/Main/blob/master/bucket/busybox.json) for an example.
+    * However if you declare just one shim like this, you must ensure it's enclosed in an outer array, e.g: 
+      `"bin": [ [ "program.exe", "alias" ] ]`. Otherwise it will be read as separate shims.
 
 ### Optional Properties
 
@@ -24,10 +36,6 @@ For more examples, see the app manifests in the [main Scoop bucket](https://gith
 * <a name="architecture"/>`architecture`: If the app has 32- and 64-bit versions, architecture can be used to wrap the differences ([example](https://github.com/ScoopInstaller/Main/blob/master/bucket/7zip.json)).
     * `32bit|64bit`: contains architecture-specific instructions (`bin`, `checkver`, `extract_dir`, `hash`, `installer`,  `pre_install`, `post_install`, `shortcuts`, `uninstaller`, `url`, and `msi` [`msi` is deprecated]).
 * <a name="autoupdate"/>[`autoupdate`](App-Manifest-Autoupdate#adding-autoupdate-to-a-manifest): Definition of how the manifest can be updated automatically.
-* <a name="bin"/>`bin`: A string or array of strings of programs (executables or scripts) to make available on the user's path.
-    * You can also create an alias shim which uses a different name to the real executable and (optionally) passes arguments to the executable. Instead of just using a string for the executable, use e.g: `[ "program.exe", "alias", "--arguments" ]`. See [busybox](https://github.com/ScoopInstaller/Main/blob/master/bucket/busybox.json) for an example.
-    * However if you declare just one shim like this, you must ensure it's enclosed in an outer array, e.g: 
-      `"bin": [ [ "program.exe", "alias" ] ]`. Otherwise it will be read as separate shims.
 * <a name="checkver"/>[`checkver`](App-Manifest-Autoupdate#adding-checkver-to-a-manifest): App maintainers and developers can use the [bin/checkver](https://github.com/lukesampson/scoop/blob/master/bin/checkver.ps1) tool to check for updated versions of apps. The `checkver` property in a manifest is a regular expression that can be used to match the current stable version of an app from the app's homepage. For an example, see the [go](https://github.com/ScoopInstaller/Main/blob/master/bucket/go.json) manifest. If the homepage doesn't have a reliable indication of the current version, you can also specify a different URL to check—for an example see the [ruby](https://github.com/ScoopInstaller/Main/blob/master/bucket/ruby.json) manifest.
 * <a name="depends"/>`depends`: Runtime dependencies for the app which will be installed automatically. See also `suggest` (below) for an alternative to `depends`.
 * <a name="description"/>`description`: A one line string containing a short description of the program. Don’t include the name of the program, if it’s the same as the app’s filename.
@@ -35,7 +43,6 @@ For more examples, see the app manifests in the [main Scoop bucket](https://gith
 * <a name="env_set"/>`env_set`: Sets one or more environment variables for the user (or system if `--global` is used) ([example](https://github.com/ScoopInstaller/Main/blob/master/bucket/go.json)).
 * <a name="extract_dir"/>`extract_dir`: If `url` points to a compressed file (.zip, .7z, .tar, .gz, .lzma, and .lzh are supported), Scoop will extract just the directory specified from it.
 * <a name="extract_to"/>`extract_to`: If `url` points to a compressed file (.zip, .7z, .tar, .gz, .lzma, and .lzh are supported), Scoop will extract all content to the directory specified ([example](https://github.com/lukesampson/scoop-extras/blob/master/bucket/irfanview.json)).
-* <a name="hash"/>`hash`: A string or array of strings with a file hash for each URL in `url`. Hashes are SHA256 by default, but you can use SHA512, SHA1 or MD5 by prefixing the hash string with 'sha512:', 'sha1:' or 'md5:'.
 * <a name="description"/>`homepage`: The home page for the program.
 * <a name="innosetup"/>`innosetup`: set to the boolean `true` (without quotes) if the installer is InnoSetup based.
 * <a name="installer"/>`installer`: Instructions for running a non-MSI installer.
