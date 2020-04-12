@@ -1,1 +1,1 @@
-# Docs on scoop for windows
+* # Docs on scoop for windows
