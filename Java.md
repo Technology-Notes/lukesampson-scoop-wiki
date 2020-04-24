@@ -27,7 +27,7 @@ scoop install openjdk
 
 #### Oracle HotSpot JVM
 
-##### OpenJDK 8 with Oracle HotSPot JVM
+##### OpenJDK 8 with Oracle HotSpot JVM
 
 [adopt8-upstream.json](https://github.com/ScoopInstaller/Java/blob/master/bucket/adopt8-upstream.json) is the preferred Java 8 JDK. Oracle does not distribute Oracle 8 JDK:s anymore, see FAQ [here](https://www.oracle.com/technetwork/java/javase/overview/oracle-jdk-faqs.html). Oracle 8 JRE is available through the [oraclejre8.json](https://github.com/ScoopInstaller/Java/blob/master/bucket/oraclejre8.json) manifest.
 
