@@ -7,7 +7,6 @@ To add the bucket, run:
 scoop bucket add java
 ```
 
-
 ## OpenJDK
 
 [OpenJDK](http://openjdk.java.net) is the preferred JDK (because of its Open Source [license](http://openjdk.java.net/legal/gplv2+ce.html)).
@@ -28,38 +27,42 @@ scoop install openjdk
 
 #### Oracle HotSpot JVM
 
-##### AdoptOpenJDK 12 with Oracle HotSpot JVM
+##### OpenJDK 8 with Oracle HotSPot JVM
 
-[adopt12-hotspot.json](https://github.com/ScoopInstaller/Java/blob/master/bucket/adopt12-hotspot.json) can be installed with:
+[adopt8-upstream.json](https://github.com/ScoopInstaller/Java/blob/master/bucket/adopt8-upstream.json) is the preferred Java 8 JDK. Oracle does not distribute Oracle 8 JDK:s anymore, see FAQ [here](https://www.oracle.com/technetwork/java/javase/overview/oracle-jdk-faqs.html). Oracle 8 JRE is available through the [oraclejre8.json](https://github.com/ScoopInstaller/Java/blob/master/bucket/oraclejre8.json) manifest.
 
-```
-scoop install adopt12-hotspot
-```
+##### AdoptOpenJDK with Oracle HotSpot JVM
 
-##### AdoptOpenJDK 12 JRE with Oracle HotSpot JVM (runtime environment)
-
-[adopt12-hotspot-jre.json](https://github.com/ScoopInstaller/Java/blob/master/bucket/adopt12-hotspot-jre.json) can be installed with:
+[adoptopenjdk-hotspot.json](https://github.com/ScoopInstaller/Java/blob/master/bucket/adoptopenjdk-hotspot.json) can be installed with:
 
 ```
-scoop install adopt12-hotspot-jre
+scoop install adoptopenjdk-hotspot
+```
+
+##### AdoptOpenJDK JRE with Oracle HotSpot JVM (runtime environment)
+
+[adoptopenjdk-hotspot-jre.json](https://github.com/ScoopInstaller/Java/blob/master/bucket/adoptopenjdk-hotspot-jre.json) can be installed with:
+
+```
+scoop install adoptopenjdk-hotspot-jre
 ```
 
 #### Eclipse OpenJ9 JVM
 
-##### AdoptOpenJDK 12 with Eclipse OpenJ9 JVM
+##### AdoptOpenJDK with Eclipse OpenJ9 JVM
 
-[adopt12-openj9.json](https://github.com/ScoopInstaller/Java/blob/master/bucket/adopt12-hotspot-jre.json) can be installed with:
-
-```
-scoop install adopt12-openj9
-```
-
-##### AdoptOpenJDK 12 JRE with Eclipse OpenJ9 JVM (runtime environment)
-
-[adopt12-openj9-jre.json](https://github.com/ScoopInstaller/Java/blob/master/bucket/adopt12-hotspot-jre.json) can be installed with:
+[adoptopenjdk-openj9.json](https://github.com/ScoopInstaller/Java/blob/master/bucket/adoptopenjdk-openj9.json) can be installed with:
 
 ```
-scoop install adopt12-openj9-jre
+scoop install adoptopenjdk-openj9
+```
+
+##### AdoptOpenJDK JRE with Eclipse OpenJ9 JVM (runtime environment)
+
+[adoptopenjdk-openj9-jre.json](https://github.com/ScoopInstaller/Java/blob/master/bucket/adoptopenjdk-openj9-jre.json) can be installed with:
+
+```
+scoop install adoptopenjdk-openj9-jre
 ```
 
 
