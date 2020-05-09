@@ -44,3 +44,4 @@
 * [Using Scoop behind a proxy server](wiki/Using-Scoop-behind-a-proxy)
 * [Can I use Scoop in Bash, Zsh, etc?](wiki/Can-I-Use-Scoop-in-Bash,-Zsh,-etc%3F)
 * [PowerShell modules](wiki/PowerShell-Modules)
+* [Antivirus false positive](Antivirus-false-positive)
