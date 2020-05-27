@@ -42,7 +42,7 @@ Here's an example of one way you might go about creating a new bucket, using Git
 2. Add an app to your bucket. In a powershell session:
 
 ```powershell
-git clone https://github.com/<your-username>/my-bucket
+git clone --depth 1 https://github.com/<your-username>/my-bucket
 cd my-bucket
 '{ version: "1.0", url: "https://gist.github.com/lukesampson/6446238/raw/hello.ps1", bin: "hello.ps1" }' > hello.json
 git add .
